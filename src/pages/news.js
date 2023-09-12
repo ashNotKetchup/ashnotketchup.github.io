@@ -27,6 +27,22 @@ const News = ({pageContext}) => {
 
   const data = useStaticQuery(graphql`
   {
+
+    about: markdownRemark(
+          fields: { category: { eq: "about" } }
+          fileAbsolutePath: { regex: "/about-short.md/" }
+        ) {
+          html
+          frontmatter {
+            title
+            video
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: CONSTRAINED, width: 400)
+              }
+            }
+          }
+        }
     news: allMarkdownRemark(
     filter: {fields: {category: {eq: "news"}}}
     sort: {frontmatter: {date: DESC}}
@@ -61,6 +77,9 @@ const News = ({pageContext}) => {
     const getFilteredNodes = useCallback((nodes) => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
+
+
+    
 
   return (
     <Layout name="News" crumbs={crumbs}>

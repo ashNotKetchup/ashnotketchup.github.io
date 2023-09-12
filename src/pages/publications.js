@@ -1,10 +1,10 @@
 import React, { useState, useCallback } from "react";
 import { graphql, useStaticQuery, Link } from "gatsby";
-import Layout from "../../components/layout";
-import TableCard from "../../components/tableCard";
+import Layout from "../components/layout";
+import TableCard from "../components/tableCard";
 import kebabCase from "lodash/kebabCase";
-import ParallelogramHeader from "../../components/parallelogramHeader";
-import TagSelector from "../../components/tagSelector";
+import ParallelogramHeader from "../components/parallelogramHeader";
+import TagSelector from "../components/tagSelector";
 
 // Return structured content for table card
 const firstColumn = (title, author, medium, year) => (

@@ -1,20 +1,33 @@
-import * as React from "react";
-import { graphql, useStaticQuery, Link } from "gatsby";
-import "../style/bulmacustom.scss"
-import "@fortawesome/fontawesome-free/css/all.min.css";
-import Layout from "../components/layout.js";
-import Carousel from "../components/carousel";
-import BlogCard from "../components/blogCard";
-import Video from "../components/video";
+import React, {useState, useCallback} from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import Layout from "../components/layout";
+import TableCard from "../components/tableCard";
+import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
 
+// Return structured content for table card
+const firstColumn = (title) => (
+    <>               
+      <p className="title is-4">{title || "New Blog Entry"} </p>
+      {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
+      </div> */}
+    </>
+)
+
+const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
+
 const IndexPage = ({pageContext}) => {
+
+
+
   const {
     breadcrumb: { crumbs },
   } = pageContext
-    const data = useStaticQuery(graphql`
-      {
-        about: markdownRemark(
+
+  const data = useStaticQuery(graphql`
+  {
+
+    about: markdownRemark(
           fields: { category: { eq: "about" } }
           fileAbsolutePath: { regex: "/about-short.md/" }
         ) {
@@ -29,132 +42,99 @@ const IndexPage = ({pageContext}) => {
             }
           }
         }
-        projects: allMarkdownRemark(
-          filter: { fields: { category: { eq: "projects" } } }
-          sort: { frontmatter: { end: DESC } }
-          limit: 6
-        ) {
-          nodes {
-            fields {
-              slug
-            }
-            frontmatter {
-              image {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1)
-                }
-              }
-              title
-              author
-              date(formatString: "ddd DD MMM yy")
-            }
-            html
-            id
-          }
+    news: allMarkdownRemark(
+    filter: {fields: {category: {eq: "news"}}}
+    sort: {frontmatter: {date: DESC}}
+    ) {
+      nodes {
+        fields {
+          slug
         }
-        news: allMarkdownRemark(
-          filter: { fields: { category: { eq: "news" } } }
-          sort: { frontmatter: { date: DESC } }
-          limit: 6
-        ) {
-          nodes {
-            fields {
-              slug
-            }
-            frontmatter {
-              image {
-                childImageSharp {
-                  gatsbyImageData(layout: CONSTRAINED, aspectRatio: 1)
-                }
-              }
-              title
-              author
-              date(formatString: "ddd DD MMM yy")
-            }
-            html
-            id
-          }
+        frontmatter {
+          title
+          tags
+          date(formatString: "ddd DD MMM yy")
         }
+        id
       }
-    `);
+    }
 
-    const projectCards = data.projects.nodes.map((project) => (
-      <BlogCard
-        title={project.frontmatter.title}
-        author={project.frontmatter.author}
-        date={project.frontmatter.date}
-        image={project.frontmatter.image.childImageSharp.gatsbyImageData}
-        html={project.html}
-        slug={project.fields.slug}
-      />
-    ));
+    allTags: allMarkdownRemark(
+          limit: 2000
+          filter: {fields: {category: {eq: "news"}}}
+          ) {
+          group(field: { frontmatter: { tags: SELECT }}) {
+            fieldValue
+            totalCount
+          }
+        }
+  }
+  `);
 
-    const newsCards = data.news.nodes.map((news) => (
-      <BlogCard
-        title={news.frontmatter.title}
-        author={news.frontmatter.author}
-        date={news.frontmatter.date}
-        image={news.frontmatter.image.childImageSharp.gatsbyImageData}
-        
-        slug={news.fields.slug}
-      />
-    ));
+    const [filteredNodes, setFilteredNodes] = useState(data.news.nodes);
 
-    const homeHero = (
-      <section className="hero is-fullheight-with-navbar">
-        <div className="hero-body has-text-centered has-background-primary">
-          <div className="container">
-            <div className="columns is-multiline is-centered">
-              <div className="column is-one-third-desktop is-full-tablet">
-                <Link to="/about">
-                  <div
-                    dangerouslySetInnerHTML={{ __html: data.about.html }}
-                    className="pt-6 pr-6 is-size-4-desktop is-size-5-mobile has-text-left has-text-white"
-                  ></div>
-                  <div className="has-text-left">
-                    <br></br>
-                    <p class="subtitle is-size-7 has-text-white">Read More</p>
-                  </div>
-                </Link>
-              </div>
-              <div className="column is-two-thirds-desktop is-full-tablet">
-                <Video videoSrcURL={data.about.frontmatter.video} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
+    const getFilteredNodes = useCallback((nodes) => {
+      setFilteredNodes(nodes);
+    }, [setFilteredNodes]);
+
+
+    // const homeHero = (
+    //   // <section className="hero is-fullheight-with-navbar">
+    //     // <div className="hero-body has-text-left has-background-primary">
+    //     //   <div className="container">
+    //     //     {/* <div className="columns is-multiline is-left"> */}
+    //     //       {/* <div className="column is-one-third-desktop is-full-tablet"> */}
+    //     //         <Link to="/about">
+    //     //           <div
+    //     //             dangerouslySetInnerHTML={{ __html: data.about.html }}
+    //     //             className="pt-6 pr-6 is-size-4-desktop is-size-5-mobile has-text-left has-text-black"
+    //     //           ></div>
+    //     //           <div className="has-text-left">
+    //     //             <br></br>
+    //     //             <p class="subtitle is-size-7 has-text-black">Read More</p>
+    //     //           </div>
+    //     //         </Link>
+    //     //       {/* </div> */}
+    //     //       {/* <div className="column is-two-thirds-desktop is-full-tablet">
+    //     //         <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
+    //     //       </div> */}
+    //     //     {/* </div> */}
+    //     //   </div>
+    //     // // </div>
+    //   // </section>
+    // );
 
   return (
-    <Layout name="Homepage" hero={homeHero}>
+    <Layout name="Index" crumbs={crumbs}>
       <section className="section">
+        <ParallelogramHeader
+          text="Selected Works"
+          backgroundColor="primary"
+          textColor="Black"
+          className="mb-6"
+        />
+        <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
 
-          <div className="lowerPadding">
-            <div className="column is-one-third">
-              <ParallelogramHeader text="Projects" backgroundColor="primary" textColor="white"/>
-            </div>
-          </div>
-          <div className="container">
-            <Carousel content={projectCards} />
-          </div>
+        <div className="lowerPadding"> </div>
 
-      </section>
-
-      <section className="secondary">
-        <div className="lowerPadding">
-          <div className="column is-one-third">
-          <ParallelogramHeader text="News" backgroundColor="white" textColor="black"/>
-          </div>
-        </div>
-
-        <div className="container">
-          <Carousel content={newsCards} />
-        </div>
+        {filteredNodes.map((blogentry) => (
+              <div
+                className="card-image row card-image row is-full"
+                key={blogentry.id}
+              >
+                <Link to={blogentry.fields.slug}>
+                  <TableCard
+                    first={blogentry.frontmatter.title}
+                    second={blogentry.frontmatter.date}
+                  />
+                </Link>
+              </div>
+          )
+        )}
       </section>
     </Layout>
   );
-}
+};
 
 export default IndexPage
 

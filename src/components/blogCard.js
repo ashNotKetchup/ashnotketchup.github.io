@@ -58,7 +58,7 @@ const BlogCard = (props) => {
           </div>
           {!props.html ? undefined : (
             <div className="card-footer p-2 has-text-centered is-align-self-center">
-                {link("Read More")}
+                {/* {link("Read More")} */}
             </div>
           )}
         </div>

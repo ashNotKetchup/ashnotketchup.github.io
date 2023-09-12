@@ -1,10 +1,10 @@
 import React from "react";
 
-const Video = ({ videoSrcURL, videoTitle, ...props }) => {
+const Video = ({ videoSrcURL, videoTitle, width, ...props }) => {
   const containerStyle = {
     position: "relative",
     overflow: "hidden",
-    width: "90%",
+    width: {width},
     paddingTop: "50.63%" /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) then * 90% = 50.63 */,
   };
 

@@ -1,39 +1,19 @@
 import React from "react";
 
 const TableCard = (props) => {
-    const length = Object.keys(props).length;
+    // const length = Object.keys(props).length;
     return (
-      <div className="card table-card columns">
-        <div
-          className={`card-image column ${
-            length > 1 ? "is-one-fifth" : "is-full"
-          } is-full-mobile`}
-        >
-          <div className="media">
-            <div className="media-content">{props.first}</div>
-          </div>
-        </div>
-        {length > 1 ? (
-          <div
-            className={`card-content column ${
-              length > 2 ? "is-one-fifth" : "is-four-fifths"
-            } is-full-mobile`}
-          >
-            <div className="media">
-              <div className="media-content">{props.second}</div>
-            </div>
-          </div>
-        ) : undefined}
-        {length > 2 ? (
-          <div className="card-content is-three-fifths is-full-mobile">
-            <div className="media">
-                <div className="media-content">
-                    {props.third}
+      <div className="container">
+            <div className="columns is-multiline is-left">
+              <div className="column is-one-third">
+                <p class="subtitle is-size-7 has-text-black">{props.first}</p> 
                 </div>
-            </div>
+                {/* add conditional rendering for this second set */}
+              {/* <div className="column is-two-thirds">
+                <p class="subtitle is-size-7 has-text-black">{props.second}</p>
+                </div> */}
+            </div>  
           </div>
-        ) : undefined}
-      </div>
     );
 
 }
