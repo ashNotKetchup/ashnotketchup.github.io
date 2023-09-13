@@ -4,6 +4,12 @@ import Layout from "../components/layout";
 import TableCard from "../components/tableCard";
 import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
+import { StaticImage } from "gatsby-plugin-image"
+
+// export function background() {
+//   return <StaticImage src="../images/are-bure.png" alt="A blurry photo of signs, shot in black and white" />
+// }
+import BG from "../images/are-bure.jpg"
 
 // Return structured content for table card
 const firstColumn = (title) => (
@@ -78,60 +84,80 @@ const IndexPage = ({pageContext}) => {
     }, [setFilteredNodes]);
 
 
-    // const homeHero = (
-    //   // <section className="hero is-fullheight-with-navbar">
-    //     // <div className="hero-body has-text-left has-background-primary">
-    //     //   <div className="container">
-    //     //     {/* <div className="columns is-multiline is-left"> */}
-    //     //       {/* <div className="column is-one-third-desktop is-full-tablet"> */}
-    //     //         <Link to="/about">
-    //     //           <div
-    //     //             dangerouslySetInnerHTML={{ __html: data.about.html }}
-    //     //             className="pt-6 pr-6 is-size-4-desktop is-size-5-mobile has-text-left has-text-black"
-    //     //           ></div>
-    //     //           <div className="has-text-left">
-    //     //             <br></br>
-    //     //             <p class="subtitle is-size-7 has-text-black">Read More</p>
-    //     //           </div>
-    //     //         </Link>
-    //     //       {/* </div> */}
-    //     //       {/* <div className="column is-two-thirds-desktop is-full-tablet">
-    //     //         <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
-    //     //       </div> */}
-    //     //     {/* </div> */}
-    //     //   </div>
-    //     // // </div>
-    //   // </section>
-    // );
+    const homeHero = (
+          <div className="container">
+            <div
+              dangerouslySetInnerHTML={{ __html: data.about.html }}
+              className="pt-6 pr-6 has-text-left has-text-black"
+            >
+              </div>
+            <div className="has-text-left">
+              <br></br>
+              <Link to="/about">
+              <p class="subtitle is-size-7 has-text-black">Read More</p>
+              </Link>
+              </div>
+            </div>
+            // <div className="column is-two-thirds-desktop is-full-tablet">
+            //   <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
+            //   </div> 
+    );
+
+    const works=(
+      <div>
+      <ParallelogramHeader
+            text="Selected Works"
+            backgroundColor="primary"
+            textColor="Black"
+            className="mb-6"
+          />
+          <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
+          {/* <div className="lowerPadding"> </div> */}
+          {filteredNodes.map((blogentry) => (
+                <div
+                  className="card-image"
+                  key={blogentry.id}
+                >
+                  <Link to={blogentry.fields.slug}>
+                    <TableCard
+                      first={blogentry.frontmatter.title}
+                      second={blogentry.frontmatter.date}
+                    />
+                  </Link>
+                </div>
+            )
+          )}
+          </div>
+
+    )
 
   return (
     <Layout name="Index" crumbs={crumbs}>
-      <section className="section">
-        <ParallelogramHeader
-          text="Selected Works"
-          backgroundColor="primary"
-          textColor="Black"
-          className="mb-6"
+      <section>
+      <div className="hero is-fullheight-with-navbar">
+        {/* <img src={BG} className="background" /> */}
+        <StaticImage
+          className="background"
+          src="../images/are-bure.jpg"
+          // placeholder="blurred"
+          // formats={["auto", "webp", "avif"]}
+          // alt="A blurry image in black and white"
+          // quality={90}
         />
-        <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
-
-        <div className="lowerPadding"> </div>
-
-        {filteredNodes.map((blogentry) => (
-              <div
-                className="card-image row card-image row is-full"
-                key={blogentry.id}
-              >
-                <Link to={blogentry.fields.slug}>
-                  <TableCard
-                    first={blogentry.frontmatter.title}
-                    second={blogentry.frontmatter.date}
-                  />
-                </Link>
-              </div>
-          )
-        )}
+      <div className="columns is-multiline is-centre mt-auto">
+        <div className="column is-two-fifths-desktop is-full-tablet mt-auto reverse-row-order" >
+          
+          {works}
+          </div> 
+        <div className="column is right is-three-fifths-desktop is-full-tablet mt-auto">
+          {homeHero}
+        </div>
+      </div>
+      </div>
+      
       </section>
+      
+    
     </Layout>
   );
 };
