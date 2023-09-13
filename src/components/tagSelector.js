@@ -18,7 +18,7 @@ const TagSelector = ({tags,nodes,callback}) => {
             {tags.group.map((tag) => (
             // If selected=='tag', then grey it out
                 <button
-                    className="button is-grey"
+                    className="button is-white"
                     key={tag.fieldValue}
                     onClick={() => setSelected(tag.fieldValue)}
                     disabled={selected === tag.fieldValue}
@@ -29,7 +29,7 @@ const TagSelector = ({tags,nodes,callback}) => {
 
             {/* // If selected==False, then grey this out */}
             <button 
-                className="button" 
+                className="button is-white" 
                 onClick={() => setSelected(false)}
                 disabled={!selected}
             >

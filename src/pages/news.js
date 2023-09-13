@@ -86,8 +86,8 @@ const News = ({pageContext}) => {
       <section className="section">
         <ParallelogramHeader
           text="News"
-          backgroundColor="primary"
-          textColor="white"
+          backgroundColor="white"
+          textColor="primary"
           className="mb-6"
         />
         <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>

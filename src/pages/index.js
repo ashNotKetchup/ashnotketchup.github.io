@@ -108,7 +108,7 @@ const IndexPage = ({pageContext}) => {
       <ParallelogramHeader
             text="Selected Works"
             backgroundColor="primary"
-            textColor="Black"
+            textColor="black"
             className="mb-6"
           />
           <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
@@ -139,14 +139,10 @@ const IndexPage = ({pageContext}) => {
         <StaticImage
           className="background"
           src="../images/are-bure.jpg"
-          // placeholder="blurred"
-          // formats={["auto", "webp", "avif"]}
-          // alt="A blurry image in black and white"
-          // quality={90}
         />
       <div className="columns is-multiline is-centre mt-auto">
         <div className="column is-two-fifths-desktop is-full-tablet mt-auto reverse-row-order" >
-          
+          <></>
           {works}
           </div> 
         <div className="column is right is-three-fifths-desktop is-full-tablet mt-auto">
