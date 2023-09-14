@@ -5,21 +5,8 @@ import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
 
-// Return structured content for table card
-const firstColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
-
-const secondColumn = (title) => (
-    <>               
-      <p className="title is-4">{title || "New Blog Entry"} </p>
-      <div className="card-footer p-2 has-text-centered is-align-self-center">
-        Read More
-      </div>
-    </>
-)
 
 const Garden = ({pageContext}) => {
-
-
 
   const {
     breadcrumb: { crumbs },
@@ -57,15 +44,40 @@ const Garden = ({pageContext}) => {
   `);
 
     const [filteredNodes, setFilteredNodes] = useState(data.garden.nodes);
-
     const getFilteredNodes = useCallback((nodes) => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
 
-    const works = (
-    <div>
-      <ParallelogramHeader
+    const garden = (
+      <div>
+        {/* randomise filteredNodes order */}
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+      </div>
+
+  )
+
+  return (
+    <Layout>
+      <section>
+        <div className="hero is-fullheight-with-navbar">
+          <div className="columns is-multiline is-centre mt-auto">
+            <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
+            </div>
+            <div className="column is right is-6-desktop is-full-tablet mt-auto">
+              {garden}
+            </div>
+            <div className="column is-right is-1 is-full-tablet mt-auto has-text-right mx-0">
+              <ParallelogramHeader
         text="Garden"
         backgroundColor="primary"
         textColor="black"
@@ -73,28 +85,12 @@ const Garden = ({pageContext}) => {
       />
 
       <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} />
-      {/* <div className="lowerPadding"> </div> */}
-      {filteredNodes.map((blogentry) => (
-        <div
-          className="card-image"
-          key={blogentry.id}
-        >
-          <Link to={blogentry.fields.slug}>
-            <Plant
-              first={blogentry.frontmatter.title}
-              second={blogentry.frontmatter.date}
-            />
-          </Link>
+            </div>
+          </div>
         </div>
-      )
-      )}
-    </div>
 
-  )
-
-  return (
-    <Layout>
-    {works}
+      </section>
+    {/* {garden} */}
     </Layout>
   );
 };
