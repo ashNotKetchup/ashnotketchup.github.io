@@ -86,12 +86,14 @@ const IndexPage = ({ pageContext }) => {
 
   const bio = (
     <div className="container diff">
+      <Link to="/about">
       <ParallelogramHeader
         text="(Brief) Bio"
         backgroundColor="primary"
         textColor="black"
         className="mb-6"
       />
+      </Link>
       <div
         dangerouslySetInnerHTML={{ __html: data.about.html }}
         className="pt-6 pr-6 has-text-left has-text-black diff"
@@ -112,12 +114,14 @@ const IndexPage = ({ pageContext }) => {
 
   const works = (
     <div>
+      <Link to="/work">
       <ParallelogramHeader
         text="Selected Works"
         backgroundColor="primary"
         textColor="black"
         className="mb-6"
       />
+      </Link>
       <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
       {/* <div className="lowerPadding"> </div> */}
       {filteredNodes.map((blogentry) => (
@@ -140,7 +144,7 @@ const IndexPage = ({ pageContext }) => {
 
   const garden = (
     <div>
-      <Link>
+      <Link to="/garden">
       <ParallelogramHeader
         text="Garden"
         backgroundColor="primary"
