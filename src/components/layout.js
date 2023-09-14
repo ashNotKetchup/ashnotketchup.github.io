@@ -16,13 +16,22 @@ const socialMediaItems = [
   },
 ];
 
+// function topLeft(hasTopLeft){
+//   if (hasTopLeft) {
+//     return ;
+//   }
+//   return;
 
-const Layout = ({children, crumbs, name, hero}) => {
+// }
 
+
+const Layout = ({children, nameInNav, crumbs, name, hero}) => {
+
+  
     const navBar = (
       <nav className="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
-          <Link to="/">
+        <Link to="/">
             <p className="is-size-3 has-text-black">
             Ashley Noel-Hirst
             </p>

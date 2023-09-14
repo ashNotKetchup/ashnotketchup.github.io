@@ -30,9 +30,14 @@ $family-sans-serif: 'Source Sans Pro';
 html,
 body {
     height: 100vh;
+    // p{
+    //     mix-blend-mode: exclusion;
+    // }
+    
 }
 
 .background {
+    // mix-blend-mode: screen;
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
