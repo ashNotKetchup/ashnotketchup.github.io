@@ -30,19 +30,36 @@ $family-sans-serif: 'Source Sans Pro';
 html,
 body {
     height: 100vh;
+    
+    
     // p{
     //     mix-blend-mode: exclusion;
     // }
-    
+
+}
+
+// body{
+//     // mix-blend-mode: difference;
+// }
+
+.diff {
+    h1,p {color: white;
+    // mix-blend-mode: difference;
+    // mix-blend-mode: exclusion;
+        // color: white;
+    }
+    // color: red;
+        mix-blend-mode: difference;
 }
 
 .background {
-    // mix-blend-mode: screen;
+    // mix-blend-mode: normal;
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-    z-index: -1 !important;
+    z-index: 0 !important;
+    
 }
 
 // Make sure that page takes up whole vertical space
@@ -57,6 +74,7 @@ body {
 main.container {
     max-width: 2000px;
     width: 100%;
+    // mix-blend-mode: difference;
 }
 
 .blog-card-text {

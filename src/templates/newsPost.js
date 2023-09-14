@@ -12,7 +12,6 @@ const NewsPost = ({ data, pageContext }) => {
 
     return (
       <Layout name="Blog" crumbs={crumbs}>
-        <section className="section" id="header">
           <div className="container">
             <GatsbyImage
               alt="Blogpost header image"
@@ -29,7 +28,6 @@ const NewsPost = ({ data, pageContext }) => {
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
           </div>
-        </section>
       </Layout>
     );
 }

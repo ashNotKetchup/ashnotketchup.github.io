@@ -79,36 +79,38 @@ const News = ({pageContext}) => {
     }, [setFilteredNodes]);
 
 
-    
+    const works = (
+    <div>
+      <ParallelogramHeader
+        text="Selected Works"
+        backgroundColor="primary"
+        textColor="black"
+        className="mb-6"
+      />
+
+      <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes} />
+      {/* <div className="lowerPadding"> </div> */}
+      {filteredNodes.map((blogentry) => (
+        <div
+          className="card-image"
+          key={blogentry.id}
+        >
+          <Link to={blogentry.fields.slug}>
+            <TableCard
+              first={blogentry.frontmatter.title}
+              second={blogentry.frontmatter.date}
+            />
+          </Link>
+        </div>
+      )
+      )}
+    </div>
+
+  )
 
   return (
-    <Layout name="News" crumbs={crumbs}>
-      <section className="section">
-        <ParallelogramHeader
-          text="News"
-          backgroundColor="white"
-          textColor="primary"
-          className="mb-6"
-        />
-        <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
-
-        <div className="lowerPadding"> </div>
-
-        {filteredNodes.map((blogentry) => (
-              <div
-                className="card-image row is-three-fifths pt-3"
-                key={blogentry.id}
-              >
-                <Link to={blogentry.fields.slug}>
-                  <TableCard
-                    first={firstColumn(blogentry.frontmatter.date)}
-                    second={secondColumn(blogentry.frontmatter.title)}
-                  />
-                </Link>
-              </div>
-          )
-        )}
-      </section>
+    <Layout>
+    {works}
     </Layout>
   );
 };

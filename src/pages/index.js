@@ -85,7 +85,7 @@ const IndexPage = ({ pageContext }) => {
 
 
   const bio = (
-    <div className="container">
+    <div className="container diff">
       <ParallelogramHeader
         text="(Brief) Bio"
         backgroundColor="primary"
@@ -94,13 +94,14 @@ const IndexPage = ({ pageContext }) => {
       />
       <div
         dangerouslySetInnerHTML={{ __html: data.about.html }}
-        className="pt-6 pr-6 has-text-left has-text-black"
+        className="pt-6 pr-6 has-text-left has-text-black diff"
       >
+        {/* <p>{data.about.html}</p> */}
       </div>
       <div className="has-text-left">
         <br></br>
         <Link to="/about">
-          <p class="subtitle is-size-7 has-text-black">Read More</p>
+          <p class="subtitle is-size-7 has-text-black diff">Read More</p>
         </Link>
       </div>
     </div>
@@ -186,3 +187,5 @@ const IndexPage = ({ pageContext }) => {
 export default IndexPage
 
 export const Head = () => <title>Home Page</title>
+
+
