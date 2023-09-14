@@ -31,18 +31,17 @@ const AboutPage = ({pageContext}) => {
 
   return (
     <Layout name="about" crumbs={crumbs}>
-      <section className="section">
+      
         <ParallelogramHeader
           text="About"
           backgroundColor="primary"
-          textColor="white"
+          textColor="black"
           className="mb-6"
         />
         <div
           className="content"
           dangerouslySetInnerHTML={{ __html: data.about.html }}
         ></div>
-      </section>
     </Layout>
   );
 }

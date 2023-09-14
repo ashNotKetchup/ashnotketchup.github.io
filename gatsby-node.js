@@ -31,12 +31,12 @@ exports.onCreateNode = async ({ node, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const newsPostTemplate = path.resolve("./src/templates/newsPost.js");
-    const projectPostTemplate = path.resolve("./src/templates/projectPost.js");
+    const workPostTemplate = path.resolve("./src/templates/workPost.js");
+    const gardenPostTemplate = path.resolve("./src/templates/gardenPost.js");
 
     const result = await graphql(`
         {
-            news: allMarkdownRemark ( filter: {fields: {category: {eq: "news"}}})
+            work: allMarkdownRemark ( filter: {fields: {category: {eq: "work"}}})
             {   
                 nodes {
                     fields {
@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
 
-            projects: allMarkdownRemark ( filter: {fields: {category: {eq: "projects"}}})
+            garden: allMarkdownRemark ( filter: {fields: {category: {eq: "garden"}}})
             {
                 nodes {
                     fields {
@@ -67,11 +67,11 @@ exports.createPages = async ({ graphql, actions }) => {
     `);
 
 
-    // Create news pages 
-    result.data.news.nodes.forEach(node => {
+    // Create work pages 
+    result.data.work.nodes.forEach(node => {
         createPage({
             path: node.fields.slug,
-            component: newsPostTemplate,
+            component: workPostTemplate,
             context: {
                 slug: node.fields.slug,
             },
@@ -79,11 +79,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
 
-    // Create project pages
-    result.data.projects.nodes.forEach((node) => {
+    // Create garden pages
+    result.data.garden.nodes.forEach((node) => {
         createPage({
         path: node.fields.slug,
-        component: projectPostTemplate,
+        component: gardenPostTemplate,
         context: {
             slug: node.fields.slug,
         },

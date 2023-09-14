@@ -1,4 +1,4 @@
-import React, {useState, useCallback} from "react";
+import React, { useState, useCallback } from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import TableCard from "../components/tableCard";
@@ -13,16 +13,16 @@ import BG from "../images/are-bure.jpg"
 
 // Return structured content for table card
 const firstColumn = (title) => (
-    <>               
-      <p className="title is-4">{title || "New Blog Entry"} </p>
-      {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
+  <>
+    <p className="title is-4">{title || "New Blog Entry"} </p>
+    {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
       </div> */}
-    </>
+  </>
 )
 
 const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
 
-const IndexPage = ({pageContext}) => {
+const IndexPage = ({ pageContext }) => {
 
 
 
@@ -48,8 +48,8 @@ const IndexPage = ({pageContext}) => {
             }
           }
         }
-    news: allMarkdownRemark(
-    filter: {fields: {category: {eq: "news"}}}
+    work: allMarkdownRemark(
+    filter: {fields: {category: {eq: "work"}}}
     sort: {frontmatter: {date: DESC}}
     ) {
       nodes {
@@ -67,7 +67,7 @@ const IndexPage = ({pageContext}) => {
 
     allTags: allMarkdownRemark(
           limit: 2000
-          filter: {fields: {category: {eq: "news"}}}
+          filter: {fields: {category: {eq: "work"}}}
           ) {
           group(field: { frontmatter: { tags: SELECT }}) {
             fieldValue
@@ -77,83 +77,109 @@ const IndexPage = ({pageContext}) => {
   }
   `);
 
-    const [filteredNodes, setFilteredNodes] = useState(data.news.nodes);
+  const [filteredNodes, setFilteredNodes] = useState(data.work.nodes);
 
-    const getFilteredNodes = useCallback((nodes) => {
-      setFilteredNodes(nodes);
-    }, [setFilteredNodes]);
+  const getFilteredNodes = useCallback((nodes) => {
+    setFilteredNodes(nodes);
+  }, [setFilteredNodes]);
 
 
-    const homeHero = (
-          <div className="container">
-            <div
-              dangerouslySetInnerHTML={{ __html: data.about.html }}
-              className="pt-6 pr-6 has-text-left has-text-black"
-            >
-              </div>
-            <div className="has-text-left">
-              <br></br>
-              <Link to="/about">
-              <p class="subtitle is-size-7 has-text-black">Read More</p>
-              </Link>
-              </div>
-            </div>
-            // <div className="column is-two-thirds-desktop is-full-tablet">
-            //   <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
-            //   </div> 
-    );
-
-    const works=(
-      <div>
+  const bio = (
+    <div className="container diff">
       <ParallelogramHeader
-            text="Selected Works"
-            backgroundColor="primary"
-            textColor="black"
-            className="mb-6"
-          />
-          <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes}/>
-          {/* <div className="lowerPadding"> </div> */}
-          {filteredNodes.map((blogentry) => (
-                <div
-                  className="card-image"
-                  key={blogentry.id}
-                >
-                  <Link to={blogentry.fields.slug}>
-                    <TableCard
-                      first={blogentry.frontmatter.title}
-                      second={blogentry.frontmatter.date}
-                    />
-                  </Link>
-                </div>
-            )
-          )}
-          </div>
+        text="(Brief) Bio"
+        backgroundColor="primary"
+        textColor="black"
+        className="mb-6"
+      />
+      <div
+        dangerouslySetInnerHTML={{ __html: data.about.html }}
+        className="pt-6 pr-6 has-text-left has-text-black diff"
+      >
+        {/* <p>{data.about.html}</p> */}
+      </div>
+      <div className="has-text-left">
+        <br></br>
+        <Link to="/about">
+          <p class="subtitle is-size-7 has-text-black diff">Read More</p>
+        </Link>
+      </div>
+    </div>
+    // <div className="column is-two-thirds-desktop is-full-tablet">
+    //   <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
+    //   </div> 
+  );
 
-    )
+  const works = (
+    <div>
+      <ParallelogramHeader
+        text="Selected Works"
+        backgroundColor="primary"
+        textColor="black"
+        className="mb-6"
+      />
+      <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
+      {/* <div className="lowerPadding"> </div> */}
+      {filteredNodes.map((blogentry) => (
+        <div
+          className="card-image"
+          key={blogentry.id}
+        >
+          <Link to={blogentry.fields.slug}>
+            <TableCard
+              first={blogentry.frontmatter.title}
+              second={blogentry.frontmatter.date}
+            />
+          </Link>
+        </div>
+      )
+      )}
+    </div>
+
+  )
+
+  const garden = (
+    <div>
+      <Link>
+      <ParallelogramHeader
+        text="Garden"
+        backgroundColor="primary"
+        textColor="black"
+        className="mb-6"
+      />
+      </Link>
+      </div>
+    // <p className="text has-text-right"></p>
+  )
 
   return (
     <Layout name="Index" crumbs={crumbs}>
       <section>
-      <div className="hero is-fullheight-with-navbar">
-        {/* <img src={BG} className="background" /> */}
-        <StaticImage
-          className="background"
-          src="../images/are-bure.jpg"
-        />
-      <div className="columns is-multiline is-centre mt-auto">
-        <div className="column is-two-fifths-desktop is-full-tablet mt-auto reverse-row-order" >
-          <></>
-          {works}
-          </div> 
-        <div className="column is right is-three-fifths-desktop is-full-tablet mt-auto">
-          {homeHero}
+        <div className="hero is-fullheight-with-navbar">
+          {/* <img src={BG} className="background" /> */}
+          <StaticImage
+            className="background"
+            src="../images/me-film.jpg"
+          />
+          <div className="columns is-multiline is-centre mt-auto">
+            <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
+              <></>
+              {works}
+            </div>
+            <div className="column is right is-6-desktop is-full-tablet mt-auto">
+              {/* want to make this invert based on image underneath */}
+              {bio}
+            </div>
+            {/* want to move this to bottom right */}
+            <div className="column is-right is-1 is-full-tablet mt-auto has-text-right mx-0">
+              {garden}
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      
+
       </section>
-      
-    
+
+
     </Layout>
   );
 };
@@ -161,3 +187,5 @@ const IndexPage = ({pageContext}) => {
 export default IndexPage
 
 export const Head = () => <title>Home Page</title>
+
+
