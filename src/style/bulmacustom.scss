@@ -27,9 +27,24 @@ $family-sans-serif: 'Source Sans Pro';
     }
 }
 
+.has-text-black{
+h1,
+    p {
+        // color: white;
+        // mix-blend-mode: difference;
+        // mix-blend-mode: exclusion;
+        // color: white;
+    }
+
+    // color: red;
+    // color: white;
+    // mix-blend-mode: difference;
+}
+
 html,
 body {
     height: 100vh;
+
     
     
     // p{
@@ -43,13 +58,13 @@ body {
 // }
 
 .diff {
-    h1,p {color: white;
-    // mix-blend-mode: difference;
-    // mix-blend-mode: exclusion;
-        // color: white;
-    }
-    // color: red;
-        mix-blend-mode: difference;
+    // h1,p {color: white;
+    // // mix-blend-mode: difference;
+    // // mix-blend-mode: exclusion;
+    //     // color: white;
+    // }
+    // // color: red;
+    //     mix-blend-mode: difference;
 }
 
 .background {

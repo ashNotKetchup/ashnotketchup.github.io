@@ -48,8 +48,8 @@ const IndexPage = ({ pageContext }) => {
             }
           }
         }
-    news: allMarkdownRemark(
-    filter: {fields: {category: {eq: "news"}}}
+    work: allMarkdownRemark(
+    filter: {fields: {category: {eq: "work"}}}
     sort: {frontmatter: {date: DESC}}
     ) {
       nodes {
@@ -67,7 +67,7 @@ const IndexPage = ({ pageContext }) => {
 
     allTags: allMarkdownRemark(
           limit: 2000
-          filter: {fields: {category: {eq: "news"}}}
+          filter: {fields: {category: {eq: "work"}}}
           ) {
           group(field: { frontmatter: { tags: SELECT }}) {
             fieldValue
@@ -77,7 +77,7 @@ const IndexPage = ({ pageContext }) => {
   }
   `);
 
-  const [filteredNodes, setFilteredNodes] = useState(data.news.nodes);
+  const [filteredNodes, setFilteredNodes] = useState(data.work.nodes);
 
   const getFilteredNodes = useCallback((nodes) => {
     setFilteredNodes(nodes);
@@ -118,7 +118,7 @@ const IndexPage = ({ pageContext }) => {
         textColor="black"
         className="mb-6"
       />
-      <TagSelector tags={data.allTags} nodes={data.news.nodes} data={data} callback={getFilteredNodes} />
+      <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
       {/* <div className="lowerPadding"> </div> */}
       {filteredNodes.map((blogentry) => (
         <div
@@ -159,7 +159,7 @@ const IndexPage = ({ pageContext }) => {
           {/* <img src={BG} className="background" /> */}
           <StaticImage
             className="background"
-            src="../images/are-bure.jpg"
+            src="../images/me-film.jpg"
           />
           <div className="columns is-multiline is-centre mt-auto">
             <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
