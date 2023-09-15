@@ -20,40 +20,40 @@ $family-sans-serif: 'Source Sans Pro';
 //     flex-direction: row-reverse;
 // }
 
-@media screen and (max-width: 769px) {
-    .reverse-column-order {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-}
-
-.has-text-black{
-h1,
-    p {
-        // color: white;
-        // mix-blend-mode: difference;
-        // mix-blend-mode: exclusion;
-        // color: white;
-    }
-
-    // color: red;
-    // color: white;
-    // mix-blend-mode: difference;
-}
-
-// .is-garden{
-//     // background-color: red;
-//     position: fixed;
-//         /* or absolute */
-//         top: 50%;
-//         left: 50%;
-//         /* bring your own prefixes */
-//         transform: translate(-50%, -50%);
-//     // height: 100vh;
-//     // display: flex;
-//     // justify-content: center;
-//     // align-items: center;
+// @media screen and (max-width: 769px) {
+//     .reverse-column-order {
+//         display: flex;
+//         flex-direction: column-reverse;
+//     }
 // }
+
+// .has-text-black{
+// h1,
+//     p {
+//         // color: white;
+//         // mix-blend-mode: difference;
+//         // mix-blend-mode: exclusion;
+//         // color: white;
+//     }
+
+//     // color: red;
+//     // color: white;
+//     // mix-blend-mode: difference;
+// }
+
+.is-garden{
+    background-color: red;
+    position: fixed;
+        /* or absolute */
+        top: 50%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    // height: 100vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
 
 html,
 body {
@@ -71,15 +71,15 @@ body {
 //     // mix-blend-mode: difference;
 // }
 
-.diff {
-    // h1,p {color: white;
-    // // mix-blend-mode: difference;
-    // // mix-blend-mode: exclusion;
-    //     // color: white;
-    // }
-    // // color: red;
-    //     mix-blend-mode: difference;
-}
+// .diff {
+//     // h1,p {color: white;
+//     // // mix-blend-mode: difference;
+//     // // mix-blend-mode: exclusion;
+//     //     // color: white;
+//     // }
+//     // // color: red;
+//     //     mix-blend-mode: difference;
+// }
 
 
 .background {
@@ -106,7 +106,7 @@ body {
 
 // Make sure main content is not wider than page
 main.container {
-    max-width: 2000px;
+    max-width: 100%;
     width: 100%;
     // mix-blend-mode: difference;
 }

@@ -4,30 +4,27 @@ import Layout from "../components/layout";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 
 
 function gardenTitle(title, subtitle){
   return (
-    <div>
+    <span>
       <ParallelogramHeader
             text={title}
             backgroundColor="primary"
             textColor="black"
             className="mb-6"
+            alignment="is-centered"
           />
           <p> {subtitle} </p>
-    </div>
+    </span>
     
   )
 }
 
 
 const Garden = () => {
-  const title = "Welcome to my Digital Garden"
-  const subtitle = "a space for cultivating ideas in public."
-
-
   const data = useStaticQuery(graphql`
   {
     garden: allMarkdownRemark(
@@ -64,11 +61,12 @@ const Garden = () => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    const [titleText, setTitleText] = useState('initialise'); //causes rerender when changed
+    const initiaTitle = "My Digital Garden"
+    const [titleText, setTitleText] = useState(initiaTitle); //causes rerender when changed
 
         
     const allPlants = (
-      <div className="column is-4"> 
+      <span> 
         {/* randomise filteredNodes order */}
         {filteredNodes.map((plantsentry) => (
           <Link to={plantsentry.fields.slug}>
@@ -76,40 +74,52 @@ const Garden = () => {
             size={1.4}
             obj = {plantsentry}
             callback = {setTitleText}
-            initTitle = "Gardeen"
+            initTitle = {initiaTitle}
             />
             </Link>
         )
         )}
 
-      </div>
+      </span>
 
   )
 
   const garden =(
-    <div className="is-garden">
-    {/* <div className="columns is-multiline is-centre"> */}
-      {/* <div className="column is-4"> */}
-      {gardenTitle(titleText)}
-      {/* </div> */}
-      {/* <div className="column is-4"> */}
+    // <div>
+    <div className="columns is-multiline is-centered my-auto">
+      <div className="column is-12 has-text-centered">
+        {/* <div className="column is-narrow has-background-black"> */}
+          {gardenTitle(titleText)}  
+        {/* </div> */}
+        </div>
+        <div className="column is-12 has-text-centered">
+          <p>subtitle</p>
+          </div>
+        {/* <div className="column is-full"></div> */}
+      {/* <div className="is-garden"> */}
+
+        <div className="column is-4 has-text-centered">
+          {allPlants}
+          </div>
+
+
+      <div className="column is-9 has-text-centered">
+        <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} centre={1} />
         
-      {allPlants}
-      {/* </div> */}
-      <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div>
-      {/* {gardenLinks} */}
+        </div>
       </div>
 )
 
   return (
     <Layout>
-      <section>
+      <section className="">
         <div className="hero is-fullheight-with-navbar"> 
         {/* <StaticImage
             className="garden-background"
             src="../images/plants.jpeg"
           /> */}
         {garden}
+
         </div> 
       </section>
     </Layout>
