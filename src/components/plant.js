@@ -34,12 +34,16 @@ const Plant = (props) => {
             <span class="subtitle is-size-7 has-text-black" 
             onMouseEnter={() => 
                 props.callback(props.obj.frontmatter.title)
+                // props.callback("picked")
                 }
-                onMouseLeave={() => setIsShown(false)}>
-                    {props.callback(props.initTitle)} 
-            {isShown && (
+            onMouseLeave={() => 
+                props.callback('left')
+                } >
+                    
+            {/* {isShown && (
                 plantActive=1
-            )}
+            )} */}
+            {pickPlant(size)}
             </span>
             // <p>.</p>
         );

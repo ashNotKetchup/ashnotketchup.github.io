@@ -64,13 +64,6 @@ const Garden = () => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    function getPlantHoverId(id){
-      console.log(id)
-      return (
-        alert(id)
-        )
-    }
-
     const message = "testing that this works hang on"
 
     const [isShown, setIsShown] = useState(false);
@@ -79,7 +72,7 @@ const Garden = () => {
 
         
     const allPlants = (
-      <div>
+      <div className="column is-4"> 
         {/* randomise filteredNodes order */}
         {filteredNodes.map((plantsentry) => (
         // id= plantsentry.id
@@ -102,9 +95,15 @@ const Garden = () => {
 
   const garden =(
     <div className="is-garden">
+    {/* <div className="columns is-multiline is-centre"> */}
+      {/* <div className="column is-4"> */}
       {gardenTitle(titleText)}
+      {/* </div> */}
+      {/* <div className="column is-4"> */}
+        
       {allPlants}
-      <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div>
+      {/* </div> */}
+      {/* <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div> */}
       {/* {gardenLinks} */}
       </div>
 )
@@ -134,7 +133,8 @@ const TitleNavigation = (
   return (
     <Layout>
       <section>
-        <div className="hero is-fullheight-with-navbar">
+        <div className="is-fullheight-with-navbar"> 
+        {/* removed hero above? */}
         {/* {TitleNavigation} */}
         {/* <StaticImage
             className="garden-background"
