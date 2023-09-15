@@ -86,22 +86,18 @@ const Garden = () => {
 
   const garden =(
     // <div>
-    <div className="columns is-multiline is-centered my-auto">
+    <div className="columns is-multiline is-centered my-auto is-garden">
       <div className="column is-12 has-text-centered">
-        {/* <div className="column is-narrow has-background-black"> */}
           {gardenTitle(titleText)}  
-        {/* </div> */}
         </div>
+
         <div className="column is-12 has-text-centered">
-          <p>subtitle</p>
+          <p className="subtitle mt-0">subtitle</p>
           </div>
-        {/* <div className="column is-full"></div> */}
-      {/* <div className="is-garden"> */}
 
         <div className="column is-4 has-text-centered">
           {allPlants}
           </div>
-
 
       <div className="column is-9 has-text-centered">
         <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} centre={1} />

@@ -41,14 +41,21 @@ $family-sans-serif: 'Source Sans Pro';
 //     // mix-blend-mode: difference;
 // }
 
+// @media (max-width: 800px) {
+
+
+// }
 .is-garden{
-    background-color: red;
-    position: fixed;
+    // background-color: red;
+    // position: fixed;
         /* or absolute */
-        top: 50%;
-        left: 50%;
+        // top: 50%;
+        // left: 50%;
         /* bring your own prefixes */
-        transform: translate(-50%, -50%);
+        
+        @media screen and (min-width: $desktop) {
+            transform: translate(5%, -25%);
+        }
     // height: 100vh;
     // display: flex;
     // justify-content: center;
