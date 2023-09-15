@@ -81,6 +81,7 @@ body {
     //     mix-blend-mode: difference;
 }
 
+
 .background {
     // mix-blend-mode: normal;
     position: absolute !important;
@@ -88,6 +89,10 @@ body {
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     z-index: 0 !important;
+    .garden{
+        mix-blend-mode: hard-light;
+        z-index: 3 !important;
+    }
     
 }
 

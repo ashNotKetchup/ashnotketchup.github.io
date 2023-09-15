@@ -6,21 +6,17 @@ import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
 import { StaticImage } from "gatsby-plugin-image"
 
-// export function background() {
-//   return <StaticImage src="../images/are-bure.png" alt="A blurry photo of signs, shot in black and white" />
-// }
-import BG from "../images/are-bure.jpg"
 
 // Return structured content for table card
-const firstColumn = (title) => (
-  <>
-    <p className="title is-4">{title || "New Blog Entry"} </p>
-    {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
-      </div> */}
-  </>
-)
+// const firstColumn = (title) => (
+//   <>
+//     <p className="title is-4">{title || "New Blog Entry"} </p>
+//     {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
+//       </div> */}
+//   </>
+// )
 
-const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
+// const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
 
 const IndexPage = ({ pageContext }) => {
 
@@ -160,7 +156,6 @@ const IndexPage = ({ pageContext }) => {
     <Layout name="Index" crumbs={crumbs}>
       <section>
         <div className="hero is-fullheight-with-navbar">
-          {/* <img src={BG} className="background" /> */}
           <StaticImage
             className="background"
             src="../images/me-film.jpg"
