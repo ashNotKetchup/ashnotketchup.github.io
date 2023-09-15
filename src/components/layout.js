@@ -32,7 +32,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
       <nav className="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
         <Link to="/">
-            <p className="is-size-3 has-text-black">
+            <p className="is-size-3 has-text-black is-family-sans-serif">
             Ashley Noel-Hirst
             </p>
           </Link>

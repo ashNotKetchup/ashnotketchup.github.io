@@ -6,72 +6,46 @@
 
 // Primary pulled from qm site
 
-$primary: #092350;
+$primary: #fa91cc;
 $grey: rgb(167, 167, 167);
 
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
 
-// Assign font
-$font-family: 'Source Sans Pro';
-$family-sans-serif: 'Source Sans Pro';
+// // Assign font
+// $font-family: 'Source Sans Pro';
+// $family-sans-serif: 'Source Sans Pro';
 
-// .reverse-row-order {
-//     flex-direction: row-reverse;
-// }
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,500,700');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
-// @media screen and (max-width: 769px) {
-//     .reverse-column-order {
-//         display: flex;
-//         flex-direction: column-reverse;
-//     }
-// }
+// Set your brand colors
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
 
-// .has-text-black{
-// h1,
-//     p {
-//         // color: white;
-//         // mix-blend-mode: difference;
-//         // mix-blend-mode: exclusion;
-//         // color: white;
-//     }
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
 
-//     // color: red;
-//     // color: white;
-//     // mix-blend-mode: difference;
-// }
-
-// @media (max-width: 800px) {
+$family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 
-// }
+
+
 .is-garden{
-    // background-color: red;
-    // position: fixed;
-        /* or absolute */
-        // top: 50%;
-        // left: 50%;
-        /* bring your own prefixes */
-        
-        @media screen and (min-width: $desktop) {
-            transform: translate(5%, -25%);
-        }
-    // height: 100vh;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    @media screen and (min-width: $desktop) {
+        transform: translate(5%, -25%);
+    }
 }
 
 html,
 body {
     height: 100vh;
-
-    
-    
-    // p{
-    //     mix-blend-mode: exclusion;
-    // }
-
+    font-family: 'PT Serif', serif;
 }
 
 // body{
@@ -90,7 +64,6 @@ body {
 
 
 .background {
-    // mix-blend-mode: normal;
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
@@ -236,3 +209,13 @@ section.hero::before {
     margin-bottom: 2vw;
 }
 
+// // Import only what you need from Bulma
+// @import "../node_modules/bulma/sass/utilities/_all.sass";
+// @import "../node_modules/bulma/sass/base/_all.sass";
+// @import "../node_modules/bulma/sass/elements/button.sass";
+// @import "../node_modules/bulma/sass/elements/container.sass";
+// @import "../node_modules/bulma/sass/elements/title.sass";
+// @import "../node_modules/bulma/sass/form/_all.sass";
+// @import "../node_modules/bulma/sass/components/navbar.sass";
+// @import "../node_modules/bulma/sass/layout/hero.sass";
+// @import "../node_modules/bulma/sass/layout/section.sass";
