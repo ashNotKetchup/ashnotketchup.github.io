@@ -87,7 +87,7 @@ const IndexPage = ({ pageContext }) => {
         text="(Brief) Bio"
         backgroundColor="primary"
         textColor="black"
-        className="mb-6"
+        className="mb-0"
       />
       </Link>
       <div
@@ -115,7 +115,7 @@ const IndexPage = ({ pageContext }) => {
         text="Selected Works"
         backgroundColor="primary"
         textColor="black"
-        className="mb-6"
+        className="mb-0"
       />
       </Link>
       <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
@@ -145,7 +145,7 @@ const IndexPage = ({ pageContext }) => {
         text="Garden"
         backgroundColor="primary"
         textColor="black"
-        className="mb-6"
+        className="mb-0"
       />
       </Link>
       </div>

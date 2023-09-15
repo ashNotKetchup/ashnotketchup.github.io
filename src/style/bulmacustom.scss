@@ -20,6 +20,7 @@ $grey: rgb(167, 167, 167);
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 // Set your brand colors
 $purple: #8A4D76;
@@ -29,9 +30,12 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif:  'PT Serif',
+ serif;
 
-$family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
+ $font-family: 'Cormorant Garamond',
+ serif;
+// $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 
 
@@ -42,10 +46,16 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
     }
 }
 
+.garden-heading{
+    font-family: 'Cormorant Garamond'
+}
+
+
 html,
 body {
     height: 100vh;
-    font-family: 'PT Serif', serif;
+    // font-family: 'PT Serif', serif;
+    // font-family: 'Cormorant Garamond'
 }
 
 // body{

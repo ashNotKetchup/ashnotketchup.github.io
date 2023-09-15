@@ -36,7 +36,7 @@ const AboutPage = ({pageContext}) => {
           text="About"
           backgroundColor="primary"
           textColor="black"
-          className="mb-6"
+          className="mb-0"
         />
         <div
           className="content"

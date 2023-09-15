@@ -14,7 +14,7 @@ function gardenTitle(title, subtitle){
             text={title}
             backgroundColor="primary"
             textColor="black"
-            className="mb-6"
+            className="mb-0 garden-heading"
             alignment="is-centered"
           />
           <p> {subtitle} </p>
@@ -92,7 +92,7 @@ const Garden = () => {
         </div>
 
         <div className="column is-12 has-text-centered">
-          <p className="subtitle mt-0">subtitle</p>
+          <p className="subtitle mt-0 ">subtitle</p>
           </div>
 
         <div className="column is-4 has-text-centered">
