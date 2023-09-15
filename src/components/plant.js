@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // interactive object displaying a digital garden object based on relevance/size
-// hover for text preview
+// hover for text preview in title
 
 const plantArray = [".","🌱","🪴","🌲"];
 
@@ -11,42 +11,19 @@ function pickPlant(plantIndex){
 
 const Plant = (props) => {
     const size = props.size;
-    const data = props.data;
-
-    var plantActive=0;
-
-    
-
-    // return (
-    //             <span class="subtitle is-size-7 has-text-black">{pickPlant(size)}</span> 
-    //             // TODO: add title on hover/click
-
-    // );
-
-      const [isShown, setIsShown] = useState(false);
-        // var myPlant;
-        // var icon = ()
-        // myPlant.preview = (
-
-
-        // )
-        return (
-            <span class="subtitle is-size-7 has-text-black" 
-            onMouseEnter={() => 
-                props.callback(props.obj.frontmatter.title)
-                // props.callback("picked")
-                }
-            onMouseLeave={() => 
-                props.callback('left')
-                } >
-                    
-            {/* {isShown && (
-                plantActive=1
-            )} */}
-            {pickPlant(size)}
-            </span>
-            // <p>.</p>
-        );
+    return (
+        // Set Heading From Hover
+        <span class="subtitle is-size-7 has-text-black" 
+        onMouseEnter={() => 
+            props.callback(props.obj.frontmatter.title)
+            }
+        onMouseLeave={() => 
+            props.callback(props.initTitle)
+            }>
+        {/* Render Plant Sprite */}
+        {pickPlant(size)}
+        </span>
+    );
 
 }
 

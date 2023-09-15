@@ -64,10 +64,6 @@ const Garden = () => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    const message = "testing that this works hang on"
-
-    const [isShown, setIsShown] = useState(false);
-
     const [titleText, setTitleText] = useState('initialise'); //causes rerender when changed
 
         
@@ -75,8 +71,6 @@ const Garden = () => {
       <div className="column is-4"> 
         {/* randomise filteredNodes order */}
         {filteredNodes.map((plantsentry) => (
-        // id= plantsentry.id
-        <span class="subtitle is-size-7 has-text-black">
           <Link to={plantsentry.fields.slug}>
             <Plant
             size={1.4}
@@ -85,7 +79,6 @@ const Garden = () => {
             initTitle = "Gardeen"
             />
             </Link>
-          </span>
         )
         )}
 
@@ -103,39 +96,15 @@ const Garden = () => {
         
       {allPlants}
       {/* </div> */}
-      {/* <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div> */}
+      <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div>
       {/* {gardenLinks} */}
       </div>
 )
 
-const TitleNavigation = (
-
-    <div className="columns is-multiline is-centre ">
-      {/* <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
-        </div>
-      <div className="column is-6-desktop is-full-tablet">
-        </div> */}
-      <div className="column is-right is-5 is-full-tablet mt-auto has-text-right mx-0">
-        <ParallelogramHeader
-          text="Garden"
-          backgroundColor="primary"
-          textColor="black"
-          className="mb-6"
-        />
-        <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} />
-        </div>
-      </div>
-    
-
-)
-
-
   return (
     <Layout>
       <section>
-        <div className="is-fullheight-with-navbar"> 
-        {/* removed hero above? */}
-        {/* {TitleNavigation} */}
+        <div className="hero is-fullheight-with-navbar"> 
         {/* <StaticImage
             className="garden-background"
             src="../images/plants.jpeg"
