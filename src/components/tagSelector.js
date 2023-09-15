@@ -1,9 +1,7 @@
 import React, {useState, useEffect, useMemo} from "react";
-import {Link} from "gatsby";
 import {startCase, camelCase} from 'lodash';
 
 const filterData = (nodes, filter) => nodes.filter((node) => !filter ? true : node.frontmatter?.tags?.includes(filter) || node.frontmatter?.role?.includes(filter) || node.year?.includes(filter));
-
 
 const TagSelector = ({tags,nodes,callback}) => {
     const [selected, setSelected] = useState(false);

@@ -13,6 +13,10 @@ const Plant = (props) => {
     const size = props.size;
     const data = props.data;
 
+    var plantActive=0;
+
+    
+
     // return (
     //             <span class="subtitle is-size-7 has-text-black">{pickPlant(size)}</span> 
     //             // TODO: add title on hover/click
@@ -20,16 +24,24 @@ const Plant = (props) => {
     // );
 
       const [isShown, setIsShown] = useState(false);
+        // var myPlant;
+        // var icon = ()
+        // myPlant.preview = (
 
+
+        // )
         return (
-            <span class="subtitle is-size-7 has-text-black" onMouseEnter={() => setIsShown(true)}
-                onMouseLeave={() => setIsShown(false)}>{pickPlant(size)} 
+            <span class="subtitle is-size-7 has-text-black" 
+            onMouseEnter={() => 
+                props.callback(props.obj.frontmatter.title)
+                }
+                onMouseLeave={() => setIsShown(false)}>
+                    {props.callback(props.initTitle)} 
             {isShown && (
-                <div>
-                I'll appear when you hover over the button.
-                </div>
+                plantActive=1
             )}
             </span>
+            // <p>.</p>
         );
 
 }

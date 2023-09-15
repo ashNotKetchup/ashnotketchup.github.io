@@ -59,24 +59,37 @@ const Garden = () => {
   }
   `);
 
-    const [filteredNodes, setFilteredNodes] = useState(data.garden.nodes);
+    const [filteredNodes, setFilteredNodes] = useState(data.garden.nodes); //causes rerender when changed
     const getFilteredNodes = useCallback((nodes) => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    function Test(e) {
-    alert(e.id);
-}
+    function getPlantHoverId(id){
+      console.log(id)
+      return (
+        alert(id)
+        )
+    }
 
+    const message = "testing that this works hang on"
+
+    const [isShown, setIsShown] = useState(false);
+
+    const [titleText, setTitleText] = useState('initialise'); //causes rerender when changed
+
+        
     const allPlants = (
       <div>
         {/* randomise filteredNodes order */}
         {filteredNodes.map((plantsentry) => (
-        <span key={plantsentry.id} onmouseover="Test(this)">
+        // id= plantsentry.id
+        <span class="subtitle is-size-7 has-text-black">
           <Link to={plantsentry.fields.slug}>
             <Plant
             size={1.4}
             obj = {plantsentry}
+            callback = {setTitleText}
+            initTitle = "Gardeen"
             />
             </Link>
           </span>
@@ -87,10 +100,9 @@ const Garden = () => {
 
   )
 
-
   const garden =(
     <div className="is-garden">
-      {gardenTitle("Welcome to my Digital Garden","a space for cultivating ideas in public.")}
+      {gardenTitle(titleText)}
       {allPlants}
       <div className="is-centred"><TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} /></div>
       {/* {gardenLinks} */}
