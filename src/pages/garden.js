@@ -6,11 +6,11 @@ import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
 
 
-const Garden = ({pageContext}) => {
+const Garden = () => {
 
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+  // const {
+  //   breadcrumb: { crumbs },
+  // } = pageContext
 
   const data = useStaticQuery(graphql`
   {
@@ -50,7 +50,7 @@ const Garden = ({pageContext}) => {
 
 
     const garden = (
-      <div>
+      <div className="is-garden">
         {/* randomise filteredNodes order */}
         {filteredNodes.map((plantsentry) => (
         <span key={plantsentry.id}>
@@ -62,35 +62,122 @@ const Garden = ({pageContext}) => {
           </span>
         )
         )}
+
+        {/* delete after test */}
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+
+        {filteredNodes.map((plantsentry) => (
+        <span key={plantsentry.id}>
+          <Link to={plantsentry.fields.slug}>
+            <Plant
+            size={1.4}
+            />
+            </Link>
+          </span>
+        )
+        )}
+
+
+
+
       </div>
 
   )
+
+const TitleNavigation = (
+
+    <div className="columns is-multiline is-centre mt-auto ">
+      <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
+        </div>
+      <div className="column is-6-desktop is-full-tablet">
+        </div>
+      <div className="column is-right is-1 is-full-tablet mt-auto has-text-right mx-0">
+        <ParallelogramHeader
+          text="Garden"
+          backgroundColor="primary"
+          textColor="black"
+          className="mb-6"
+        />
+        <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} />
+        </div>
+      </div>
+    
+
+)
+
 
   return (
     <Layout>
       <section>
         <div className="hero is-fullheight-with-navbar">
-          <div className="columns is-multiline is-centre mt-auto">
-            <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
-            </div>
-            <div className="column is right is-6-desktop is-full-tablet mt-auto">
-              {garden}
-            </div>
-            <div className="column is-right is-1 is-full-tablet mt-auto has-text-right mx-0">
-              <ParallelogramHeader
-        text="Garden"
-        backgroundColor="primary"
-        textColor="black"
-        className="mb-6"
-      />
+        {TitleNavigation}
 
-      <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} />
-            </div>
-          </div>
-        </div>
-
+      
+        {garden}
+        </div> 
       </section>
-    {/* {garden} */}
     </Layout>
   );
 };
