@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
-// import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 
 function gardenTitle(title, subtitle){
@@ -12,12 +12,11 @@ function gardenTitle(title, subtitle){
     <span>
       <ParallelogramHeader
             text={title}
-            backgroundColor="primary"
-            textColor="black"
+
             className="mb-0 garden-heading"
             alignment="is-centered"
           />
-          <p> {subtitle} </p>
+          <p className="subtitle"> {subtitle} </p>
     </span>
     
   )
@@ -110,10 +109,10 @@ const Garden = () => {
     <Layout>
       <section className="">
         <div className="hero is-fullheight-with-navbar"> 
-        {/* <StaticImage
-            className="garden-background"
+        <StaticImage
+            className="background"
             src="../images/plants.jpeg"
-          /> */}
+          />
         {garden}
 
         </div> 

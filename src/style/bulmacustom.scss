@@ -1,13 +1,16 @@
-// Primary from old site
-// $primary: #3E40A5;
 
-// // new blue from branding doc is a lie 
-// $primary: #21386A;
 
-// Primary pulled from qm site
-
-$primary: #fa91cc;
+$primary: rgb(random(255), random(255), random(255));
+// $light: green;
+$dark: #fa91cc;
 $grey: rgb(167, 167, 167);
+
+// $navbar-breakpoint: $tablet;
+
+$background-color: rgb(random(255), random(255), random(255));
+$text: $primary;
+$link: $text;
+
 
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
@@ -54,8 +57,13 @@ $family-sans-serif:  'PT Serif',
 html,
 body {
     height: 100vh;
+    background-color: $background-color;
     // font-family: 'PT Serif', serif;
     // font-family: 'Cormorant Garamond'
+}
+
+.is-background-color{
+    background-color: $background-color;
 }
 
 // body{
@@ -68,7 +76,7 @@ body {
 //     // // mix-blend-mode: exclusion;
 //     //     // color: white;
 //     // }
-//     // // color: red;
+//     // // 
 //     //     mix-blend-mode: difference;
 // }
 
@@ -79,10 +87,38 @@ body {
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     z-index: 0 !important;
-    .garden{
-        mix-blend-mode: hard-light;
-        z-index: 3 !important;
-    }
+    mix-blend-mode: screen;
+    // .garden{
+    //     mix-blend-mode: hard-light;
+    //     z-index: 3 !important;
+    // }
+
+        // ::before {
+        //     background-color: $light;
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     mix-blend-mode: overlay;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     z-index:1
+        // }
+    
+        // ::after {
+        //     background-color: pink;
+        //     content: '';
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     mix-blend-mode: color-burn;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //         z-index: 1
+        // }
+
     
 }
 

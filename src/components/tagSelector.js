@@ -16,7 +16,7 @@ const TagSelector = ({tags,nodes,callback,centre}) => {
 
     const createButtons = <span>
         {tags.group.map((tag) => (
-            <a className="button is-small is-black is-outlined is-rounded is-responsive"
+            <a className="button is-small is-primary is-outlined is-rounded is-responsive"
             key={tag.fieldValue} 
             onClick={() => setSelected(tag.fieldValue)} 
             disabled={selected === tag.fieldValue}>

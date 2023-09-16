@@ -13,7 +13,7 @@ const Plant = (props) => {
     const size = props.size;
     return (
         // Set Heading From Hover
-        <span class="subtitle is-size-3 has-text-black" 
+        <span class="subtitle is-size-3" 
         onMouseEnter={() => 
             props.callback(props.obj.frontmatter.title)
             }

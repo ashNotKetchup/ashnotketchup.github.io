@@ -29,10 +29,10 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="navbar is-white is-fixed-top" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-background-color is-fixed-top" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
         <Link to="/">
-            <p className="is-size-3 has-text-black is-family-sans-serif">
+            <p className="is-size-3 has-text-primary is-family-sans-serif">
             Ashley Noel-Hirst
             </p>
           </Link>
@@ -40,10 +40,10 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
         <div class="navbar-end">
             {navItems.map((item) => (
               <React.Fragment key={`navbar-unit-${item.name}`}>
-                <Link className="navbar-item has-text-black" to={item.link}>
+                <Link className="my-auto mr-2 has-text-primary is-size-5" to={item.link}>
                   {item.name}
                 </Link>
-                <span className="navitem-divider"></span>
+                {/* <span className="navitem-divider"></span> */}
               </React.Fragment>
             ))}
           </div>

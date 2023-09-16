@@ -18,8 +18,8 @@ const GardenPost = ({ data, pageContext }) => {
               image={frontmatter.image.childImageSharp.gatsbyImageData}
             />
           </div>
-          <div className="container">
-            <h1 className="title">{frontmatter.title}</h1>
+          <div className="container has-text-primary">
+            <h1 className="title has-text-primary">{frontmatter.title}</h1>
             <h2 className="subtitle">
               by {frontmatter.author} &mdash; {frontmatter.date}
             </h2>

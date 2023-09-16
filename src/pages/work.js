@@ -83,8 +83,7 @@ const Work = ({pageContext}) => {
     <div>
       <ParallelogramHeader
         text="Selected Works"
-        backgroundColor="primary"
-        textColor="black"
+        
         className="mb-6"
       />
 
