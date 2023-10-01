@@ -36,7 +36,6 @@ const IndexPage = ({ pageContext }) => {
           html
           frontmatter {
             title
-            video
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, width: 400)
@@ -82,24 +81,29 @@ const IndexPage = ({ pageContext }) => {
 
   const bio = (
     <div className="container diff">
+      
       <Link to="/about">
-      <ParallelogramHeader
-        text="(Brief) Bio"
+        {/* <Link to="/about"> */}
+      {/* <ParallelogramHeader
+        text="Me"
         className="mb-0"
-      />
-      </Link>
+      /> */}
+      {/* </Link> */}
       <div
         dangerouslySetInnerHTML={{ __html: data.about.html }}
-        className="pt-6 pr-6 has-text-left diff"
+        className="is-size-5 is-bold pt-6 pr-6 has-text-left diff mb-0 mt-0"
       >
         {/* <p>{data.about.html}</p> */}
       </div>
-      <div className="has-text-left">
-        <br></br>
-        <Link to="/about">
-          <p class="subtitle is-size-7 diff">Read More</p>
-        </Link>
-      </div>
+      {/* <div className="has-text-left"> */}
+        {/* <br></br> */}
+
+
+        {/* Add some mouseover thing which says read more when hover  */}
+          {/* <p class="subtitle is-size-7 diff">Read More</p> */}
+        
+      {/* </div> */}
+      </Link>
     </div>
     // <div className="column is-two-thirds-desktop is-full-tablet">
     //   <Video videoSrcURL={data.about.frontmatter.video} width={"90%"}/>
@@ -110,16 +114,16 @@ const IndexPage = ({ pageContext }) => {
     <div>
       <Link to="/work">
       <ParallelogramHeader
-        text="Selected Works"
+        text="Work"
        
         className="mb-0"
       />
       </Link>
-      <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
+      <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} initialState="awards" />
       {/* <div className="lowerPadding"> </div> */}
       {filteredNodes.map((blogentry) => (
         <div
-          className="card-image"
+          className="card-image is-size-7"
           key={blogentry.id}
         >
           <Link to={blogentry.fields.slug}>
@@ -141,7 +145,7 @@ const IndexPage = ({ pageContext }) => {
       <ParallelogramHeader
         text="Garden"
         
-        className="mb-0"
+        className="mb-0 is-size-1"
       />
       </Link>
       </div>

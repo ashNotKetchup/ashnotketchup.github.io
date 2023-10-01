@@ -35,7 +35,7 @@ const Work = ({pageContext}) => {
           html
           frontmatter {
             title
-            video
+
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, width: 400)
@@ -82,9 +82,9 @@ const Work = ({pageContext}) => {
     const works = (
     <div>
       <ParallelogramHeader
-        text="Selected Works"
+        text="Work"
         
-        className="mb-6"
+        className="mb-0"
       />
 
       <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />

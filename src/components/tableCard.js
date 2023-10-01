@@ -5,8 +5,9 @@ import React from "react";
 
 const TableCard = (props) => {
     // const length = Object.keys(props).length;
+    const textSize = props.textSize;
     return (
-                <p class="subtitle is-size-7">{props.first}</p> 
+                <p class="">{props.first}</p> 
 
     );
 
