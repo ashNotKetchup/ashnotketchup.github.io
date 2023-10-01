@@ -1,14 +1,12 @@
 import React from "react";
 
 
-const ParallelogramHeader = ({text,backgroundColor,textColor,className}) => {
+const ParallelogramHeader = ({text,backgroundColor,textColor,className, alignment}) => {
     return (
       // <div className={`oval has-background-${backgroundColor} ${className}`}>
-      <div>
-        <h1 className={`is-size-2-desktop is-size-3-tablet is-size-4-mobile has-text-left has-text-${textColor}`}>
+        <h1 className={`is-size-2-desktop is-size-3-tablet mb-0 is-size-4-mobile has-text-${alignment} has-text-${textColor} ${className}`}>
           {text}
         </h1>
-      </div>
     );
 }
 

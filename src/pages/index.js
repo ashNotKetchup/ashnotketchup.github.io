@@ -6,21 +6,17 @@ import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
 import { StaticImage } from "gatsby-plugin-image"
 
-// export function background() {
-//   return <StaticImage src="../images/are-bure.png" alt="A blurry photo of signs, shot in black and white" />
-// }
-import BG from "../images/are-bure.jpg"
 
 // Return structured content for table card
-const firstColumn = (title) => (
-  <>
-    <p className="title is-4">{title || "New Blog Entry"} </p>
-    {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
-      </div> */}
-  </>
-)
+// const firstColumn = (title) => (
+//   <>
+//     <p className="title is-4">{title || "New Blog Entry"} </p>
+//     {/* <div className="card-footer p-2 has-text-centered is-align-self-center">
+//       </div> */}
+//   </>
+// )
 
-const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
+// const secondColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
 
 const IndexPage = ({ pageContext }) => {
 
@@ -86,22 +82,22 @@ const IndexPage = ({ pageContext }) => {
 
   const bio = (
     <div className="container diff">
+      <Link to="/about">
       <ParallelogramHeader
         text="(Brief) Bio"
-        backgroundColor="primary"
-        textColor="black"
-        className="mb-6"
+        className="mb-0"
       />
+      </Link>
       <div
         dangerouslySetInnerHTML={{ __html: data.about.html }}
-        className="pt-6 pr-6 has-text-left has-text-black diff"
+        className="pt-6 pr-6 has-text-left diff"
       >
         {/* <p>{data.about.html}</p> */}
       </div>
       <div className="has-text-left">
         <br></br>
         <Link to="/about">
-          <p class="subtitle is-size-7 has-text-black diff">Read More</p>
+          <p class="subtitle is-size-7 diff">Read More</p>
         </Link>
       </div>
     </div>
@@ -112,12 +108,13 @@ const IndexPage = ({ pageContext }) => {
 
   const works = (
     <div>
+      <Link to="/work">
       <ParallelogramHeader
         text="Selected Works"
-        backgroundColor="primary"
-        textColor="black"
-        className="mb-6"
+       
+        className="mb-0"
       />
+      </Link>
       <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} />
       {/* <div className="lowerPadding"> </div> */}
       {filteredNodes.map((blogentry) => (
@@ -140,12 +137,11 @@ const IndexPage = ({ pageContext }) => {
 
   const garden = (
     <div>
-      <Link>
+      <Link to="/garden">
       <ParallelogramHeader
         text="Garden"
-        backgroundColor="primary"
-        textColor="black"
-        className="mb-6"
+        
+        className="mb-0"
       />
       </Link>
       </div>
@@ -156,7 +152,6 @@ const IndexPage = ({ pageContext }) => {
     <Layout name="Index" crumbs={crumbs}>
       <section>
         <div className="hero is-fullheight-with-navbar">
-          {/* <img src={BG} className="background" /> */}
           <StaticImage
             className="background"
             src="../images/me-film.jpg"

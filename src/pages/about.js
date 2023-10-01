@@ -35,11 +35,11 @@ const AboutPage = ({pageContext}) => {
         <ParallelogramHeader
           text="About"
           backgroundColor="primary"
-          textColor="black"
-          className="mb-6"
+          // textColor="primary"
+          className="mb-0"
         />
         <div
-          className="content"
+          className="content "
           dangerouslySetInnerHTML={{ __html: data.about.html }}
         ></div>
     </Layout>

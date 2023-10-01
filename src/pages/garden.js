@@ -4,27 +4,26 @@ import Layout from "../components/layout";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 import ParallelogramHeader from "../components/parallelogramHeader";
-
-// Return structured content for table card
-const firstColumn = (date) => <p className="subtitle is-6">{date || null}</p>;
-
-const secondColumn = (title) => (
-    <>               
-      <p className="title is-4">{title || "New Blog Entry"} </p>
-      <div className="card-footer p-2 has-text-centered is-align-self-center">
-        Read More
-      </div>
-    </>
-)
-
-const Garden = ({pageContext}) => {
+import { StaticImage } from "gatsby-plugin-image"
 
 
+function gardenTitle(title, subtitle){
+  return (
+    <span>
+      <ParallelogramHeader
+            text={title}
 
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+            className="mb-0 garden-heading"
+            alignment="is-centered"
+          />
+          <p className="subtitle"> {subtitle} </p>
+    </span>
+    
+  )
+}
 
+
+const Garden = () => {
   const data = useStaticQuery(graphql`
   {
     garden: allMarkdownRemark(
@@ -56,45 +55,68 @@ const Garden = ({pageContext}) => {
   }
   `);
 
-    const [filteredNodes, setFilteredNodes] = useState(data.garden.nodes);
-
+    const [filteredNodes, setFilteredNodes] = useState(data.garden.nodes); //causes rerender when changed
     const getFilteredNodes = useCallback((nodes) => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
+    const initiaTitle = "My Digital Garden"
+    const [titleText, setTitleText] = useState(initiaTitle); //causes rerender when changed
 
-    const works = (
-    <div>
-      <ParallelogramHeader
-        text="Garden"
-        backgroundColor="primary"
-        textColor="black"
-        className="mb-6"
-      />
-
-      <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} />
-      {/* <div className="lowerPadding"> </div> */}
-      {filteredNodes.map((blogentry) => (
-        <div
-          className="card-image"
-          key={blogentry.id}
-        >
-          <Link to={blogentry.fields.slug}>
+        
+    const allPlants = (
+      <span> 
+        {/* randomise filteredNodes order */}
+        {filteredNodes.map((plantsentry) => (
+          <Link to={plantsentry.fields.slug}>
             <Plant
-              first={blogentry.frontmatter.title}
-              second={blogentry.frontmatter.date}
+            size={1.4}
+            obj = {plantsentry}
+            callback = {setTitleText}
+            initTitle = {initiaTitle}
             />
-          </Link>
-        </div>
-      )
-      )}
-    </div>
+            </Link>
+        )
+        )}
+
+      </span>
 
   )
 
+  const garden =(
+    // <div>
+    <div className="columns is-multiline is-centered my-auto is-garden">
+      <div className="column is-12 has-text-centered">
+          {gardenTitle(titleText)}  
+        </div>
+
+        <div className="column is-12 has-text-centered">
+          <p className="subtitle mt-0 ">subtitle</p>
+          </div>
+
+        <div className="column is-4 has-text-centered">
+          {allPlants}
+          </div>
+
+      <div className="column is-9 has-text-centered">
+        <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} centre={1} />
+        
+        </div>
+      </div>
+)
+
   return (
     <Layout>
-    {works}
+      <section className="">
+        <div className="hero is-fullheight-with-navbar"> 
+        <StaticImage
+            className="background"
+            src="../images/plants.jpeg"
+          />
+        {garden}
+
+        </div> 
+      </section>
     </Layout>
   );
 };

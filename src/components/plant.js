@@ -1,43 +1,28 @@
-import React from "react";
-
+import React, { useState } from 'react';
 
 // interactive object displaying a digital garden object based on relevance/size
-// hover for text preview
+// hover for text preview in title
 
-function pickPlant(size){
-    // return the right avatar for the right size
-    switch (Math.floor(size)){
-        case 0:
-            return(
-            <p class="subtitle is-size-7 has-text-black">smol</p> 
-            )
-        case 1:
-            return(
-            <p class="subtitle is-size-7 has-text-black">mediom</p> 
-            )
-        case 2:
-            return(
-            <p class="subtitle is-size-7 has-text-black">big</p> 
-            )
-        case 3:
-            return(
-            <p class="subtitle is-size-7 has-text-black">epic</p> 
-            )
-            case 4:
-            return(
-            <p class="subtitle is-size-7 has-text-black">huge</p> 
-            )
-    }
-}
+const plantArray = [".","🌱","🪴","🌲"];
 
+function pickPlant(plantIndex){
+    return plantArray[Math.floor(plantIndex)];
+} 
 
 const Plant = (props) => {
     const size = props.size;
-
-    // const length = Object.keys(props).length;
     return (
-                <p class="subtitle is-size-7 has-text-black">{props.first}</p> 
-
+        // Set Heading From Hover
+        <span class="subtitle is-size-3" 
+        onMouseEnter={() => 
+            props.callback(props.obj.frontmatter.title)
+            }
+        onMouseLeave={() => 
+            props.callback(props.initTitle)
+            }>
+        {/* Render Plant Sprite */}
+        {pickPlant(size)}
+        </span>
     );
 
 }
