@@ -109,11 +109,13 @@ const Garden = () => {
     <Layout>
       <section className="">
         <div className="hero is-fullheight-with-navbar"> 
-        <StaticImage
+        
+        {garden}
+
+        {/* <StaticImage
             className="background"
             src="../images/plants.jpeg"
-          />
-        {garden}
+          /> */}
 
         </div> 
       </section>

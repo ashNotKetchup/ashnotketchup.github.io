@@ -1,13 +1,25 @@
+@use 'src/style/a11y-color.scss';
 
 
 $primary: rgb(random(255), random(255), random(255));
+
 // $light: green;
 $dark: #fa91cc;
 $grey: rgb(167, 167, 167);
 
+// $background: black;
 // $navbar-breakpoint: $tablet;
 
 $background-color: rgb(random(255), random(255), random(255));
+
+$background-color: #000;
+
+// Need to get ally colour working
+// $primary: a11y-color(#c0c, #000);
+// light-or-dark(); says whether or not a colour is light or dark, can use this for mix methods....
+
+
+
 $text: $primary;
 $link: $text;
 
@@ -41,11 +53,13 @@ $family-sans-serif:  'PT Serif',
 // $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 
-
+// h1,h2,h3,h4{
+//     color: pink;
+// }
 
 .is-garden{
     @media screen and (min-width: $desktop) {
-        transform: translate(5%, -25%);
+        transform: translate(5%, -7%);
     }
 }
 
