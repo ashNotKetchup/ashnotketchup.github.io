@@ -7,8 +7,8 @@ const filterData = (nodes, filter) => nodes.filter((node) => !filter ? true : no
 
 // passing arguments to the class tag doesnt work for some reason, 
 // so I'm makinig my own attribute, passing centre? boolean. If true then its centred, otherwise it is left
-const TagSelector = ({tags,nodes,callback,centre}) => {
-    const [selected, setSelected] = useState(false);
+const TagSelector = ({tags,nodes,callback,centre, initialState=false}) => {
+    const [selected, setSelected] = useState(initialState);
 
     const memoFilter = useMemo(() => filterData(nodes,selected), [nodes,selected])
 
@@ -35,11 +35,11 @@ const TagSelector = ({tags,nodes,callback,centre}) => {
     </span>
 
     const buttonList = {}
-    buttonList.left = (<div class={`buttons is-left`}>
+    buttonList.left = (<div class={`buttons is-left mb-0`}>
         {createButtons}
         </div>)
     buttonList.centre = (
-        <div class="buttons is-centered">
+        <div class="buttons is-centered mb-0">
             {createButtons}
         </div>
     )

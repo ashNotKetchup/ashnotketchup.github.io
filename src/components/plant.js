@@ -13,13 +13,31 @@ const Plant = (props) => {
     const size = props.size;
     return (
         // Set Heading From Hover
-        <span class="subtitle is-size-3" 
-        onMouseEnter={() => 
-            props.callback(props.obj.frontmatter.title)
+        <span class="is-size-3" 
+        onMouseEnter={() => {
+            props.callback.title(props.obj.frontmatter.title)
+            if(props.obj.frontmatter.subtitle){
+                props.callback.subtitle(props.obj.frontmatter.subtitle)
             }
-        onMouseLeave={() => 
-            props.callback(props.initTitle)
-            }>
+            else{
+                props.callback.subtitle("\n \n")
+            }
+            
+            return
+        }
+            
+            }
+        onMouseLeave={() => {
+            props.callback.title(props.initTitle)
+            if(props.subinitTitle){
+                props.callback.subtitle(props.subinitTitle)
+            }
+            else{
+                props.callback.subtitle("\n \n")
+            }
+            
+            return
+            }}>
         {/* Render Plant Sprite */}
         {pickPlant(size)}
         </span>

@@ -16,7 +16,7 @@ function gardenTitle(title, subtitle){
             className="mb-0 garden-heading"
             alignment="is-centered"
           />
-          <p className="subtitle"> {subtitle} </p>
+          <p className="subtitle is-size-7"> {subtitle} </p>
     </span>
     
   )
@@ -36,6 +36,7 @@ const Garden = () => {
         }
         frontmatter {
           title
+          subtitle
           tags
           date(formatString: "ddd DD MMM yy")
         }
@@ -60,8 +61,14 @@ const Garden = () => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    const initiaTitle = "My Digital Garden"
+    const initiaTitle = "Welcome to my Digital Garden"
+
     const [titleText, setTitleText] = useState(initiaTitle); //causes rerender when changed
+
+
+
+    const initiaSubtitle = "A space for cultivating ideas in public"
+    const [subtitleText, setSubtitleText] = useState(initiaSubtitle); //causes rerender when changed
 
         
     const allPlants = (
@@ -72,8 +79,9 @@ const Garden = () => {
             <Plant
             size={1.4}
             obj = {plantsentry}
-            callback = {setTitleText}
+            callback = {{title: setTitleText, subtitle: setSubtitleText}}
             initTitle = {initiaTitle}
+            subinitTitle = {initiaSubtitle}
             />
             </Link>
         )
@@ -86,19 +94,19 @@ const Garden = () => {
   const garden =(
     // <div>
     <div className="columns is-multiline is-centered my-auto is-garden">
-      <div className="column is-12 has-text-centered">
-          {gardenTitle(titleText)}  
+      <div className="column is-12 has-text-centered mb-0">
+          {gardenTitle(titleText,subtitleText)}  
         </div>
 
         <div className="column is-12 has-text-centered">
-          <p className="subtitle mt-0 ">subtitle</p>
+          {/* <p className="subtitle mt-0 ">subtitle</p> */}
           </div>
 
         <div className="column is-4 has-text-centered">
           {allPlants}
           </div>
 
-      <div className="column is-9 has-text-centered">
+      <div className="column is-9 has-text-centered mb-0">
         <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} centre={1} />
         
         </div>
@@ -109,11 +117,13 @@ const Garden = () => {
     <Layout>
       <section className="">
         <div className="hero is-fullheight-with-navbar"> 
-        <StaticImage
+        
+        {garden}
+
+        {/* <StaticImage
             className="background"
             src="../images/plants.jpeg"
-          />
-        {garden}
+          /> */}
 
         </div> 
       </section>

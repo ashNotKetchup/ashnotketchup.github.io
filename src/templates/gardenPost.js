@@ -3,15 +3,13 @@ import { graphql} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 
-const GardenPost = ({ data, pageContext }) => {
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+const GardenPost = ({ data }) => {
+
     const {markdownRemark} = data;
     const {frontmatter, fields, html} = markdownRemark;
 
     return (
-      <Layout name="Blog" crumbs={crumbs}>
+      <Layout name="Blog">
           <div className="container">
             <GatsbyImage
               alt="Blogpost header image"
@@ -24,7 +22,7 @@ const GardenPost = ({ data, pageContext }) => {
               by {frontmatter.author} &mdash; {frontmatter.date}
             </h2>
             <div
-              className="content"
+              className="content has-text-primary"
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
           </div>

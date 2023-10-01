@@ -18,7 +18,6 @@ const AboutPage = ({pageContext}) => {
           html
           frontmatter {
             title
-            video
             image {
               childImageSharp {
                 gatsbyImageData(layout: CONSTRAINED, width: 400)
@@ -39,7 +38,7 @@ const AboutPage = ({pageContext}) => {
           className="mb-0"
         />
         <div
-          className="content "
+          className="content mb-0"
           dangerouslySetInnerHTML={{ __html: data.about.html }}
         ></div>
     </Layout>

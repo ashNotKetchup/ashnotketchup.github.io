@@ -1,13 +1,69 @@
+@function colour-difference($foreground, $background) {
+    $r: (
+        max(red($foreground), red($background))) - (min(red($foreground), red($background))
+    );
+$g: (
+    max(green($foreground), green($background))) - (min(green($foreground), green($background))
+);
+$b: (
+    max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background))
+);
+$sum-rgb: $r + $g + $b;
+
+@if $sum-rgb < 500 {
+    @return "false";
+}
+
+@else {
+    @return "true";
+}
+}
+// end
 
 
 $primary: rgb(random(255), random(255), random(255));
+$background-color:  rgb(random(255), random(255), random(255));
+
+// $primary: $background-color;
+@debug "No contrast, changed background to: #{$background-color}";
+
+@while(contrast-checker($primary, $background-color)=="false") {
+    // $color: light($color, 1%);
+    $primary: dark($primary, 1%);
+    $background-color: black;
+    // $background-color: color.scale($background-color, $saturation: -100%);
+    // $color: $background-color;
+    // color.scale(background-color, $saturation: -30%);
+    // @debug "No contrast, changed background to: #{$background-color}";
+    @if(contrast-checker($primary,
+        $background-color)=="true") {
+        $background-color: $background-color;
+
+        // $primary: $background-color;
+        // $background-color: color.scale(background-color, $saturation: -30%);
+    }
+}
+
+// $background-color: $color;
+
+// $primary: hsv(random(255), random(255), random(255));
+
 // $light: green;
 $dark: #fa91cc;
 $grey: rgb(167, 167, 167);
 
+
+
+// $background: black;
 // $navbar-breakpoint: $tablet;
 
-$background-color: rgb(random(255), random(255), random(255));
+// $background-color: #000;
+
+// Need to get ally colour working
+// $primary: a11y-color(#c0c, #000);
+// light-or-dark(); says whether or not a colour is light or dark, can use this for mix methods....
+
+
 $text: $primary;
 $link: $text;
 
@@ -38,20 +94,27 @@ $family-sans-serif:  'PT Serif',
 
  $font-family: 'Cormorant Garamond',
  serif;
-// $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
+ 
+$family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 
+// h1,h2,h3,h4{
+//     color: pink;
+// }
 
+// .has-text-weight-bold{
+//     font-family: 'Cormorant Garamond'
+// }
 
 .is-garden{
     @media screen and (min-width: $desktop) {
-        transform: translate(5%, -25%);
+        transform: translate(5%, -7%);
     }
 }
 
-.garden-heading{
-    font-family: 'Cormorant Garamond'
-}
+// .garden-heading{
+//     font-family: 'Cormorant Garamond'
+// }
 
 
 html,
