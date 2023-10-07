@@ -21,49 +21,34 @@ $sum-rgb: $r + $g + $b;
 // end
 
 
-$primary: rgb(random(255), random(255), random(255));
-$background-color:  rgb(random(255), random(255), random(255));
+$primary: rgb(111,220,151);
+$background-color:  rgb(252, 250, 250);
+
 
 // $primary: $background-color;
-@debug "No contrast, changed background to: #{$background-color}";
+// @debug "No contrast, changed background to: #{$background-color}";
 
-@while(contrast-checker($primary, $background-color)=="false") {
-    // $color: light($color, 1%);
-    $primary: dark($primary, 1%);
-    $background-color: black;
-    // $background-color: color.scale($background-color, $saturation: -100%);
-    // $color: $background-color;
-    // color.scale(background-color, $saturation: -30%);
-    // @debug "No contrast, changed background to: #{$background-color}";
-    @if(contrast-checker($primary,
-        $background-color)=="true") {
-        $background-color: $background-color;
+// @while(contrast-checker($primary, $background-color)=="false") {
+//     // $color: light($color, 1%);
+//     // $primary: dark($primary, 1%);
+//     $background-color: color.scale(background-color, $saturation: -30%);
+//     // $background-color: color.scale($background-color, $saturation: -100%);
+//     // $color: $background-color;
+//     // color.scale(background-color, $saturation: -30%);
+//     // @debug "No contrast, changed background to: #{$background-color}";
+//     @if(contrast-checker($primary,
+//         $background-color)=="true") {
+//         $background-color: $background-color;
 
-        // $primary: $background-color;
-        // $background-color: color.scale(background-color, $saturation: -30%);
-    }
-}
+//         // $primary: $background-color;
+//         // $background-color: color.scale(background-color, $saturation: -30%);
+//     }
+// }
 
 // $background-color: $color;
 
-// $primary: hsv(random(255), random(255), random(255));
 
-// $light: green;
-$dark: #fa91cc;
-$grey: rgb(167, 167, 167);
-
-
-
-// $background: black;
-// $navbar-breakpoint: $tablet;
-
-// $background-color: #000;
-
-// Need to get ally colour working
-// $primary: a11y-color(#c0c, #000);
-// light-or-dark(); says whether or not a colour is light or dark, can use this for mix methods....
-
-
+$background: black;
 $text: $primary;
 $link: $text;
 
@@ -98,23 +83,13 @@ $family-sans-serif:  'PT Serif',
 $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 
-// h1,h2,h3,h4{
-//     color: pink;
-// }
-
-// .has-text-weight-bold{
-//     font-family: 'Cormorant Garamond'
-// }
-
 .is-garden{
     @media screen and (min-width: $desktop) {
         transform: translate(5%, -7%);
     }
 }
 
-// .garden-heading{
-//     font-family: 'Cormorant Garamond'
-// }
+
 
 
 html,

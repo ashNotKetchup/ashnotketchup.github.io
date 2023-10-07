@@ -10,12 +10,12 @@ const GardenPost = ({ data }) => {
 
     return (
       <Layout name="Blog">
-          <div className="container">
+          {/* <div className="container">
             <GatsbyImage
               alt="Blogpost header image"
               image={frontmatter.image.childImageSharp.gatsbyImageData}
             />
-          </div>
+          </div> */}
           <div className="container has-text-primary">
             <h1 className="title has-text-primary">{frontmatter.title}</h1>
             <h2 className="subtitle">

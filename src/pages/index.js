@@ -3,7 +3,7 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import TableCard from "../components/tableCard";
 import TagSelector from "../components/tagSelector";
-import ParallelogramHeader from "../components/parallelogramHeader";
+// import ParallelogramHeader from "../components/parallelogramHeader";
 import { StaticImage } from "gatsby-plugin-image"
 
 
@@ -91,7 +91,7 @@ const IndexPage = ({ pageContext }) => {
       {/* </Link> */}
       <div
         dangerouslySetInnerHTML={{ __html: data.about.html }}
-        className="is-size-5 is-bold pt-6 pr-6 has-text-left diff mb-0 mt-0"
+        className="is-size-1 is-bold pt-6 pr-6 has-text-left diff mb-0 mt-0"
       >
         {/* <p>{data.about.html}</p> */}
       </div>
@@ -112,18 +112,17 @@ const IndexPage = ({ pageContext }) => {
 
   const works = (
     <div>
-      <Link to="/work">
+      {/* <Link to="/work">
       <ParallelogramHeader
         text="Work"
-       
         className="mb-0"
       />
-      </Link>
-      <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} initialState="awards" />
+      </Link> */}
+      
       {/* <div className="lowerPadding"> </div> */}
       {filteredNodes.map((blogentry) => (
         <div
-          className="card-image is-size-7"
+          className="card-image is-size-2"
           key={blogentry.id}
         >
           <Link to={blogentry.fields.slug}>
@@ -132,21 +131,25 @@ const IndexPage = ({ pageContext }) => {
               second={blogentry.frontmatter.date}
             />
           </Link>
+         
         </div>
+        
       )
       )}
+       <TagSelector tags={data.allTags} nodes={data.work.nodes} data={data} callback={getFilteredNodes} initialState="selected" />
     </div>
 
   )
 
   const garden = (
     <div>
-      <Link to="/garden">
-      <ParallelogramHeader
+      <Link to="/garden" className="mb-0 is-size-1 has-text-right-desktop">
+        Garden
+      {/* <ParallelogramHeader
         text="Garden"
         
-        className="mb-0 is-size-1"
-      />
+        className="mb-0 is-size-1 is-size-1"
+      /> */}
       </Link>
       </div>
     // <p className="text has-text-right"></p>
@@ -160,17 +163,18 @@ const IndexPage = ({ pageContext }) => {
             className="background"
             src="../images/me-film.jpg"
           />
+          {/* todo: Make it so that scrolls page through each of these on mobile.
+          On desktop make them fill their thirds */}
           <div className="columns is-multiline is-centre mt-auto">
-            <div className="column is-5-desktop is-full-tablet mt-auto reverse-row-order" >
+            <div className="column is-4-desktop is-full-tablet mt-auto">
+              {bio}
+            </div>
+            <div className="column is-1-desktop is-full-tablet mt-auto"></div>
+            <div className="column is-5-desktop is-full-tablet mt-auto" >
               <></>
               {works}
             </div>
-            <div className="column is right is-6-desktop is-full-tablet mt-auto">
-              {/* want to make this invert based on image underneath */}
-              {bio}
-            </div>
-            {/* want to move this to bottom right */}
-            <div className="column is-right is-1 is-full-tablet mt-auto has-text-right mx-0">
+            <div className="column is-2-desktop is-full-tablet mt-auto has-text-right-desktop">
               {garden}
             </div>
           </div>

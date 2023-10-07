@@ -3,7 +3,9 @@ title: "Figural Bodies"
 author: "Ash"
 date: "2023-10-01"
 image: "./placeholder.png"
-tags: ["conferences", "Dance", "Interactive and Geneerative", "Composition"]
+tags: ["sound", "selected", "research"]
+# use tags for sorting
+ideas: ["conferences", "Dance", "Interactive and Generative", "Composition", "selected"]
 ---
 
 SXSW Documentation

@@ -2,7 +2,7 @@
 title: "Machinic Gaze"
 author: "Ash"
 date: "2023-10-01"
-tags: ["Composition", "Interactive and Generative"]
+tags: ["sound"]
 image: "./placeholder.png"
 ---
 

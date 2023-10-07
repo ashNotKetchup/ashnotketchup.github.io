@@ -2,7 +2,7 @@
 title: "Harmonic Routes"
 author: "Ash"
 date: "2023-10-01"
-tags: ["Composition", "Interactive and Generative"]
+tags: ["sound", "selected"]
 image: "./placeholder.png"
 ---
 
