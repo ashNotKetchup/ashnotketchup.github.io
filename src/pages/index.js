@@ -36,13 +36,8 @@ const IndexPage = ({ pageContext }) => {
           html
           frontmatter {
             title
-            image {
-              childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, width: 400)
-              }
             }
           }
-        }
     work: allMarkdownRemark(
     filter: {fields: {category: {eq: "work"}}}
     sort: {frontmatter: {date: DESC}}

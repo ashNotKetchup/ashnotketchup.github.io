@@ -42,11 +42,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "dddd, D MMMM yyyy")
         author
-        image {
-          childImageSharp {
-            gatsbyImageData(layout: CONSTRAINED)
-          }
-        }
+        
       }
     }
   }

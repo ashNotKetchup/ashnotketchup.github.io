@@ -18,11 +18,6 @@ const AboutPage = ({pageContext}) => {
           html
           frontmatter {
             title
-            image {
-              childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, width: 400)
-              }
-            }
           }
         }
       }

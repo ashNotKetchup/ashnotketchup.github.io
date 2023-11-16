@@ -36,11 +36,6 @@ const Work = ({pageContext}) => {
           frontmatter {
             title
 
-            image {
-              childImageSharp {
-                gatsbyImageData(layout: CONSTRAINED, width: 400)
-              }
-            }
           }
         }
     work: allMarkdownRemark(
