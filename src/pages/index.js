@@ -126,18 +126,14 @@ const IndexPage = ({ pageContext }) => {
     //loop through theme, then loop through each entry in theme
     themes.map((theme)=> 
       (
-        <div className="">
+        <div className="blog mb-5">
           <Link to="/work">
             <h1 className="is-uppercase bigTitle">{theme.name}</h1>
             </Link>
         
-        {/* <div className="lowerPadding"> </div> */}
+        {/* <div className="negativePadding"> </div> */}
           {theme.data.map((blogentry) => 
             (
-            // <div
-            // className="card-image is-size-2"
-            // key={blogentry.id}
-            // >
               <Link to={blogentry.fields.slug} key={blogentry.id} className="listedEntry">
                 {/* Later, would be cool to add some small images next to each title, square thumbnails same height as text */}
                 <TableCard
@@ -146,7 +142,6 @@ const IndexPage = ({ pageContext }) => {
                 />
                 {/* {blogentry.frontmatter.title} */}
                 </Link>
-              // </div>  
               )
             )
             }

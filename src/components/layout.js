@@ -16,22 +16,15 @@ const socialMediaItems = [
   },
 ];
 
-// function topLeft(hasTopLeft){
-//   if (hasTopLeft) {
-//     return ;
-//   }
-//   return;
-
-// }
-
 
 const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="column is-3 has-text-centered-desktop mt-6 pt-6 " role="navigation" aria-label="main navigation">
+      <nav className="column is-3 has-text-centered-desktop" role="navigation" aria-label="main navigation">
         <Link to="/" className="is-uppercase logo">
             Ashley Noel-Hirst
+            {/* move this a lil left */}
           </Link>
           {/* </div> */}
 
@@ -50,9 +43,9 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
     return (
       <>
-      <body className="columns">
+      <body className="columns is-desktop">
           {navBar}
-          <main className="column is-6 ">
+          <main className="pageContent column is-6">
             {/* need a negative margin by like 3% */}
             {children}
           </main>
