@@ -27,22 +27,16 @@ const IndexPage = ({ pageContext }) => {
     breadcrumb: { crumbs },
   } = pageContext
 
+
+  // I want to query specific folders. 
+  // Then loop through their subfolders looking for md and image files. 
+  // Return the first of each.
+
   const data = useStaticQuery(graphql`
   {
-
-    about: markdownRemark(
-          fields: { category: { eq: "about" } }
-          fileAbsolutePath: { regex: "/about-short.md/" }
-        ) {
-          html
-          frontmatter {
-            title
-            }
-          }
-  
-          sound: allMarkdownRemark(
-  filter: {fields: {category: {eq: "sound"}}}
-  sort: {frontmatter: {date: DESC}}
+  sound: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(sound)/"  }}
+    sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
       fields {
@@ -50,6 +44,7 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
+        image
         tags
         date(formatString: "ddd DD MMM yy")
       }
@@ -58,8 +53,8 @@ const IndexPage = ({ pageContext }) => {
   }
 
   design: allMarkdownRemark(
-  filter: {fields: {category: {eq: "design"}}}
-  sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {regex: "/(design)/"  }}
+    sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
       fields {
@@ -67,6 +62,7 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
+        image
         tags
         date(formatString: "ddd DD MMM yy")
       }
@@ -75,8 +71,8 @@ const IndexPage = ({ pageContext }) => {
   }
 
   research: allMarkdownRemark(
-  filter: {fields: {category: {eq: "research"}}}
-  sort: {frontmatter: {date: DESC}}
+    filter: {fileAbsolutePath: {regex: "/(research)/"  }}
+    sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
       fields {
@@ -84,42 +80,33 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
+        image
         tags
         date(formatString: "ddd DD MMM yy")
       }
       id
     }
   }
-
-    allTags: allMarkdownRemark(
-          limit: 2000
-          filter: {fields: {category: {eq: "work"}}}
-          ) {
-          group(field: { frontmatter: { tags: SELECT }}) {
-            fieldValue
-            totalCount
-          }
-        }
-  }
+}
   `);
 
 
   const themes = [{"name": 'Sound',"data": data.sound.nodes}, , {"name": 'Design',"data": data.design.nodes}, {"name": 'Research',"data": data.research.nodes}]
 
-  const bio = (
-    <div className="container diff">
+  // const bio = (
+  //   <div className="container diff">
       
-      <Link to="/about">
-      <div
-        dangerouslySetInnerHTML={{ __html: data.about.html }}
-        className="is-size-1 is-bold pt-6 pr-6 has-text-left diff mb-0 mt-0"
-      >
+  //     <Link to="/about">
+  //     <div
+  //       dangerouslySetInnerHTML={{ __html: data.about.html }}
+  //       className="is-size-1 is-bold pt-6 pr-6 has-text-left diff mb-0 mt-0"
+  //     >
 
-      </div>
-      </Link>
-    </div>
+  //     </div>
+  //     </Link>
+  //   </div>
 
-  );
+  // );
 
   const works = (
 
