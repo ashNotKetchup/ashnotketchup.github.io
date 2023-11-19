@@ -26,6 +26,16 @@ module.exports = {
       __key: "images",
     },
     {
+      // line below changed
+      resolve: `gatsby-plugin-mdx`, 
+      options: {
+        // line below changed
+        gatsbyRemarkPlugins: [ 
+          `gatsby-remark-smartypants`,
+        ],
+      }
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
@@ -70,13 +80,13 @@ module.exports = {
     },
     "gatsby-remark-responsive-iframe", //Optional: Must be loaded after gatsby-remark-embed-video
     "gatsby-plugin-twitter",
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `documents`,
-        path: `${__dirname}/src/content/publications`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `documents`,
+    //     path: `${__dirname}/src/content/publications`,
+    //   },
+    // },
     'gatsby-transformer-bibtex',
   ],
 };

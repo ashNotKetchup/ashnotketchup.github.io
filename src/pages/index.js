@@ -124,8 +124,9 @@ const IndexPage = ({ pageContext }) => {
               <Link to={blogentry.fields.slug} key={blogentry.id} className="listedEntry">
                 {/* Later, would be cool to add some small images next to each title, square thumbnails same height as text */}
                 <TableCard
-                  first={blogentry.frontmatter.title}
-                  second={blogentry.frontmatter.date}
+                  title={blogentry.frontmatter.title}
+                  date={blogentry.frontmatter.date}
+                  image={blogentry.frontmatter.image}
                 />
                 {/* {blogentry.frontmatter.title} */}
                 </Link>

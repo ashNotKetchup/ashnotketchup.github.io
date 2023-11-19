@@ -39,5 +39,8 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "sass": "^1.58.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-mdx": "^2.2.0"
   }
 }
