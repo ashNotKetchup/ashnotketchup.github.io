@@ -1,6 +1,7 @@
 const { graphql } = require("gatsby");
 const path = require("path");
-const _ = require("lodash")
+const _ = require("lodash");
+// const { default: ThemePage } = require("./src/components/themePage");
 
 // this is on compile, mybe i could write other stuff (like colour changes) in here?
 
@@ -119,6 +120,16 @@ exports.createPages = async ({ graphql, actions }) => {
         },
         });
     });
+
+
+    //manually create filter pages
+    // createPage({
+    //     path: "/sound",
+    //     component: ThemePage,
+    //     context: {
+    //         slug: "sound",
+    //     },
+    //     });
 
 }
 

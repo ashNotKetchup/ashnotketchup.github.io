@@ -12,22 +12,11 @@ const WorkPost = ({ data, pageContext }) => {
 
     return (
       <Layout name="Blog" crumbs={crumbs}>
-          {/* <div className="container">
-            <GatsbyImage
-              alt="Blogpost header image"
-              image={frontmatter.image.childImageSharp.gatsbyImageData}
-            />
-          </div> */}
-          <div className="container">
-            <h1 className="title has-text-primary">{frontmatter.title}</h1>
-            {/* <h2 className="subtitle">
-              by {frontmatter.author} &mdash; {frontmatter.date}
-            </h2> */}
+            <h1 className="is-uppercase bigTitle smaller">{frontmatter.title}</h1>
             <div
               className="content"
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
-          </div>
       </Layout>
     );
 }
