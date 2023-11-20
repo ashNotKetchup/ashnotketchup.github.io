@@ -19,7 +19,12 @@ const Sound = ({ pageContext }) => {
       }
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            gatsbyImageData(height: 200)
+          }
+          id
+        }
         tags
         date(formatString: "ddd DD MMM yy")
       }

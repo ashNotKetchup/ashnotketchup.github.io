@@ -17,6 +17,7 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -24,16 +25,6 @@ module.exports = {
         path: "./src/images/",
       },
       __key: "images",
-    },
-    {
-      // line below changed
-      resolve: `gatsby-plugin-mdx`, 
-      options: {
-        // line below changed
-        gatsbyRemarkPlugins: [ 
-          `gatsby-remark-smartypants`,
-        ],
-      }
     },
     {
       resolve: "gatsby-source-filesystem",
@@ -50,6 +41,16 @@ module.exports = {
         path: "./src/content",
       },
     },
+    // {
+    //   // line below changed
+    //   resolve: `gatsby-plugin-mdx`, 
+    //   options: {
+    //     // line below changed
+    //     gatsbyRemarkPlugins: [ 
+    //       `gatsby-remark-smartypants`,
+    //     ],
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
