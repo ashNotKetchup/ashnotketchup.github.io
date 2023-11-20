@@ -4,10 +4,10 @@
   </a>
 </p>
 <h1 align="center">
-  Gatsby Minimal Starter
+
 </h1>
 
-## Developing c4dm site:
+## Developing site:
 
 1 - Clone repo (you'll need git or something for this)
 2 - Install Node (you can use homebrew for this if you like, more info covered in the following: https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/ )
