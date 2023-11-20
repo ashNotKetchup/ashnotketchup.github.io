@@ -33,6 +33,11 @@ $family-sans-serif:  'PT Serif',
  
 $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
+// issue, markdown headings not matching colour
+h2{
+    color: pink;
+    $font-size: 20.2em;
+}
 
 .is-garden{
     @media screen and (min-width: $desktop) {

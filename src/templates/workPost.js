@@ -10,7 +10,7 @@ const WorkPost = ({ data, pageContext }) => {
     const {frontmatter, fields, html} = markdownRemark;
 
     return (
-      <Layout name="Blog" crumbs={crumbs}>
+      <Layout>
             <h1 className="is-uppercase bigTitle smaller">{frontmatter.title}</h1>
             <div
               className="content"

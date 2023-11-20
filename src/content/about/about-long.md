@@ -1,10 +1,10 @@
 ---
-title: "About the centre"
-image: "./placeholder.png"
+title: "Info"
+image: "./me-film.JPG"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed ex erat. Ut accumsan mi eget est pulvinar consectetur. Nullam in euismod diam. Ut cursus magna quis imperdiet faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor tellus sed sapien malesuada tristique. Phasellus ornare sem lectus, et pharetra magna sollicitudin eu. Vivamus molestie augue eu interdum fermentum. Nulla ut mollis ligula. Morbi consectetur tortor vitae diam luctus, quis cursus mauris congue. Etiam non sem ut elit iaculis euismod. Mauris lobortis arcu sit amet odio finibus molestie. Nunc efficitur justo sit amet mollis tempus. Proin ac nisl convallis, sollicitudin nulla ut, pellentesque massa. Maecenas massa diam, faucibus volutpat tempus vel, dignissim vel lorem. Nulla posuere, justo a porta egestas, ligula velit cursus magna, sed imperdiet ante elit sit amet massa.
-
-Morbi dignissim turpis id aliquet tristique. Etiam accumsan tempor est, vitae sollicitudin erat tempor nec. Nullam feugiat lacus ultrices augue lacinia, eu ornare sem lobortis. Ut scelerisque eget sapien a rhoncus. Pellentesque augue erat, euismod quis finibus ut, maximus id urna. Proin egestas mi a ligula lobortis, eget cursus nisl ultrices. Sed tempus eget urna ut imperdiet. Nam ac aliquam enim. Nulla mattis ultrices erat, vel semper dui suscipit et. Cras dapibus pretium pellentesque. In massa est, malesuada faucibus erat in, condimentum rutrum velit. Phasellus volutpat consectetur cursus.
-
-Proin facilisis neque nec lacus elementum, vel dapibus ipsum luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent enim turpis, auctor sed ligula a, ultrices ultrices ipsum. Mauris tempus justo finibus, ullamcorper ipsum id, congue mauris. Etiam nunc ante, viverra id molestie et, elementum sit amet ipsum. Aenean vulputate aliquam tincidunt. Nam a risus magna. Pellentesque ut vehicula enim. Donec sit amet elit nunc. Aliquam imperdiet urna eu luctus lobortis. Fusce convallis fermentum velit eu volutpat.
+Hi, I’m Ash – an artist, researcher and composer.
+My work explores human-computer interaction, knowledge representation and personal data science (mainly for the arts).
+My primary occupation is a PhD in Artificial Intelligence and Music, where I am investigating the implications of explainable AI for human-computer music generation.
+If you would like to collaborate, or have any questions about my work, feel free to contact me at:
+a.l.noel-hirst[at]qmul[dot]ac[dot]uk
