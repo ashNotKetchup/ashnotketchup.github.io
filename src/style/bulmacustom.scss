@@ -65,6 +65,7 @@ $link: $text;
 @import url('https://fonts.googleapis.com/css?family=Karla:400,700|Rubik:400,500,700');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.cdnfonts.com/css/hakuna-sans');
 
 // Set your brand colors
 $purple: #8A4D76;
@@ -119,13 +120,131 @@ body {
 // }
 
 
+.listedEntry{
+
+    $font-size: 2.2em;
+    font-size: $font-size;
+    
+
+    // might need to readjust
+    line-height: 0.8;
+
+    font-weight: 500;
+    font-stretch: semi-condensed;
+
+    img{
+        border-radius: 10%;
+        height: calc($font-size/2.6) !important;
+        
+        }
+
+                .placeholderListImage {
+                    width: calc($font-size/2.5) !important;
+                }
+
+}
+
+.listImage{
+    line-height: 0.7;
+}
+
+// maybe pin this on desktop
+nav{
+    margin-top: 100px;
+    @media only screen and (max-width : $desktop) {
+            margin-top: 0px;
+        }
+}
+
+.pageContent{
+    margin-top: 80px;
+    @media only screen and (max-width : $desktop) {
+            margin-top: 0px;
+        }
+}
+
+.logo{
+    font-size: 1em;
+    font-weight: bold;
+    
+    // font-stretch: semi-expanded;
+}
+
+
+.bigTitle {
+    // mix-blend-mode: screen;
+    font-size: 10em;
+    font-family: 'Hakuna Sans', sans-serif;
+    // margin-bottom: 0;
+    line-height: 0.8;
+    color: transparent;
+    text-shadow: 0 0 15px $primary;
+
+    
+        
+    // vertical-align: text-top;
+    // filter: blur(2px);
+}
+
+.smaller {
+    font-size: 7em;
+    text-shadow: 0 0 7px $primary;
+}
+
+
+
+// /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+// @media screen and (min-width: 601px) {
+    
+// }
+
+@media only screen and (max-width : $tablet) {
+    .bigTitle {
+            font-size: 7em;
+            text-shadow: 0 0 7px $primary;
+                }
+
+        .smaller {
+            font-size: 5em;
+            text-shadow: 0 0 6px $primary;
+        }
+        
+    .listedEntry{
+        $font-size: 2em;
+        font-size: $font-size;
+        font-stretch: normal;
+        img {
+                border-radius: 10%;
+                height: calc($font-size/2.6) !important;
+                // height: $font-size/2.5 !important;
+            }
+        
+    }
+}
+
+// /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+// @media screen and (max-width: 600px) {
+//     div.example {
+//         font-size: 30px;
+//     }
+// }
+
+// @supports (text-shadow: 0 0 15px $primary){} not needed since shadow is very supported
+    
+
+
 .background {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
     z-index: 0 !important;
-    mix-blend-mode: screen;
+        // mix-blend-mode: screen;
+
+
+
+    // position: absolute !important;
+    // top: 50% !important;
+    // left: 50% !important;
+    // transform: translate(-50%, -50%) !important;
+    
+
     // .garden{
     //     mix-blend-mode: hard-light;
     //     z-index: 3 !important;
@@ -162,7 +281,7 @@ body {
 
 // Make sure that page takes up whole vertical space
 #gatsby-focus-wrapper {
-    padding-top: 3.5rem; // Add padding to make sure navbar does not cover content
+    // padding-top: 3.5rem; // Add padding to make sure navbar does not cover content
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -192,43 +311,43 @@ main.container {
     height: 128px;
 }
 
-.navbar {
-    // Add margin to logos
-    .gatsby-image-wrapper {
-        margin: 10px;
-    }
+// .navbar {
+//     // Add margin to logos
+//     .gatsby-image-wrapper {
+//         margin: 10px;
+//     }
 
-    // Divide navbar items with a slash
-    .navitem-divider {
-        @extend .navbar-item;
-        pointer-events: none;
-        margin: 0;
-        padding: 0;
-        &::after {
-            display: block;
-            content: "/";   
-        }
-        // Last item should not have a slash
-        &:last-child::after {
-            display: none;
-        }
-        // Hide navbar divider on mobile 
-        @media (max-width: $desktop) {  
-            display: none;    
-        }
-    }
+//     // Divide navbar items with a slash
+//     .navitem-divider {
+//         @extend .navbar-item;
+//         pointer-events: none;
+//         margin: 0;
+//         padding: 0;
+//         &::after {
+//             display: block;
+//             content: "/";   
+//         }
+//         // Last item should not have a slash
+//         &:last-child::after {
+//             display: none;
+//         }
+//         // Hide navbar divider on mobile 
+//         @media (max-width: $desktop) {  
+//             display: none;    
+//         }
+//     }
     
-    // Colours for mobile menu
-    .navbar-end {
-        .navbar-item {
-            color: $light;
-            &:hover {
-                background-color: $light;
-                color: $primary;
-            }
-        }
-    }
-}
+//     // Colours for mobile menu
+//     .navbar-end {
+//         .navbar-item {
+//             color: $light;
+//             &:hover {
+//                 background-color: $light;
+//                 color: $primary;
+//             }
+//         }
+//     }
+// }
 
 // Make sure that the white gap between navbar and hero is never visible (even when scrolling up)
 section.hero::before {
@@ -266,6 +385,8 @@ section.hero::before {
 .section {
     padding: 3rem 3rem 3rem 3em;
 }
+
+
 
 .secondary {
     @extend .section;

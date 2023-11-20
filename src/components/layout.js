@@ -16,46 +16,40 @@ const socialMediaItems = [
   },
 ];
 
-// function topLeft(hasTopLeft){
-//   if (hasTopLeft) {
-//     return ;
-//   }
-//   return;
-
-// }
-
 
 const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="navbar is-background-color is-fixed-top" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-        <Link to="/">
-            <p className="is-size-3-desktop is-size-3-tablet mb-0 is-size-4-mobile has-text-primary is-family-sans-serif">
+      <nav className="column is-3 has-text-centered-desktop" role="navigation" aria-label="main navigation">
+        <Link to="/" className="is-uppercase logo">
             Ashley Noel-Hirst
-            </p>
+            {/* move this a lil left */}
           </Link>
-        </div>
-        <div class="navbar-end">
-            {navItems.map((item) => (
-              <React.Fragment key={`navbar-unit-${item.name}`}>
-                <Link className="my-auto mr-2 has-text-primary is-size-5" to={item.link}>
-                  {item.name}
-                </Link>
-                {/* <span className="navitem-divider"></span> */}
-              </React.Fragment>
-            ))}
-          </div>
+          {/* </div> */}
+
+        {/* <div class="navbar-end"> */}
+            {/* {navItems.map((item) => ( */}
+              {/* // <React.Fragment key={`navbar-unit-${item.name}`}> */}
+              {/* //   <Link className="my-auto mr-2 has-text-primary is-size-5" to={item.link}> */}
+              {/* //     {item.name} */}
+              {/* //   </Link> */}
+              {/* <span className="navitem-divider"></span> */}
+              {/* // </React.Fragment> */}
+            {/* // ))} */}
+          {/* </div> */}
       </nav>
     );
 
     return (
       <>
+      <body className="columns is-desktop">
           {navBar}
-          <main className="container mx-0 is-fullhd">
+          <main className="pageContent column is-6">
+            {/* need a negative margin by like 3% */}
             {children}
           </main>
+          </body>
       </>
     );
 }

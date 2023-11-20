@@ -1,16 +1,34 @@
 import React from "react";
-
-
-
+import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 
 const TableCard = (props) => {
-    // const length = Object.keys(props).length;
-    const textSize = props.textSize;
+    // const textSize = props.textSize;
+    const image = getImage(props.image)
+    const imageAlt = props.alt
+
     return (
-                <p class="">{props.first}</p> 
+        <span className="listedEntry">
+                {image ? 
+                    (
+                    <GatsbyImage 
+                        className="listImage"
+                        alt={imageAlt} 
+                        image={image} />
+                        ) 
+                    : 
+                    (
 
-    );
-
+                    <StaticImage
+                        className="placeholderListImage"
+                        alt="A coloured square"
+                        src="../images/me-film.jpg"
+                        />
+                        )
+                    }
+                {/* </figure> */}
+            {props.title}
+            </span> 
+        );
 }
 
 export default TableCard;

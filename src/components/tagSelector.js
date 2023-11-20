@@ -3,8 +3,6 @@ import {startCase, camelCase} from 'lodash';
 
 const filterData = (nodes, filter) => nodes.filter((node) => !filter ? true : node.frontmatter?.tags?.includes(filter) || node.frontmatter?.role?.includes(filter) || node.year?.includes(filter));
 
-
-
 // passing arguments to the class tag doesnt work for some reason, 
 // so I'm makinig my own attribute, passing centre? boolean. If true then its centred, otherwise it is left
 const TagSelector = ({tags,nodes,callback,centre, initialState=false}) => {

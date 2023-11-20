@@ -24,3 +24,7 @@ https://www.gatsbyjs.com/docs/how-to/previews-deploys-hosting/how-gatsby-works-w
 Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
 
 [<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+
+
+# New notes:
+To add new pages with markdown, add them to the gatsby node query, as well as the appropriate folder. Then pick a template which they will load based off, and update that route in the bottom of the gatsby node

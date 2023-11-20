@@ -1,7 +1,9 @@
 const { graphql } = require("gatsby");
 const path = require("path");
-const _ = require("lodash")
+const _ = require("lodash");
+// const { default: ThemePage } = require("./src/components/themePage");
 
+// this is on compile, mybe i could write other stuff (like colour changes) in here?
 
 exports.onCreateNode = async ({ node, actions }) => {
     const { createNodeField } = actions
@@ -35,8 +37,9 @@ exports.createPages = async ({ graphql, actions }) => {
     const gardenPostTemplate = path.resolve("./src/templates/gardenPost.js");
 
     const result = await graphql(`
+        
         {
-            work: allMarkdownRemark ( filter: {fields: {category: {eq: "work"}}})
+            sound: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(sound)/"  }})
             {   
                 nodes {
                     fields {
@@ -54,7 +57,16 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
 
-            people: allMarkdownRemark ( filter: {fields: {category: {eq: "people"}}})
+            design: allMarkdownRemark ( filter: {fileAbsolutePath: {regex: "/(design)/"  }})
+            {   
+                nodes {
+                    fields {
+                        slug
+                    }
+                }
+            }
+          
+          research: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(research)/"  }})
             {   
                 nodes {
                     fields {
@@ -68,7 +80,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
     // Create work pages 
-    result.data.work.nodes.forEach(node => {
+    result.data.sound.nodes.forEach(node => {
         createPage({
             path: node.fields.slug,
             component: workPostTemplate,
@@ -78,6 +90,25 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
+    result.data.design.nodes.forEach(node => {
+        createPage({
+            path: node.fields.slug,
+            component: workPostTemplate,
+            context: {
+                slug: node.fields.slug,
+            },
+        })
+    })
+
+    result.data.research.nodes.forEach(node => {
+        createPage({
+            path: node.fields.slug,
+            component: workPostTemplate,
+            context: {
+                slug: node.fields.slug,
+            },
+        })
+    })
 
     // Create garden pages
     result.data.garden.nodes.forEach((node) => {
@@ -89,6 +120,16 @@ exports.createPages = async ({ graphql, actions }) => {
         },
         });
     });
+
+
+    //manually create filter pages
+    // createPage({
+    //     path: "/sound",
+    //     component: ThemePage,
+    //     context: {
+    //         slug: "sound",
+    //     },
+    //     });
 
 }
 
