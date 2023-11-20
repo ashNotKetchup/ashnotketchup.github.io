@@ -21,7 +21,11 @@ const Sound = ({ pageContext }) => {
         title
         image {
           childImageSharp {
-            gatsbyImageData(height: 200)
+            gatsbyImageData(
+              height: 200
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              )
           }
           id
         }

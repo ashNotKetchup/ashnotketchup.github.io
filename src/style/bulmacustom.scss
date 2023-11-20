@@ -122,10 +122,17 @@ body {
 
 .listedEntry{
     font-size: 2.2em;
-    line-height: 0.7;
+
+    // might need to readjust
+    line-height: 0.8;
+
     font-weight: 500;
     font-stretch: semi-condensed;
 
+}
+
+.listImage{
+    line-height: 0.7;
 }
 
 // maybe pin this on desktop
@@ -206,12 +213,17 @@ nav{
 
 
 .background {
-    position: absolute !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
     z-index: 0 !important;
-    mix-blend-mode: screen;
+        // mix-blend-mode: screen;
+
+
+
+    // position: absolute !important;
+    // top: 50% !important;
+    // left: 50% !important;
+    // transform: translate(-50%, -50%) !important;
+    
+
     // .garden{
     //     mix-blend-mode: hard-light;
     //     z-index: 3 !important;

@@ -30,7 +30,11 @@ const IndexPage = ({ pageContext }) => {
         title
         image {
           childImageSharp {
-            gatsbyImageData(height: 200)
+            gatsbyImageData(
+              height: 35
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              )
           }
           id
         }
@@ -53,7 +57,11 @@ const IndexPage = ({ pageContext }) => {
         title
         image {
           childImageSharp {
-            gatsbyImageData(height: 200)
+            gatsbyImageData(
+              height: 35
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              )
           }
           id
         }
@@ -76,7 +84,11 @@ const IndexPage = ({ pageContext }) => {
         title
         image {
           childImageSharp {
-            gatsbyImageData(height: 200)
+            gatsbyImageData(
+              height: 35
+              placeholder: BLURRED
+              formats: [AUTO, WEBP, AVIF]
+              )
           }
           id
         }
