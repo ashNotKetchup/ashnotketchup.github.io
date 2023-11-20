@@ -28,7 +28,12 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            gatsbyImageData(height: 200)
+          }
+          id
+        }
         tags
         date(formatString: "ddd DD MMM yy")
       }
@@ -46,7 +51,12 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            gatsbyImageData(height: 200)
+          }
+          id
+        }
         tags
         date(formatString: "ddd DD MMM yy")
       }
@@ -64,7 +74,12 @@ const IndexPage = ({ pageContext }) => {
       }
       frontmatter {
         title
-        image
+        image {
+          childImageSharp {
+            gatsbyImageData(height: 200)
+          }
+          id
+        }
         tags
         date(formatString: "ddd DD MMM yy")
       }
