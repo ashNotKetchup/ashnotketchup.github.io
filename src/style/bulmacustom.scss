@@ -1,53 +1,5 @@
-@function colour-difference($foreground, $background) {
-    $r: (
-        max(red($foreground), red($background))) - (min(red($foreground), red($background))
-    );
-$g: (
-    max(green($foreground), green($background))) - (min(green($foreground), green($background))
-);
-$b: (
-    max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background))
-);
-$sum-rgb: $r + $g + $b;
-
-@if $sum-rgb < 500 {
-    @return "false";
-}
-
-@else {
-    @return "true";
-}
-}
-// end
-
-
 $primary: rgb(111,220,151);
 $background-color:  rgb(252, 250, 250);
-
-
-// $primary: $background-color;
-// @debug "No contrast, changed background to: #{$background-color}";
-
-// @while(contrast-checker($primary, $background-color)=="false") {
-//     // $color: light($color, 1%);
-//     // $primary: dark($primary, 1%);
-//     $background-color: color.scale(background-color, $saturation: -30%);
-//     // $background-color: color.scale($background-color, $saturation: -100%);
-//     // $color: $background-color;
-//     // color.scale(background-color, $saturation: -30%);
-//     // @debug "No contrast, changed background to: #{$background-color}";
-//     @if(contrast-checker($primary,
-//         $background-color)=="true") {
-//         $background-color: $background-color;
-
-//         // $primary: $background-color;
-//         // $background-color: color.scale(background-color, $saturation: -30%);
-//     }
-// }
-
-// $background-color: $color;
-
-
 $background: black;
 $text: $primary;
 $link: $text;
@@ -57,8 +9,6 @@ $link: $text;
 @import "~bulma/bulma.sass";
 
 // // Assign font
-// $font-family: 'Source Sans Pro';
-// $family-sans-serif: 'Source Sans Pro';
 
 // Import a Google Font
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
@@ -90,34 +40,15 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
     }
 }
 
-
-
-
 html,
 body {
     height: 100vh;
     background-color: $background-color;
-    // font-family: 'PT Serif', serif;
-    // font-family: 'Cormorant Garamond'
 }
 
 .is-background-color{
     background-color: $background-color;
 }
-
-// body{
-//     // mix-blend-mode: difference;
-// }
-
-// .diff {
-//     // h1,p {color: white;
-//     // // mix-blend-mode: difference;
-//     // // mix-blend-mode: exclusion;
-//     //     // color: white;
-//     // }
-//     // // 
-//     //     mix-blend-mode: difference;
-// }
 
 
 .listedEntry{
@@ -135,12 +66,11 @@ body {
     img{
         border-radius: 10%;
         height: calc($font-size/2.6) !important;
-        
         }
-
-                .placeholderListImage {
-                    width: calc($font-size/2.5) !important;
-                }
+        
+    .placeholderListImage {
+        width: calc($font-size/2.5) !important;
+    }
 
 }
 
@@ -166,24 +96,15 @@ nav{
 .logo{
     font-size: 1em;
     font-weight: bold;
-    
-    // font-stretch: semi-expanded;
 }
 
 
 .bigTitle {
-    // mix-blend-mode: screen;
     font-size: 10em;
     font-family: 'Hakuna Sans', sans-serif;
-    // margin-bottom: 0;
     line-height: 0.8;
     color: transparent;
     text-shadow: 0 0 15px $primary;
-
-    
-        
-    // vertical-align: text-top;
-    // filter: blur(2px);
 }
 
 .smaller {
@@ -191,12 +112,6 @@ nav{
     text-shadow: 0 0 7px $primary;
 }
 
-
-
-// /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-// @media screen and (min-width: 601px) {
-    
-// }
 
 @media only screen and (max-width : $tablet) {
     .bigTitle {
@@ -216,22 +131,10 @@ nav{
         img {
                 border-radius: 10%;
                 height: calc($font-size/2.6) !important;
-                // height: $font-size/2.5 !important;
             }
         
     }
 }
-
-// /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-// @media screen and (max-width: 600px) {
-//     div.example {
-//         font-size: 30px;
-//     }
-// }
-
-// @supports (text-shadow: 0 0 15px $primary){} not needed since shadow is very supported
-    
-
 
 .background {
     z-index: 0 !important;
@@ -311,44 +214,6 @@ main.container {
     height: 128px;
 }
 
-// .navbar {
-//     // Add margin to logos
-//     .gatsby-image-wrapper {
-//         margin: 10px;
-//     }
-
-//     // Divide navbar items with a slash
-//     .navitem-divider {
-//         @extend .navbar-item;
-//         pointer-events: none;
-//         margin: 0;
-//         padding: 0;
-//         &::after {
-//             display: block;
-//             content: "/";   
-//         }
-//         // Last item should not have a slash
-//         &:last-child::after {
-//             display: none;
-//         }
-//         // Hide navbar divider on mobile 
-//         @media (max-width: $desktop) {  
-//             display: none;    
-//         }
-//     }
-    
-//     // Colours for mobile menu
-//     .navbar-end {
-//         .navbar-item {
-//             color: $light;
-//             &:hover {
-//                 background-color: $light;
-//                 color: $primary;
-//             }
-//         }
-//     }
-// }
-
 // Make sure that the white gap between navbar and hero is never visible (even when scrolling up)
 section.hero::before {
     background-color: $primary;
@@ -404,23 +269,7 @@ section.hero::before {
     padding: 0 0 2vw 0;
 }
 
-// .row {
-//     width: 100%;
-//     margin-bottom: 2vw;
-// }
-
 .newsContainer {
     width: 100%;
     margin-bottom: 2vw;
 }
-
-// // Import only what you need from Bulma
-// @import "../node_modules/bulma/sass/utilities/_all.sass";
-// @import "../node_modules/bulma/sass/base/_all.sass";
-// @import "../node_modules/bulma/sass/elements/button.sass";
-// @import "../node_modules/bulma/sass/elements/container.sass";
-// @import "../node_modules/bulma/sass/elements/title.sass";
-// @import "../node_modules/bulma/sass/form/_all.sass";
-// @import "../node_modules/bulma/sass/components/navbar.sass";
-// @import "../node_modules/bulma/sass/layout/hero.sass";
-// @import "../node_modules/bulma/sass/layout/section.sass";

@@ -1,9 +1,7 @@
-import React, { useState, useCallback } from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ThemeList from "../components/themeList";
-import TagSelector from "../components/tagSelector";
-import { StaticImage } from "gatsby-plugin-image"
 
 
 const Research = ({ pageContext }) => {

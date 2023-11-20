@@ -3,9 +3,8 @@ import { graphql, useStaticQuery } from "gatsby";
 import "../style/bulmacustom.scss"
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Layout from "../components/layout.js";
-import ParallelogramHeader from "../components/parallelogramHeader"; 
 
-const AboutPage = ({pageContext}) => {
+const InfoPage = ({pageContext}) => {
   const {
     breadcrumb: { crumbs },
   } = pageContext
@@ -25,13 +24,7 @@ const AboutPage = ({pageContext}) => {
 
   return (
     <Layout name="about" crumbs={crumbs}>
-      
-        <ParallelogramHeader
-          text="About"
-          backgroundColor="primary"
-          // textColor="primary"
-          className="mb-0"
-        />
+      <h1 className="is-uppercase bigTitle">Info</h1>
         <div
           className="content mb-0"
           dangerouslySetInnerHTML={{ __html: data.about.html }}
@@ -40,6 +33,6 @@ const AboutPage = ({pageContext}) => {
   );
 }
 
-export default AboutPage
+export default InfoPage
 
-export const Head = () => <title>About</title>
+export const Head = () => <title>Info</title>

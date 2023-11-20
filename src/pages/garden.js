@@ -3,21 +3,14 @@ import { graphql, Link, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
-import ParallelogramHeader from "../components/parallelogramHeader";
-import { StaticImage } from "gatsby-plugin-image"
 
 
 function gardenTitle(title, subtitle){
   return (
     <span>
-      <ParallelogramHeader
-            text={title}
-
-            className="mb-0 garden-heading"
-            alignment="is-centered"
-          />
-          <p className="subtitle is-size-7"> {subtitle} </p>
-    </span>
+      <h1 className="is-uppercase bigTitle">{title}</h1>
+      <p className="subtitle is-size-7"> {subtitle} </p>
+      </span>
     
   )
 }
@@ -115,19 +108,12 @@ const Garden = () => {
 
   return (
     <Layout>
-      <section className="">
-        <div className="hero is-fullheight-with-navbar"> 
-        
-        {garden}
-
-        {/* <StaticImage
-            className="background"
-            src="../images/plants.jpeg"
-          /> */}
-
-        </div> 
-      </section>
-    </Layout>
+      <section>
+        <div> 
+          {garden}
+          </div> 
+        </section>
+      </Layout>
   );
 };
 

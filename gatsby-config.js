@@ -41,16 +41,6 @@ module.exports = {
         path: "./src/content",
       },
     },
-    // {
-    //   // line below changed
-    //   resolve: `gatsby-plugin-mdx`, 
-    //   options: {
-    //     // line below changed
-    //     gatsbyRemarkPlugins: [ 
-    //       `gatsby-remark-smartypants`,
-    //     ],
-    //   }
-    // },
     {
       resolve: `gatsby-plugin-breadcrumb`,
       options: {
@@ -81,13 +71,6 @@ module.exports = {
     },
     "gatsby-remark-responsive-iframe", //Optional: Must be loaded after gatsby-remark-embed-video
     "gatsby-plugin-twitter",
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `documents`,
-    //     path: `${__dirname}/src/content/publications`,
-    //   },
-    // },
     'gatsby-transformer-bibtex',
   ],
 };

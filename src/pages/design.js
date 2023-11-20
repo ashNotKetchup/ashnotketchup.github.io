@@ -1,12 +1,10 @@
-import React, { useState, useCallback } from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Layout from "../components/layout";
 import ThemeList from "../components/themeList";
-import TagSelector from "../components/tagSelector";
-import { StaticImage } from "gatsby-plugin-image"
 
 
-const Design = ({ pageContext }) => {
+const Design = () => {
   const data = useStaticQuery(graphql`
   {
   design: allMarkdownRemark(

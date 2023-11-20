@@ -1,11 +1,8 @@
-import React, { useState, useCallback } from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
-import Layout from "./layout";
-import TableCard from "./tableCard";
-import TagSelector from "./tagSelector";
-import { StaticImage } from "gatsby-plugin-image"
+import React from "react";
+import {Link} from "gatsby";
+import ListItem from "./listItem";
 
-const ThemeList = ({theme, link, data, pageContext }) => {
+const ThemeList = ({theme, link, data}) => {
     return (
         <div className="blog mb-5">
           <Link to={link}>
@@ -14,7 +11,7 @@ const ThemeList = ({theme, link, data, pageContext }) => {
           {data.map((blogentry) => 
             (
               <Link to={blogentry.fields.slug} key={blogentry.id} >
-                <TableCard
+                <ListItem
                   title={blogentry.frontmatter.title}
                   date={blogentry.frontmatter.date}
                   image={blogentry.frontmatter.image}

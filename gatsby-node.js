@@ -121,15 +121,5 @@ exports.createPages = async ({ graphql, actions }) => {
         });
     });
 
-
-    //manually create filter pages
-    // createPage({
-    //     path: "/sound",
-    //     component: ThemePage,
-    //     context: {
-    //         slug: "sound",
-    //     },
-    //     });
-
 }
 
