@@ -121,13 +121,19 @@ body {
 
 
 .listedEntry{
-    font-size: 2.2em;
+
+    $font-size: 2.2em;
+    font-size: $font-size;
 
     // might need to readjust
     line-height: 0.8;
 
     font-weight: 500;
     font-stretch: semi-condensed;
+
+    img{
+        height: $font-size/2.5 !important;
+        }
 
 }
 
@@ -156,6 +162,7 @@ nav{
     
     // font-stretch: semi-expanded;
 }
+
 
 .bigTitle {
     // mix-blend-mode: screen;
@@ -196,8 +203,13 @@ nav{
         }
         
     .listedEntry{
-        font-size: 2em;
+        $font-size: 2em;
+            font-size: $font-size;
         font-stretch: normal;
+        img {
+                height: $font-size/2.5 !important;
+            }
+        
     }
 }
 

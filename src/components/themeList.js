@@ -13,11 +13,12 @@ const ThemeList = ({theme, link, data, pageContext }) => {
             </Link>
           {data.map((blogentry) => 
             (
-              <Link to={blogentry.fields.slug} key={blogentry.id} className="listedEntry">
+              <Link to={blogentry.fields.slug} key={blogentry.id} >
                 <TableCard
                   title={blogentry.frontmatter.title}
                   date={blogentry.frontmatter.date}
                   image={blogentry.frontmatter.image}
+                  alt = "my alt description"
                 />
                 </Link>
               )

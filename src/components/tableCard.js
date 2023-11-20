@@ -4,20 +4,25 @@ import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image";
 const TableCard = (props) => {
     // const textSize = props.textSize;
     const image = getImage(props.image)
+    const imageAlt = props.alt
 
     return (
-        <span>
-            {/* <figure className="image"> */}
+        <span className="listedEntry">
                 {image ? 
-                    (<GatsbyImage 
+                    (
+                    <GatsbyImage 
                         className="listImage"
-                        alt="replace with description" 
-                        image={image} />) 
+                        alt={imageAlt} 
+                        image={image} />
+                        ) 
                     : 
-                    (<StaticImage
-                        className="background"
-                        src="../images/me-film.jpg"
-                        />)
+                    (
+                    <></>
+                    // <StaticImage
+                    //     className="background"
+                    //     src="../images/me-film.jpg"
+                    //     />
+                        )
                     }
                 {/* </figure> */}
             {props.title}
