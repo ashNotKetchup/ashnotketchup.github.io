@@ -1,9 +1,9 @@
 {
-  "name": "c4dm-website",
+  "name": "Ashley Noel-Hirst",
   "version": "1.0.0",
   "private": true,
-  "description": "c4dm-website",
-  "author": "ash-seb-teo",
+  "description": "Portfolio for Ashley Noel-Hirst",
+  "author": "Ashley Noel-Hirst",
   "keywords": [
     "gatsby"
   ],
@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b main"
   },
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
@@ -35,6 +36,7 @@
     "gatsby-transformer-bibtex": "^0.1.5",
     "gatsby-transformer-remark": "^6.7.0",
     "gatsby-transformer-sharp": "^5.7.0",
+    "gh-pages": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
