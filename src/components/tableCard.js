@@ -17,11 +17,12 @@ const TableCard = (props) => {
                         ) 
                     : 
                     (
-                    <></>
-                    // <StaticImage
-                    //     className="background"
-                    //     src="../images/me-film.jpg"
-                    //     />
+
+                    <StaticImage
+                        className="placeholderListImage"
+                        alt="A coloured square"
+                        src="../images/me-film.jpg"
+                        />
                         )
                     }
                 {/* </figure> */}

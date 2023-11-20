@@ -124,6 +124,7 @@ body {
 
     $font-size: 2.2em;
     font-size: $font-size;
+    
 
     // might need to readjust
     line-height: 0.8;
@@ -132,8 +133,14 @@ body {
     font-stretch: semi-condensed;
 
     img{
-        height: $font-size/2.5 !important;
+        border-radius: 10%;
+        height: calc($font-size/2.6) !important;
+        
         }
+
+                .placeholderListImage {
+                    width: calc($font-size/2.5) !important;
+                }
 
 }
 
@@ -204,10 +211,12 @@ nav{
         
     .listedEntry{
         $font-size: 2em;
-            font-size: $font-size;
+        font-size: $font-size;
         font-stretch: normal;
         img {
-                height: $font-size/2.5 !important;
+                border-radius: 10%;
+                height: calc($font-size/2.6) !important;
+                // height: $font-size/2.5 !important;
             }
         
     }
