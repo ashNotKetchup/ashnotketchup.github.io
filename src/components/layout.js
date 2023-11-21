@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
+import "../style/bulmacustom.scss"
 // import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const navItems = [

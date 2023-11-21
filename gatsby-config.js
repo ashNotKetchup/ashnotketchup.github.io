@@ -2,11 +2,15 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   siteMetadata: {
     title: `Ashley Noel-Hirst`,
     siteUrl: `https://www.noelhirst.net`,
   },
   plugins: [
+    "gatsby-plugin-styled-components",
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-manifest",
