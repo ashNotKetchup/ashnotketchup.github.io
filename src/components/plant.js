@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // interactive object displaying a digital garden object based on relevance/size
 // hover for text preview in title

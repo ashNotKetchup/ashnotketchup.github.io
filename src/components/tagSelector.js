@@ -14,20 +14,20 @@ const TagSelector = ({tags,nodes,callback,centre, initialState=false}) => {
 
     const createButtons = <span>
         {tags.group.map((tag) => (
-            <a className="button is-small is-primary is-outlined is-rounded is-responsive"
+            <button className="button is-small is-primary is-outlined is-rounded is-responsive"
             key={tag.fieldValue} 
             onClick={() => setSelected(tag.fieldValue)} 
             disabled={selected === tag.fieldValue}>
                 {startCase(camelCase(tag.fieldValue))} ({tag.totalCount})
-                </a>
+                </button>
                 ))}
 
-            <a  className="button is-small is-primary is-outlined is-rounded is-responsive" 
+            <button  className="button is-small is-primary is-outlined is-rounded is-responsive" 
                 onClick={() => setSelected(false)}
                 disabled={!selected}
                 >
                 Clear Tags (x)
-                </a>
+                </button>
 
     
     </span>

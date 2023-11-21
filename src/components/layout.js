@@ -3,15 +3,15 @@ import {Link} from "gatsby"
 import "../style/bulmacustom.scss"
 // import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
-const navItems = [
-    {name: "info", link: "/info"},
-]
-const socialMediaItems = [
-  {
-    iconName: "fa-twitter",
-    link: "https://twitter.com/c4dm",
-  },
-];
+// const navItems = [
+//     {name: "info", link: "/info"},
+// ]
+// const socialMediaItems = [
+//   {
+//     iconName: "fa-twitter",
+//     link: "https://twitter.com/c4dm",
+//   },
+// ];
 
 const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 

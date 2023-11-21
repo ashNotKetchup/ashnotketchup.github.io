@@ -2,12 +2,14 @@ import React from "react";
 import { graphql} from "gatsby";
 import Layout from "../components/layout";
 
-const WorkPost = ({ data, pageContext }) => {
-  const {
-    breadcrumb: { crumbs },
-  } = pageContext
+const WorkPost = ({ data, 
+                    // pageContext 
+                    }) => {
+  // const {breadcrumb: { crumbs }} = pageContext
     const {markdownRemark} = data;
-    const {frontmatter, fields, html} = markdownRemark;
+    const {frontmatter, 
+      // fields, 
+      html} = markdownRemark;
 
     return (
       <Layout>
