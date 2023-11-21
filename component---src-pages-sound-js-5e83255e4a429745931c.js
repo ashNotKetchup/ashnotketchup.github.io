@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkAshley_Noel_Hirst=self.webpackChunkAshley_Noel_Hirst||[]).push([[146],{7072:function(e,t,n){n.r(t),n.d(t,{Head:function(){return r}});var a=n(7294),l=n(1883),s=n(8678),u=n(508);t.default=e=>{let{pageContext:t}=e;const n={name:"sound",data:(0,l.useStaticQuery)("1058727377").sound.nodes};return a.createElement(s.Z,{name:"Index"},a.createElement("section",null,a.createElement(u.Z,{theme:n.name,data:n.data})))};const r=()=>a.createElement("title",null,"Sound")}}]);
-//# sourceMappingURL=component---src-pages-sound-js-5e83255e4a429745931c.js.map

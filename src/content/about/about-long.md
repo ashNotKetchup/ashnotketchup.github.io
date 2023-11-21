@@ -1,0 +1,10 @@
+---
+title: "Info"
+image: "./me-film.JPG"
+---
+
+Hi, I’m Ash – an artist, researcher and composer.
+My work explores human-computer interaction, knowledge representation and personal data science (mainly for the arts).
+My primary occupation is a PhD in Artificial Intelligence and Music, where I am investigating the implications of explainable AI for human-computer music generation.
+If you would like to collaborate, or have any questions about my work, feel free to contact me at:
+a.l.noel-hirst[at]qmul[dot]ac[dot]uk
