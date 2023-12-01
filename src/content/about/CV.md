@@ -17,7 +17,7 @@ BA (First-Class), Philosophy (Minor in Mathematics), University of Warwick
 
 ## Research Experience
 
-Research Assistant, [Goldsmiths Mocap Streamer](https://www.mocapstreamer.live/) (AHRC)  `2021-2023`
+Research Assistant – [Goldsmiths Mocap Streamer](https://www.mocapstreamer.live/) (AHRC)  `2021-2023`
 - Developed software to support streaming of motion capture data
 - Investigated the impacts and potentials of telematic dance performance with a number of ethnography techniques (workshop, observation and interview)
 - Body sonification and interactive sound design for an [artistic intervention](https://www.mocapstreamer.live/figural-bodies) in accessiblity of metaverse technologies 
