@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "CV"
 image: "./placeholder.png"
 ---
 
@@ -20,7 +20,7 @@ BA (First-Class), Philosophy (Minor in Mathematics), University of Warwick
 Research Assistant, [Goldsmiths Mocap Streamer](https://www.mocapstreamer.live/) (AHRC)  `2021-2023`
 - Developed software to support streaming of motion capture data
 - Investigated the impacts and potentials of telematic dance performance with a number of ethnography techniques (workshop, observation and interview)
-- Body sonification and interactive sound design for an [artistic intervention](https://www.mocapstreamer.live/figural-bodies) in accessiblity of metaverse technologies, 
+- Body sonification and interactive sound design for an [artistic intervention](https://www.mocapstreamer.live/figural-bodies) in accessiblity of metaverse technologies 
 - Contributed to publications (Pending Review for DIS 2024), presented at Being Human festival (performance) and SXSW (performance and panel)
 
 Research Assistantship – AI and Music, University of Oxford `Summer 2021`
@@ -48,7 +48,7 @@ Assistant Producer,  Holocaust Galleries at Imperial War Museums
 
 Assistant Producer – “Young Tech Lab”, Iklectik Art Lab in collaboration with Queen Mary Augmented Instruments Lab 
 
-Student Engineer – Goldsmiths Music Studios
+Student Engineer, Goldsmiths Music Studios
 
 Workshop Technician, Harris Academy Wimbledon
 
@@ -66,15 +66,15 @@ Goldsmiths Excellence Fee Waiver
 
 NME’s 100 Essential Emerging Artists for 2021
 
-Goldsmiths Music Performance award (part-scholarship)
+Goldsmiths Music Performance Award (part-scholarship)
 
-Warwick Arts Centre Jazz Performance award (part-scholarship)
+Warwick Arts Centre Jazz Performance Award (part-scholarship)
 
 ## Performances/Demos
 
 **On Drums and/or Electronics:** SXSW – Austin, Texas `2023`; o2 Ritz Manchester (with Malady and Wet Leg) `2022`; o2 Institute Birmingham `2022`; Leeds Beckett Students Union Leeds `2022`; Color Factory London (with Malady and Sam Akpro) `2022`; Junction Cambridge (with Malady and Swim Deep) `2022`; The Crescent York `2022`; Cluny Newcastle `2022`; 100 Club London `2022`; CSTC Symposium – Iklectik London `2022`; The Standard London `2021`; EFG London Jazz Festival `2021`; Notting Hill Carnival (with Kinetica Blocco) `2021`; Royal Albert Hall (with Ezra Collective) `2020`; Ronnie Scotts London `2020`; Drapers Coventry (residency)`2019`; Copper Rooms Coventry `2019`; Bedford Street Leamington Spa (residency) `2017-2019`; Zephyr Lounge Leamington Spa (residency) `2017-2019`
 
-**On Voice and/or Guitars:** Zephyr Lounge Leamington Spa (residency) `2017-2019`; Defunct Club in Coventry `2018` Leif Tea Rooms Leamington Spa `2018`; Four Quarters Coventry `2017`; Copper Rooms Coventry `2017`; Crystal Palace Jazz Festival `2016`
+**On Voice and/or Guitars:** Zephyr Lounge Leamington Spa (residency) `2017-2019`; Defunct Club in Coventry `2018`; Leif Tea Rooms Leamington Spa `2018`; Four Quarters Coventry `2017`; Copper Rooms Coventry `2017`; Crystal Palace Jazz Festival `2016`
 
 
 <!-- ## Technical Skills -->
@@ -83,8 +83,9 @@ Warwick Arts Centre Jazz Performance award (part-scholarship)
 
 Corey John Ford, Ashley Noel-Hirst, Berker Banarr and Nick Bryan-Kinns. Autoethnographic Explorations of Using a Folk Generative AI Plugin for Making Punk and Glitch Music `– Pending Review`
 
+Ashley Noel-Hirst and Nick Bryan-Kinns. An Autoethnographic Exploration of XAI in Algorithmic Composition. In *The 1st International Workshop on Explainable AI for the Arts (XAIxArts),* ACM Creativity and Cognition (C&C) `2023`. Online, 3 pages. https://xaixarts.github.io
 
-Ashley Noel-Hirst and Nick Bryan-Kinns. 2023. An Autoethnographic Exploration of XAI in Algorithmic Composition. In *The 1st International Workshop on Explainable AI for the Arts (XAIxArts),* ACM Creativity and Cognition (C&C) `2023`. Online, 3 pages. https://xaixarts.github.io
+Kat Hawkins, Clarice Hilton, Ashley Noel-Hirst, Daniel Strutt Dance in the Metaverse: Tools for Accessibility (panel), at *SXSW* `2023`. Texas USA. https://schedule.sxsw.com/2023/events/PP127701
 
 Particular Granulator – Collaborating on Sonic Spaces with Granular Synthesis and Particle Systems at *Goldsmiths Centre for Sound, Technology and Culture Symposium* `2021`
 
