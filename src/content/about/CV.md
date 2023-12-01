@@ -1,10 +1,9 @@
 ---
 title: "CV"
-image: "./placeholder.png"
 ---
 
 # Ashley Noel-Hirst
-Artist, Designer, and PhD Researcher in Artificial Intelligence and Music - [noelhirst.net](noelhirst.net) 
+Artist, Designer, and PhD Researcher in Artificial Intelligence and Music - [noelhirst.net](https://www.noelhirst.net) 
 
 ## Education
 
