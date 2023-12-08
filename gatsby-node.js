@@ -75,6 +75,15 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
 
+            about: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(about)/"  }})
+            {   
+                nodes {
+                    fields {
+                        slug
+                    }
+                }
+            }
+
         }
     `);
 
@@ -120,6 +129,17 @@ exports.createPages = async ({ graphql, actions }) => {
         },
         });
     });
+
+    // Create about pages
+    result.data.about.nodes.forEach(node => {
+        createPage({
+            path: node.fields.slug,
+            component: workPostTemplate,
+            context: {
+                slug: node.fields.slug,
+            },
+        })
+    })
 
 }
 
