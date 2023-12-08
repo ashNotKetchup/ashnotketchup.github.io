@@ -16,7 +16,7 @@ const IndexPage = ({ pageContext }) => {
   const data = useStaticQuery(graphql`
   {
   sound: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(sound)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(sound\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
@@ -43,7 +43,7 @@ const IndexPage = ({ pageContext }) => {
   }
 
   design: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(design)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(design\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
@@ -70,7 +70,7 @@ const IndexPage = ({ pageContext }) => {
   }
 
   research: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(research)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(research\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {

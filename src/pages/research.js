@@ -8,7 +8,7 @@ const Research = ({ pageContext }) => {
   const data = useStaticQuery(graphql`
   {
   research: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(research)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(research\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
