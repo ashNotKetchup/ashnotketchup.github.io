@@ -8,7 +8,7 @@ const Design = () => {
   const data = useStaticQuery(graphql`
   {
   design: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(design)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(design\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {

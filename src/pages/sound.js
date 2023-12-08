@@ -8,7 +8,7 @@ const Sound = ({ pageContext }) => {
   const data = useStaticQuery(graphql`
   {
   sound: allMarkdownRemark(
-    filter: {fileAbsolutePath: {regex: "/(sound)/"  }}
+    filter: {fileAbsolutePath: {regex: "/(sound\/)/"  }}
     sort: {frontmatter: {date: DESC}}
   ) {
     nodes {
