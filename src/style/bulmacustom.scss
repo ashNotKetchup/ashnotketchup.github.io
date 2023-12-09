@@ -1,12 +1,16 @@
 $primary: rgb(111,220,151);
-$background-color:  rgb(252, 250, 250);
-$background: black;
-$text: $primary;
-$link: $text;
+$background-color:  rgb(252, 248, 250);
+// $background-color: black;
+$background: pink;
+$text: black;
+$accent-text: pink;
+$link: $primary;
 
 
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
+
+
 
 // // Assign font
 
@@ -34,9 +38,29 @@ $family-sans-serif:  'PT Serif',
 $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
 // issue, markdown headings not matching colour
-h2{
-    color: pink;
-    $font-size: 20.2em;
+.content{
+    // set base size
+        
+    font-size: 20px;
+
+    @include tablet {
+        font-size: 20px;
+    }
+
+    @include desktop {
+        font-size: 20px;
+    }
+
+    color: $text;
+        
+    // p{
+    //     font-size: 1em;
+    //     // color: pink;
+    // }
+    strong{
+        color: pink;
+    }
+    
 }
 
 .is-garden{
