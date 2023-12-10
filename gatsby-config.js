@@ -75,6 +75,6 @@ module.exports = {
     },
     "gatsby-remark-responsive-iframe", //Optional: Must be loaded after gatsby-remark-embed-video
     "gatsby-plugin-twitter",
-    'gatsby-transformer-bibtex',
+    // 'gatsby-transformer-bibtex',
   ],
 };
