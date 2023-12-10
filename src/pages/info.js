@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import "../style/bulmacustom.scss"
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Layout from "../components/layout.js";
+import { Link } from "gatsby";
 
 const InfoPage = ({pageContext}) => {
   const {
@@ -24,11 +25,18 @@ const InfoPage = ({pageContext}) => {
 
   return (
     <Layout name="about" crumbs={crumbs}>
-      <h1 className="is-uppercase bigTitle">Info</h1>
+      <h1 className="is-uppercase bigTitle smaller mb-5">Info</h1>
         <div
           className="content mb-0"
           dangerouslySetInnerHTML={{ __html: data.about.html }}
         ></div>
+
+        {/* TODO: Make relative links work to the rest of my pages! CV, etc etc... */}
+        {/* <div className=".notMarkdown block">
+          <p>Here are some links you might find useful: </p>
+          <Link className=".notMarkdown">what I'm currently working on (my PhD)</Link>
+          <Link>Here's some things I have worked on (my CV)</Link>
+          </div> */}
     </Layout>
   );
 }

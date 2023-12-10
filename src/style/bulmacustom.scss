@@ -37,8 +37,9 @@ $family-sans-serif:  'PT Serif',
  
 $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 
+
 // issue, markdown headings not matching colour
-.content{
+.content, .notMarkdown{
     // set base size
         
     font-size: 20px;
