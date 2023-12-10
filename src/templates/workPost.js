@@ -13,7 +13,7 @@ const WorkPost = ({ data,
 
     return (
       <Layout>
-            <h1 className="is-uppercase bigTitle smaller">{frontmatter.title}</h1>
+            <h1 className="is-uppercase bigTitle smaller mb-5">{frontmatter.title}</h1>
             <div
               className="content"
               dangerouslySetInnerHTML={{ __html: html }}
