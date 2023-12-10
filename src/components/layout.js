@@ -40,9 +40,9 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     );
 
     return (
-      <body className="columns is-0 is-centered is-desktop mx-1 my-1">
+      <body className="columns is-8 is-centered is-desktop mx-1 my-1">
           {navBar}
-          <main className="pageContent column is-6">
+          <main className="pageContent column is-7-desktop">
             {children}
             </main>
             {endBar}
