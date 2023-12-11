@@ -52,6 +52,7 @@ module.exports = {
         }
     },
     `gatsby-transformer-remark`,
+    `gatsby-plugin-catch-links`,
     "gatsby-plugin-sass",
     {
       resolve: "gatsby-remark-embed-video",
