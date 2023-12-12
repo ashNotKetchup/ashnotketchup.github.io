@@ -4,17 +4,23 @@ image: "./exclaimation-question.png"
 ---
 <!-- ## Background -->
 
-Sampling – the manipulation and playback of existing audio – is a tried and tested method for the composition of new sound works. As well as lowering the barrier of entry for complex sound design tasks, the use of samples can also provide novel and meaningful ways of interacting with cultural and meta-textual 'data'.
+Sampling – the manipulation and playback of existing audio – is a tried and tested method for the composition of new sound works. As well as lowering the barrier of entry for complex sound design tasks, the use of samples can also provide novel and meaningful ways of relating with and between cultural data.
+<!-- interacting with cultural and meta-textual 'data'. -->
 
 <!-- Existing sampling methods () have offered novel means of interacting with  for decades……eg -->
-Recent advances in digital signal processing suggest a new frontier in audio processing, with deep learning tools which can manipulate audio 
+Recent advances in digital signal processing suggest a new frontier in audio processing. Deep learning tools present opportunities for manipulating audio in new ways. However, the actual interactions which underpin the creation and deployment of these tools have been largely ignored. 
 
-Despite potential for audio transformation in this domain, the actual interactions which underpin the creation and deployment of these tools have been largely ignored....(nise) Similarly, sampling's rich history for data manipultion as...is also yet to be explored in the domain of ai....?
+<!-- With sampling’s rich history for interfacing between people and data, it presents a unique opportunity to explore the challenges and oppurtunities for human interaction with real-time deep learning systems. -->
+
+
+<!-- Despite potential for audio transformation in this domain, the actual interactions which underpin the creation and deployment of these tools have been largely ignored....(nise) Similarly, sampling's rich history for data manipultion as...is also yet to be explored in the domain of ai....? -->
 
 <!-- they are routinely ignored by advances in ai/dsp technology. Existing for.. retrieval -->
 
-This work, part of [my PhD in Human-Centred Artificial Intelligence and Music]() seeks to inform the design of new systems for sampling…
-As well as try to learn sample-ry approaches for a more just meta-textual ai. 
+This work, part of [my PhD in Human-Centred Artificial Intelligence and Music](/about/Stage-1/living-phd-update) seeks to inform the design of new systems for sampling, exploring challenges and oppurtunities for human interaction with real-time deep learning systems along the way.
+<!-- how we create fair, personalisable, and explainable AI systems  -->
+<!-- along the way. -->
+<!-- As well as try to learn sample-ry approaches for a more just meta-textual ai.  -->
 
 
 ## Ways to Get Involved
