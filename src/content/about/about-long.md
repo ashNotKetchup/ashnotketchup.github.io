@@ -11,6 +11,6 @@ If you would like to collaborate, or have any questions about my work, feel free
 
 ## More Info
 
-[What I'm Up To At The Moment – `My PhD`](/about/phd-living-proposal)
+[What I'm Up To At The Moment – `My PhD`](/about/Stage-1/living-phd-update)
 
 [Other Things I've Been Up To – `My CV`](/about/cv)
