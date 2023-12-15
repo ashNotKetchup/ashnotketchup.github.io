@@ -33,9 +33,9 @@ Existing research into musicians and samples primarily focusses on the musical f
 
 - If you want to rant at me via email, send me your music, or just ask questions – you can! I'm at `a.l.noel-hirst[at]qmul[dot]ac[dot]uk` and I'd love to hear from you.
 
-- We are also recruiting for a small number of one-off interviews about samples. We have **funding** to compensate people around £60 per interview. Email me for more info.
+- We are also recruiting for a small number of one-off interviews about samples. We have **funding** to compensate people for interviews at around £40-£60 per hour [^1]. Email me for more info.
 
-
+[^1]: Subject to number of participants
 ### 2: Keep an Eye out
 
 Future work (pending the results and funding from pilot), will include workshops and open source software for sampling devices which leverage explainable AI.
