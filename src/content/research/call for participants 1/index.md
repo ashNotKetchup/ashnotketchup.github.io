@@ -44,3 +44,9 @@ Future work (pending the results and funding from pilot), will include workshops
 
 If you don't understand some of my work, or the reasons for why I've done something, please ask! Similarly, if you think I could be doing something a better way, or if I'm covering something which has already been done to death, let me know via email `a.l.noel-hirst[at]qmul[dot]ac[dot]uk`. 
 <!-- I spend criminaly little time in my emails, so help me out  -->
+
+
+# Register Interest
+
+You can register interest for these studies on a rolling basis with the below form:
+<iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=kfCdVhOw40CG7r2cueJYFJoEDGDawGFHpgF5Vzkvht9UODFZM0FKMkNTN0pLOUg0TVQyQTU1ODFJTy4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
