@@ -21,7 +21,6 @@ module.exports = {
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -51,7 +50,24 @@ module.exports = {
         useAutoGen: true, // useAutoGen: required 'true' to use autogen
         }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          // `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: true,
+              sizeByPixelDensity: true,
+              showCaptions: true
+              }
+            },
+          ]
+        }
+      },
+    // `gatsby-transformer-remark`,
     `gatsby-plugin-catch-links`,
     "gatsby-plugin-sass",
     {

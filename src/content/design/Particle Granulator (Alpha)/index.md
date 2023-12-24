@@ -14,12 +14,20 @@ An exploration of digital site-specificity, this project places the user in a ch
 <!-- add link to grain fm -->
 This project marks the second in my series “Grain FM”, an exploration of physical modelling and granular sampling/synthesis. In this particular manifestation, transients are mapped equidistantly about the unit circle, and then granularly sampled as controlled by weather data and gyroscopic controls.
 
-![Alt text](hal-spectrogram.png)
+<!-- ![Alt text](./Particles-move.png) -->
 
-<figure>
-<img src="./Particles-move.png.webp" alt="Albuquerque, New Mexico">
-![Alt text](Particles-move.png.webp) ![Alt text](Particles-move2.png.webp) ![Alt text](Particles-move3.png.webp) ![Alt text](Particles-move4.png.webp) ![Alt text](Particles-move5.png.webp) ![Alt text](Particles-move6.png.webp)
-<figcaption>One-thousand particles distributed about the unit circle. In order to improve performance, the number of grains can be downsampled from this visualisation at a user-defined rate.</figcaption>
+<figure className="gallery-figure">
+<!-- <img src="./Particles-move.png" alt="Albuquerque, New Mexico"> -->
+
+![Alt text](Particles-move.png) 
+![Alt text](Particles-move2.png) 
+![Alt text](Particles-move3.png) 
+![Alt text](Particles-move4.png) 
+![Alt text](Particles-move5.png) 
+![Alt text](Particles-move6.png)
+
+<figcaption>(Above) One-thousand particles distributed about the unit circle. In order to improve performance, the number of grains can be downsampled from this visualisation at a user-defined rate.</figcaption>
+
 </figure>
 
 

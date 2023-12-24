@@ -61,7 +61,27 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
     strong{
         color: pink;
     }
+
     
+    
+}
+
+// .content figure figcaption {
+//     font-style: bold; 
+
+// }
+
+figcaption{
+    text-align: left;
+    font-style: normal !important;
+}
+
+.content figure figcaption{
+    font-style: normal !important;
+}
+
+.gallery-figure {
+    color: red;
 }
 
 .is-garden{
