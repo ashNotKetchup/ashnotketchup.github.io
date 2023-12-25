@@ -42,7 +42,7 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
 .content, .notMarkdown{
     // set base size
         
-    font-size: 20px;
+    font-size: 25px;
 
     @include tablet {
         font-size: 20px;
@@ -74,6 +74,8 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
 figcaption{
     text-align: left;
     font-style: normal !important;
+    font-weight: bold;
+    font-size: 0.6em;
 }
 
 .content figure figcaption{
@@ -89,6 +91,8 @@ figcaption{
         transform: translate(5%, -7%);
     }
 }
+
+
 
 html,
 body {
