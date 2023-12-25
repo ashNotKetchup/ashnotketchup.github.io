@@ -64,9 +64,12 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
 figure{
     @extend .is-image !optional; 
     @extend .mx-0;
-    @extend .my-4;
+    @extend .my-0;
+    @extend .py-0;
     figcaption{
         @extend .my-0;
+        @extend .pt-0;
+        @extend .pb-6;
     }   
 }
 
