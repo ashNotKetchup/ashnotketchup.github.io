@@ -6,6 +6,8 @@ $text: black;
 $accent-text: pink;
 $link: $primary;
 
+// useful for random colour on compile? https: //bulma.io/documentation/utilities/functions/
+
 
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
@@ -53,25 +55,35 @@ $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial
     }
 
     color: $text;
-        
-    // p{
-    //     font-size: 1em;
-    //     // color: pink;
-    // }
+
     strong{
         color: pink;
     }
-
-    
-    
 }
 
-// .content figure figcaption {
-//     font-style: bold; 
+figure{
+    @extend .is-image !optional; 
+    @extend .mx-0;
+    @extend .my-4;
+    figcaption{
+        @extend .my-0;
+    }   
+}
 
-// }
+
+figure {
+    > div {
+        @extend .tile;
+        @extend .is-ancestor;
+        >div {
+            @extend .tile;
+            @extend .is-child;
+        }
+    }
+}
 
 figcaption{
+    // background-color: yellow;
     text-align: left;
     font-style: normal !important;
     font-weight: bold;
@@ -82,17 +94,11 @@ figcaption{
     font-style: normal !important;
 }
 
-.gallery-figure {
-    color: red;
-}
-
 .is-garden{
     @media screen and (min-width: $desktop) {
         transform: translate(5%, -7%);
     }
 }
-
-
 
 html,
 body {

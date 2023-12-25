@@ -16,49 +16,22 @@ An exploration of digital site-specificity, this project places the user in a ch
 <!-- add link to grain fm -->
 This project marks the second in my series “Grain FM”, an exploration of physical modelling and granular sampling/synthesis. In this particular manifestation, transients are mapped equidistantly about the unit circle, and then granularly sampled as controlled by weather data and gyroscopic controls.
 
-<!-- ![Alt text](./Particles-move.png)
-<!-- <div class="columns"> -->
-<!-- <div class="columns is-multiline is-mobile">
-<figure class="is-left gallery-figure column is-4 has-text-left-desktop">
-<img src="./Particles-move.png" alt="Albuquerque, New Mexico" class="is-left">
-<img src="./Particles-move.png" alt="Albuquerque, New Mexico" class="is-left"> -->
-
-<!-- ![Alt text](Particles-move.png)  -->
-<!-- 
-![Alt text](Particles-move3.png) 
-![Alt text](Particles-move4.png) 
-![Alt text](Particles-move5.png) 
-![Alt text](Particles-move6.png) -->
-
-
-
-</figure>
-</div>
-
-<!-- -->
-
 <!-- TODO:Basically I want images to share the width, while being the same height, or on mobile to take the full width
 
 Convert this to parse just markdown images, this is too verbose 
  -->
 
-
-<figure class="is-image mx-0 my-4">
-<div class="tile is-ancestor">
-    <div class="tile is-child">
-        <img src="./Particles-move.png" alt="Albuquerque, New Mexico" class="is-left">
+<figure>
+    <div>
+        <div class="is-child">
+            <img src="./Particles-move.png" alt="Green background with white particles swarming in a circle">
+            </div>
+        <div class="is-child">
+            <img src="./Particles-move3.png" alt="Green background with white particles swarming in an arc">
+            </div>
         </div>
-    <div class="tile is-child">
-        <img src="./Particles-move3.png" alt="Albuquerque, New Mexico" class="is-left">
-        </div>
-    </div>
-    
-  </div>
-
-  <figcaption class="my-0"> ↑ One-thousand particles are distributed about the unit circle. Users can control grain playback by manipulating this visualisation</figcaption>
+  <figcaption> ↑ One-thousand particles are distributed about the unit circle. Users can control grain playback by manipulating this visualisation</figcaption>
 </figure>
-
-
 </br>
 Here is a brief demo utilising a piano and the circle of fifths:
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/u7vPjRdDeAU?si=AyHCAZIPrei4nxW_&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
