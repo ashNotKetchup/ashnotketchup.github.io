@@ -17,7 +17,10 @@ const WorkPost = ({ data,
             <div
               className="content"
               dangerouslySetInnerHTML={{ __html: html }}
-            ></div>
+            >
+            </div>
+            <br/>
+            <br/>
       </Layout>
     );
 }
