@@ -64,6 +64,7 @@ module.exports = {
               showCaptions: false
               }
             },
+          `gatsby-remark-autolink-headers`,
           ]
         }
       },
