@@ -28,7 +28,7 @@ Making the sound of a metal which has bonds to other temporal locations
 1. Spectral scrubbing on wok sounds – this is essentially a 2-axis particle simulation, whereby the y axis corresponds to some spectral filtering, and the x to granular synthesis. I used ‘emit’ in Max for Live to achieve this.
 2. I also cross-modulated the sounds with different time periods of themselves, I hoped to aesthetically introduce the otherworldly, implied properties of Thiotomoline. On the other hand, by utilising decay on my resonant filter with real-world feedback, I hoped to root such an element in a space. Even though the superimposed, cross-modulated sound interacts with itself endochronically, the ‘real-world’ listener still perceives it as being here. This is because its sounds bounce off walls and into our eardrums just as anything else would.
 3. I used a scale-quantised resonance filter locked to large interval jumps in order to modulate field recordings. With 20 mc.poly-based copies of itself, I used this to simulate sounds of pitched rain on metal.
-­
+
 ### Environmental resonance
 1. Birds used to frequency modulate train sounds. I leveraged just intonation and inharmonicity to imply metal overtones
 2. I took a short recording of running water and indefinitely reproduced it with granular synthesis.
