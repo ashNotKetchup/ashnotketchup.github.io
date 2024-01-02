@@ -341,25 +341,64 @@ nav{
     font-size: 10em;
     font-family: 'Hakuna Sans', sans-serif;
     line-height: 0.8;
-    color: transparent;
-    text-shadow: 0 0 15px $primary;
 }
 
 .smaller {
     font-size: 5em;
-    text-shadow: 0 0 6px $primary;
+}
+
+
+$blurAmount: 0.3rem;
+.bigTitle{
+    
+    @media only screen and (max-width : $desktop) {
+            margin-top: 0px;
+        }
+
+    @media only screen and (max-width : $tablet) {
+        margin-top: 0px;
+    }
+ 
+    
+    @extend .highContrastBlur;
+    overflow: hidden; //stops surrounding links from getting screwed up by the svg effects
+    padding: 0.9rem 0.4rem;
+        //  @extend .liquidMetal;
+    // background-color: blue;
+   
+
+
+
+}
+
+
+/* define filters, then mixin or extend... */
+.highContrastBlur {
+    filter: blur($blurAmount) url(#highContrastFilter);
+    // -webkit-filter: blur($blurAmount) url(#highContrastFilter);
+    -moz-filter: blur($blurAmount) url(#highContrastFilter);
+    -o-filter: blur($blurAmount) url(#highContrastFilter);
+    -ms-filter: blur($blurAmount) url(#highContrastFilter);
+    z-index: -99;
+}
+
+.liquidMetal{
+    filter: url(#liquidFilter) url(#highContrastFilter) ;
+}
+
+.SVGFilterStore{
+    // position: absolute;
+    visibility: hidden;
 }
 
 
 @media only screen and (max-width : $tablet) {
     .bigTitle {
             font-size: 5em;
-            text-shadow: 0 0 7px $primary;
                 }
 
         .smaller {
             font-size: 4em;
-            text-shadow: 0 0 5px $primary;
         }
         
     .listedEntry{
