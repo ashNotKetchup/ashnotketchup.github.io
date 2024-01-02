@@ -1,5 +1,6 @@
 ---
-title: "(Call for Participants) Designing New Tools for Audio Sampling"
+title: "Call for Participants"
+subtitle: "Designing New Tools for Audio Sampling"
 image: "./exclaimation-question.png"
 ---
 <!-- ## Background -->

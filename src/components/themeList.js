@@ -13,6 +13,7 @@ const ThemeList = ({theme, link, data}) => {
               <Link to={blogentry.fields.slug} key={blogentry.id} >
                 <ListItem
                   title={blogentry.frontmatter.title}
+                  subtitle={blogentry.frontmatter.subtitle}
                   date={blogentry.frontmatter.date}
                   image={blogentry.frontmatter.image}
                   alt = "my alt description"

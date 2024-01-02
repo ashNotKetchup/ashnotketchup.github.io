@@ -5,6 +5,7 @@ const ListItem = (props) => {
     // const textSize = props.textSize;
     const image = getImage(props.image)
     const imageAlt = props.alt
+    const subtitle = props.subtitle
 
     return (
         <span className="listedEntry">
@@ -26,6 +27,12 @@ const ListItem = (props) => {
                         )
                     }
             {props.title}
+            {subtitle ? 
+                    (<span className="customSubheading"> {subtitle} </span>
+                        ) 
+                    : 
+                    (<> </>)
+                    }
             </span> 
         );
 }

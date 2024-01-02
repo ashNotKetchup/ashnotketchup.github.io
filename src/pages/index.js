@@ -24,6 +24,7 @@ const IndexPage = ({ pageContext }) => {
         slug
       }
       frontmatter {
+        subtitle
         title
         image {
           childImageSharp {
@@ -51,6 +52,7 @@ const IndexPage = ({ pageContext }) => {
         slug
       }
       frontmatter {
+        subtitle
         title
         image {
           childImageSharp {
@@ -78,6 +80,7 @@ const IndexPage = ({ pageContext }) => {
         slug
       }
       frontmatter {
+        subtitle
         title
         image {
           childImageSharp {
