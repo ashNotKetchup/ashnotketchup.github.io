@@ -10,10 +10,20 @@ const WorkPost = ({ data,
     const {frontmatter, 
       // fields, 
       html} = markdownRemark;
+    
 
     return (
       <Layout>
-            <h1 className="is-uppercase bigTitle smaller mb-5">{frontmatter.title}</h1>
+            <h1 className="is-uppercase bigTitle smaller mb-5">{frontmatter.title}
+            {frontmatter.subtitle ? 
+                    (<span className="customSubheading"> <br/> {frontmatter.subtitle} </span>) 
+                    : 
+                    (
+
+                    <></>
+                        )
+                    }
+                    </h1>
             <div
               className="content"
               dangerouslySetInnerHTML={{ __html: html }}
@@ -33,6 +43,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
         date(formatString: "dddd, D MMMM yyyy")
         author
         

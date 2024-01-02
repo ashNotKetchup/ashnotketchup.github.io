@@ -2,23 +2,24 @@ $primary: rgb(111,220,151);
 $background-color:  rgb(252, 248, 250);
 // $background-color: black;
 $background: pink;
-$text: black;
+$text: rgb(82, 82, 82);
+$heading-text: $text;
 $accent-text: pink;
 $link: $primary;
-
-::selection {
-    background: $primary;
-    color: $background-color;
-    text-shadow: none;
-}
-
 // useful for random colour on compile? https: //bulma.io/documentation/utilities/functions/
 
 
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
 
-
+@font-face {
+    font-family: 'Junicode';
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: normal;
+    font-named-instance: 'Regular';
+    src: url(/fonts/Junicode-BoldItalic.ttf) format("ttf");
+}
 
 // // Assign font
 
@@ -40,15 +41,30 @@ $beige-lighter: #EFF0EB;
 // $family-sans-serif:  'PT Serif',
 //  serif;
 
- $font-family: BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
-
- 
+$font-family: BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
 $family-heading: "Rubik", BlinkMacSystemFont, -apple-system, "Helvetica", "Arial", sans-serif;
+$serif-family: "Junicode" ;
 
 body{
     font-family: $font-family;
 }
 
+::selection {
+    background: $primary;
+    color: $background-color;
+    text-shadow: none;
+}
+
+.listedEntry .customSubheading::before {
+    content: '↹';
+}
+.customSubheading{
+    font-family: $serif-family;
+    font-style: italic;
+    font-weight: 600;
+    letter-spacing: -0.08em;
+
+}
 // issue, markdown headings not matching colour
 .content, .notMarkdown{
     // set base size
@@ -87,6 +103,7 @@ body{
 
         h1,h2,h3,h4,h5{
             font-weight: 700;
+            color: $heading-text;
         }
     
         h1,
@@ -248,6 +265,29 @@ body {
     background-color: $background-color;
 }
 
+a:hover {
+    img{
+        
+    }
+}
+
+a img:after {
+    filter: blur(4px);
+    content: '\A';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+a img:hover:after {
+    opacity: 1;
+}
 
 .listedEntry{
 
@@ -259,8 +299,8 @@ body {
     line-height: 0.8;
 
     font-weight: 500;
-    font-stretch: semi-condensed;
-
+    font-stretch: semi-expanded;
+    letter-spacing: -0.05em;
     img{
         border-radius: 10%;
         height: calc($font-size/2.6) !important;

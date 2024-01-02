@@ -1,5 +1,7 @@
 ---
-title: "Endochron – Sounding Utopic Materials"
+type: "Composition"
+title: "Endochron"
+subtitle: "Sounding Utopic Materials"
 author: "Ash"
 date: "2023-10-01"
 image: "./microscopy_metal.jpg"
@@ -16,13 +18,13 @@ The techniques used in this piece were chosen to intentionally contrive typical 
 
 ## Process:
 The entire piece is composed from the following.
-### Source materials:
+### Source materials
 1. Wok in water
 2. A tree and its birds in the shadow of the Basilica,
 3. The road from the practice rooms at the Lyon conservatoire
 4. Gare de Nord and Gare de Lyon train stations
 
-### Modulations in Max/MSP:
+### Modulations in Max/MSP
 Making the sound of a metal which has bonds to other temporal locations
 
 1. Spectral scrubbing on wok sounds – this is essentially a 2-axis particle simulation, whereby the y axis corresponds to some spectral filtering, and the x to granular synthesis. I used ‘emit’ in Max for Live to achieve this.
