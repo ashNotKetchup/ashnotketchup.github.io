@@ -25,9 +25,9 @@ const InfoPage = ({pageContext}) => {
 
   return (
     <Layout name="about" crumbs={crumbs}>
-      <h1 className="is-uppercase bigTitle smaller mb-5">Info</h1>
+      <h1 className="smaller mb-5">Info</h1>
         <div
-          className="content mb-0"
+          className="content my-0"
           dangerouslySetInnerHTML={{ __html: data.about.html }}
         ></div>
 

@@ -14,12 +14,11 @@ const WorkPost = ({ data,
 
     return (
       <Layout>
-            <h1 className="is-uppercase bigTitle smaller mb-5">{frontmatter.title}
+            <h1 className="smaller mb-5">{frontmatter.title}
             {frontmatter.subtitle ? 
                     (<span className="customSubheading"> <br/> {frontmatter.subtitle} </span>) 
                     : 
                     (
-
                     <></>
                         )
                     }

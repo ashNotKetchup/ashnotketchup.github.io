@@ -1,5 +1,6 @@
 ---
 title: "CV"
+subtitle: "Artist, Designer, Researcher"
 ---
 
 <!-- ## Ashley Noel-Hirst -->

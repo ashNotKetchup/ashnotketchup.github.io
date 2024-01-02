@@ -18,7 +18,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="column is-2-desktop has-text-left-desktop mr-5" role="navigation" aria-label="main navigation">
+      <nav className="column is-2-desktop has-text-left-desktop mr-6 pr-6 pl-0" role="navigation" aria-label="main navigation">
         <Link to="/" className="is-uppercase logo">
           Ashley Noel-Hirst
           </Link>
@@ -76,6 +76,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     return(
       <body className="columns is-8 is-centered is-desktop mx-1 my-1">
           {navBar}
+          
           <main className="pageContent column is-6-desktop px-4">
             {children}
             </main>
