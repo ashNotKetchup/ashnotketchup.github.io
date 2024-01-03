@@ -2,11 +2,18 @@ import React from "react";
 import {Link} from "gatsby";
 import ListItem from "./listItem";
 
-const ThemeList = ({theme, link, data, className}) => {
+const ThemeList = ({theme, link, data}) => {
+  const className=theme;
     return (
         <div className="blog mb-5">
           <Link to={link}>
-            <h1 className={`is-uppercase bigTitle ${className.toLowerCase()}`}>{theme}</h1>
+            {className ? 
+                    (<h1 className={`is-uppercase bigTitle ${className.toLowerCase()}`}>{theme}</h1>
+                        ) 
+                    : 
+                    (<h1 className={`is-uppercase bigTitle `}>{theme}</h1>)
+                    }
+            
             </Link>
           {data.map((blogentry) => 
             (
