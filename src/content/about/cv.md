@@ -1,5 +1,5 @@
 ---
-title: "CV"
+title: "Ashley Noel-Hirst"
 subtitle: "Artist, Designer, Researcher"
 ---
 

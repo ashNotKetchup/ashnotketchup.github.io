@@ -20,7 +20,7 @@ const Research = ({ pageContext }) => {
         image {
           childImageSharp {
             gatsbyImageData(
-              height: 200
+              height: 35
               placeholder: BLURRED
               formats: [AUTO, WEBP, AVIF]
               )
