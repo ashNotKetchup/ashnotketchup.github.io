@@ -110,7 +110,7 @@ const IndexPage = ({ pageContext }) => {
     //loop through theme, give it a title and a list of things
     themes.map((theme)=> 
       (
-        <ThemeList theme={theme.name} data={theme.data} link={theme.link}></ThemeList>
+        <ThemeList className={theme.name} theme={theme.name} data={theme.data} link={theme.link}></ThemeList>
         )
       )  
     )

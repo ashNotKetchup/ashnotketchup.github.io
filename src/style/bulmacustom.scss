@@ -6,9 +6,10 @@ $text: rgb(82, 82, 82);
 $heading-text: $text;
 $accent-text: pink;
 $link: $primary;
+$hoverLink: $text;
 // useful for random colour on compile? https: //bulma.io/documentation/utilities/functions/
 
-
+@use 'sass:math';
 @import url('https://fonts.googleapis.com/css?family=Source Sans Pro');
 @import "~bulma/bulma.sass";
 
@@ -129,7 +130,7 @@ body{
             // font-size: 1.61111111em;
             font-size:1.81em;
             line-height: 1.5862069em;
-            margin-top: 0.79310345em;
+            margin-top: 0.69310345em;
             margin-bottom: 0em;
         }
     
@@ -137,7 +138,7 @@ body{
         .h4 {
             font-size: 1em;
             line-height: 1.27777778em;
-            margin-top: 1.27777778em;
+            margin-top: 0.47777778em;
             margin-bottom: 0em;
         }
     
@@ -335,11 +336,22 @@ nav{
 
 
 .bigTitle {
-    font-size: 5em;
+    font-size: 8.5em;
     font-family: 'Hakuna Sans', sans-serif;
     line-height: 0.8;
+
+    
 }
 
+.sound {
+    letter-spacing: 0.03em;
+    font-stretch: expanded;
+}
+
+.research{
+    font-stretch: condensed;
+    letter-spacing: -0.04em;
+}
 
 // .smaller {
 //     font-size: 5em;
@@ -390,21 +402,33 @@ $blurAmount: 0.05em;
     padding: 0.9rem 0.4rem;
         //  @extend .liquidMetal;
     // background-color: blue;
+    // overflow-x: visible;
    
 
 
 
 }
 
+.bigTitle:hover{
+    $dropBlur: math.div($blurAmount, 100);
+    filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $hoverLink);
+    -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $hoverLink);
+    -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $hoverLink);
+    -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $hoverLink);
+    -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $hoverLink);
+    // overflow-x: visible;
+}
+
+
 
 /* define filters, then mixin or extend... */
 .highContrastBlur {
-    filter: blur($blurAmount) url(#highContrastFilter);
-    -webkit-filter: blur($blurAmount) url(#highContrastFilter);
-    -moz-filter: blur($blurAmount) url(#highContrastFilter);
-    -o-filter: blur($blurAmount) url(#highContrastFilter);
-    -ms-filter: blur($blurAmount) url(#highContrastFilter);
-    z-index: -99;
+    $dropBlur: math.div($blurAmount,100);
+    filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $primary);
+    -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $primary);
+    -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $primary);
+    -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $primary);
+    -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $primary);
 }
 
 .liquidMetal{
@@ -432,7 +456,7 @@ $blurAmount: 0.05em;
 
 @media only screen and (max-width : $tablet) {
     .bigTitle {
-            font-size: 4em;
+            font-size: 7em;
                 }
 
         .smaller {
