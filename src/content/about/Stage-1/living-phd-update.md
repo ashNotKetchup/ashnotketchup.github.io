@@ -1,11 +1,12 @@
 ---
 title: "My PhD"
+subtitle: "Latent Spaces for Human-Computer Music Generation"
 bibliography:
 - references.bib
 link-citations: true
 ---
 
-# Latent Spaces for Human-Computer Music Generation
+<!-- # Latent Spaces for Human-Computer Music Generation -->
 
 Artificial Intelligence (AI) is increasingly applied in creative fields for the solution of problems (complex mappings in NIMEs, sonification) as well as the creation of artefacts (generate new musical ideas, re-arrange existing material). However, the tools used for training and implementation of such AI systems are often predicated on universalist design principles and large, pre-trained models, alienating end-users from their own data and its utility. 
 <!-- For developers, this is primarily due to a poor understanding of the typical workflows of end users. Similarly, users face barriers due to generally low machine learning literacy, as well as a lack of model parameters/explanations exposed to them. This paradigm magnifies global inequalities in the digital sphere. -->
