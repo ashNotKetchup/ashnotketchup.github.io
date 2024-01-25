@@ -1,14 +1,14 @@
 ---
 title: "Malady"
-subtitle: "All Pressure No Diamonds"
+subtitle: "All Pressure, No Diamonds"
 author: "Ash"
 date: "2024-01-18"
-image: "./iffTreeCover.jpg"
-alt: "A man, around 6ft tall, falls over a tree. The tree has also fallen over. He is wearing a tan, brown and orange coat"
+image: "./gem-stone.webp"
+alt: "A gemstone rotating slowly"
 tags: ["releases", "gigs"]
 ---
 
-![Malady stood in a field, film photo with soft warm colours](Malady_main_Press.jpg)
+![Malady, a group of four men stood in a field, film photo with soft warm colours](Malady_main_Press.jpg)
 
 Between 2021 and 2023, I was a member of Indie/Electronic band Malady. 
 
@@ -24,16 +24,17 @@ Malady supported Sam Akpro, Swim Deep and Wet Leg, among others. We also played 
 ## Studio
 In 2022, Malady released 'Round the Bend' on Nice Swan (English Teacher, Jelly Cleaver, Prima Queen). The single recieved a [remix](https://niceswanrecords.bandcamp.com/track/round-the-bend) from Manchester legends 808 State. 
 
-In early 2023, with support from [Modern Sky](https://www.modernsky.uk). Malady released 'All Pressure No Diamonds'. The EP was written and recorded together, first at Charlie's flat in East London, and then with Andy Savours (My Bloody Valentine, Black Country, New Road).
+In early 2023, with support from [Modern Sky](https://www.modernsky.uk). Malady released ['All Pressure No Diamonds'](https://malady.lnk.to/AllPNoD). The EP was written and recorded together, first at Charlie's flat in East London, and then with Andy Savours (My Bloody Valentine, Black Country New Road).
 
-![Malady live, film photo in black and white. There are 4 figures on the stage.](malady_ep_1.webp)
+![Hands with rings and a dusk behind them](malady_ep_1.jpeg)
 
 
 ## Press
-The band recieved judicious press from outlets such as [NME](https://www.nme.com/features/music-features/guitar-bands-interview-umlauts-pva-courting-radar-3257707) and [DIY Mag](https://diymag.com/review/ep/malady-all-pressure-no-diamonds).
+The band often recieved press from outlets such as [NME](https://www.nme.com/features/music-features/guitar-bands-interview-umlauts-pva-courting-radar-3257707) and [DIY Mag](https://diymag.com/review/ep/malady-all-pressure-no-diamonds).
 We also participated in ad campaigns with Fred Perry, Shure and Percival menswear.
 
-![Malady live, film photo in black and white. There are 4 figures on the stage.](Malady_press_1.png)
+
+![Malady in a range of menswear, stood in a pub around a pool table](Malady_press_1.png)
 
 
 ## Leaving
@@ -47,33 +48,33 @@ In 2023, I decided to leave the band in order to focus on research and my own mu
 <figure>
     <div>
         <div class="is-child">
-            <img src="./Malady_Poster_1.jpg" alt="Green background with white particles swarming in a circle">
+            <img src="./Malady_Poster_1.jpg" alt="Swim deep tour poster">
             </div>
         <div class="is-child">
-            <img src="./Malady_Poster_2.jpg" alt="Green background with white particles swarming in an arc">
-            </div>
-        </div>
-</figure>
-<figure>
-    <div>
-        <div class="is-child">
-            <img src="./Malady_Poster_3.jpg" alt="Green background with white particles swarming in a circle">
-            </div>
-        <div class="is-child">
-            <img src="./Malady_Poster_4.jpg" alt="Green background with white particles swarming in an arc">
+            <img src="./Malady_Poster_2.jpg" alt="nine8 live at fabric poster">
             </div>
         </div>
 </figure>
 <figure>
     <div>
         <div class="is-child">
-            <img src="./malady_live_2.jpg" alt="Green background with white particles swarming in a circle">
+            <img src="./Malady_Poster_3.jpg" alt="Sam Akpro tour poster. Green background, black text">
             </div>
         <div class="is-child">
-            <img src="./malady_live_3.jpg" alt="Green background with white particles swarming in an arc">
+            <img src="./Malady_Poster_4.jpg" alt="Poster for the great escape. Black text, orange circle, waves behind">
+            </div>
+        </div>
+</figure>
+<figure>
+    <div>
+        <div class="is-child">
+            <img src="./malady_live_2.jpg" alt="A man behind a drumkit, in fog wearing a flatcap">
             </div>
         <div class="is-child">
-            <img src="./malady_live_5.jpg" alt="Green background with white particles swarming in an arc">
+            <img src="./malady_live_3.jpg" alt="A man behind a drumkit, obscured by cymbals">
+            </div>
+        <div class="is-child">
+            <img src="./malady_live_5.jpg" alt="A view from behind the drumkit, Charlie and Khaleem">
             </div>
         </div>
 </figure>
