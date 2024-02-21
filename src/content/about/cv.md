@@ -21,7 +21,7 @@ Research Assistant – [Goldsmiths Mocap Streamer](https://www.mocapstreamer.liv
 - Developed software to support streaming of motion capture data
 - Investigated the impacts and potentials of telematic dance performance with a number of ethnography techniques (workshop, observation and interview)
 - Body sonification and interactive sound design for an [artistic intervention](https://www.mocapstreamer.live/figural-bodies) in accessiblity of metaverse technologies 
-- Contributed to publications (Pending Review for DIS 2024), presented at Being Human festival (performance) and SXSW (performance and panel)
+- Contributed to publications (Pending DIS 2024), presented at Being Human festival (performance) and SXSW (performance and panel)
 
 Research Assistantship – AI and Music, University of Oxford `Summer 2021`
 - Summer research assistantship between Oxford's biology and music departments

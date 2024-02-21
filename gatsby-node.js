@@ -84,11 +84,21 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
 
+            unsorted: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(unsorted)/"  }})
+            {   
+                nodes {
+                    fields {
+                        slug
+                    }
+                }
+            }
+
         }
     `);
 
 
     // Create work pages 
+    // TODO: Turn this into a more efficient loop for each of the nodes in the data layer, or at least in a given array. Lots of redundancy rn
     result.data.sound.nodes.forEach(node => {
         createPage({
             path: node.fields.slug,
@@ -110,6 +120,17 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     result.data.research.nodes.forEach(node => {
+        createPage({
+            path: node.fields.slug,
+            component: workPostTemplate,
+            context: {
+                slug: node.fields.slug,
+            },
+        })
+    })
+
+
+    result.data.unsorted.nodes.forEach(node => {
         createPage({
             path: node.fields.slug,
             component: workPostTemplate,
