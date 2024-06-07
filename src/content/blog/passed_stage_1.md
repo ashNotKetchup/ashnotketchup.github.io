@@ -34,15 +34,17 @@ Every day, we see new papers on the improved fidelity of generative AI models. T
 
 My PhD research explores human AI partnerships for audio manipulation, in particular focussing on . By leveraging latent spaces, I aim to create new, useful ways for artists to interact with sound, rethink data systems, and empower users' control over their data.
 
-I'm thrilled to share that last week, I passed my PhD upgrade with minor corrections. This means..... and will continue my research towards my final thesis. A huge thanks to my supervisory team @Nick, @Charis, and @Anna, as well as my colleagues at @TheCentreForDigitalMusic and @CCI for their invaluable feedback!
+I'm thrilled to share that last week, I passed my PhD upgrade with minor corrections. This means..... and will continue my research towards my final thesis. A huge thanks to my supervisory team @Nick, @Charis, and @Anna, as well as my colleagues at @TheCentreForDigitalMusic and @CCI for their invaluable advice and feedback!
 
-Key takeaways so far include the need for better communication of AI system contexts and limitations to users, and enhancing user agency.
+Key takeaways so far include:
+
+......the need for better communication of AI system contexts and limitations to users, and enhancing user agency.
 
 A question I am constantly returning to during this research is:
 
-How can I document/explicate the praxis of research at the intersection of ...
+.......How can I document/explicate the praxis of research at the intersection of ...
 
-I propose introducing an ongoing reflexive account of my research, tentatively titled: "Music about Tech and Tech about Music: Navigating the Dual Worlds of Musician and Designer in AI Music Scholarship and Praxis." This will document the intersection of practice and design, adding depth and avoiding the fetishization of individual experiences.
+
 
 Stay tuned for more updates! 🚀🎶 #AIMusic #Research #PhD #DigitalMusic #AIArtistry #humancentredAI
 

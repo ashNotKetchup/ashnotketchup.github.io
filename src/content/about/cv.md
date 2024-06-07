@@ -10,16 +10,18 @@ subtitle: "Artist, Designer, Researcher"
 
 PhD, Artificial Intelligence & Music, Queen Mary Univesity of London `2027 (Expected)`
 
+MPhil, Electronic Engineering and Computer Science, Queen Mary Univesity of London `2024`
+
 MMus (with Distinction), Sonic Arts, Goldsmiths College University of London `2022`
 
-BA (First-Class), Philosophy (Minor in Mathematics), University of Warwick
+BA (First-Class), Liberal Arts (Major in Philosophy, Minor in Mathematics), University of Warwick
 `2020`
 
 ## Research Experience
 
 Research Assistant – [Goldsmiths Mocap Streamer](https://www.mocapstreamer.live/) (AHRC)  `2021-2023`
-- Developed software to support streaming of motion capture data
-- Investigated the impacts and potentials of telematic dance performance with a number of ethnography techniques (workshop, observation and interview)
+- Investigated the impacts and potentials of telematic dance performance across cultures, using a number of ethnography techniques (workshop, observation and interview)
+- Developed software to support streaming of non-normative motion capture data
 - Body sonification and interactive sound design for an [artistic intervention](https://www.mocapstreamer.live/figural-bodies) in accessiblity of metaverse technologies 
 - Contributed to publications (Pending DIS 2024), presented at Being Human festival (performance) and SXSW (performance and panel)
 
@@ -58,6 +60,8 @@ Audio-Visual Technician, Warwick Arts Centre
 
 ## Grants/Awards
 
+Enrichment Award – Alan Turing Institute (2024)
+
 [Latent spaces for human-AI music generation (EPSRC Studentship)](https://app.dimensions.ai/details/grant/grant.13248359)
 
 Future Arts and Culture (Arts Council England)
@@ -81,7 +85,11 @@ Warwick Arts Centre Jazz Performance Award (part-scholarship)
 
 ## Presentations/Publications
 
-Corey John Ford, Ashley Noel-Hirst, Berker Banarr and Nick Bryan-Kinns. Autoethnographic Explorations of Using a Folk Generative AI Plugin for Making Punk and Glitch Music `– Pending Review`
+Ashley Noel-Hirst, Johan Pauwels, and Nick Bryan-Kinns. “Attribute- Monotonic Variational Autoencoders for Interacting With Pre-Trained Neural Audio Models" (Under Review). 2024.
+
+✨Honourable Mention – Best Paper Award!✨ Corey Ford, Ashley Noel-Hirst, Sara Cardinale, Jackson Loth, Pedro Sarmento, Elizabeth Wilson, Lewis Wolstanholme, Kyle Worrall, and Nick Bryan-Kinns. “Reflection Across AI-based Music Composition”. In: C&C ’24: Proceedings of the 16th Conference on Creativity and Cognition. 2024.
+
+Nick Bryan-Kinns, Ashley Noel-Hirst, and Corey Ford. “Using Incongruous Genres to Explore Music Making with AI Generated Content”. In: C&C ’24: Proceedings of the 16th Conference on Creativity and Cog- nition. 2024.
 
 Ashley Noel-Hirst and Nick Bryan-Kinns. An Autoethnographic Exploration of XAI in Algorithmic Composition. In *The 1st International Workshop on Explainable AI for the Arts (XAIxArts),* ACM Creativity and Cognition (C&C) `2023`. Online, 3 pages. https://xaixarts.github.io
 
