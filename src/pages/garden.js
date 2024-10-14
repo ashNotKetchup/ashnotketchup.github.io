@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import Layout from "../components/layout";
+import Layout from "../components/layout 2";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 
@@ -8,7 +8,7 @@ import TagSelector from "../components/tagSelector";
 function gardenTitle(title, subtitle){
   return (
     <span>
-      <h1 className="is-uppercase bigTitle">{title}</h1>
+      <h1 className="is-uppercase">{title}</h1>
       <p className="subtitle is-size-7"> {subtitle} </p>
       </span>
     
@@ -57,9 +57,6 @@ const Garden = () => {
     const initiaTitle = "Welcome to my Digital Garden"
 
     const [titleText, setTitleText] = useState(initiaTitle); //causes rerender when changed
-
-
-
     const initiaSubtitle = "A space for cultivating ideas in public"
     const [subtitleText, setSubtitleText] = useState(initiaSubtitle); //causes rerender when changed
 
@@ -86,23 +83,27 @@ const Garden = () => {
 
   const garden =(
     // <div>
-    <div className="columns is-multiline is-centered my-auto is-garden">
-      <div className="column is-12 has-text-centered mb-0">
+    <div className="garden"
+    // className="columns is-multiline is-centered my-auto is-garden"
+    >
+      <div className="titles"
+      // className="column is-12 has-text-centered mb-0"
+      >
           {gardenTitle(titleText,subtitleText)}  
         </div>
 
-        <div className="column is-12 has-text-centered">
+        {/* <div className="column is-12 has-text-centered"> */}
           {/* <p className="subtitle mt-0 ">subtitle</p> */}
-          </div>
+          {/* </div> */}
 
-        <div className="column is-4 has-text-centered">
+        <div className="allotment">
           {allPlants}
           </div>
 
-      <div className="column is-9 has-text-centered mb-0">
+      <div className="tags">
         <TagSelector tags={data.allTags} nodes={data.garden.nodes} data={data} callback={getFilteredNodes} centre={1} />
-        
         </div>
+
       </div>
 )
 
@@ -113,7 +114,7 @@ const Garden = () => {
           {garden}
           </div> 
         </section>
-      </Layout>
+       </Layout>
   );
 };
 
