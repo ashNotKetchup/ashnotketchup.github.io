@@ -74,7 +74,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     
 
     return(
-      <body className="columns is-8 is-centered is-desktop mx-0 my-1">
+      <body className="main-page columns is-8 is-centered is-desktop mx-0 my-1">
           {navBar}
           
           <main className="pageContent column is-6-desktop px-4">

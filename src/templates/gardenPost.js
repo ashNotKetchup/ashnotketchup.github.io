@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Layout from "../components/layout";
+import Layout from "../components/layout 2";
 
 const GardenPost = ({ data }) => {
 
@@ -10,8 +10,8 @@ const GardenPost = ({ data }) => {
 
     return (
       <Layout name="Blog">
-          <div className="container has-text-primary">
-            <h1 className="title has-text-primary">{frontmatter.title}</h1>
+          <div className="container post">
+            <h1 className="title">{frontmatter.title}</h1>
             <h2 className="subtitle">
               by {frontmatter.author} &mdash; {frontmatter.date}
             </h2>

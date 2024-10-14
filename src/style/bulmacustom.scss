@@ -266,17 +266,98 @@ figcaption, .footnotes {
 
 $blurAmount: 0.1em;
 $garden-primary: brown;
+$link: white;
 .garden{
 
-$blurAmount: 0.1em;
-$garden-primary: brown;
+    $blurAmount: 0.1em;
+    $garden-primary: brown;
+    a, button, h1, text, p, h2, h3 {
+            color: hotpink;
+        }
 
-    button {
-            background: transparent;
-            // color: red;
-            border: 0;
-            // @extend .highContrastBlur;
+        button {
+                background: transparent;
+                // color: red;
+                border: 0;
+                // @extend .highContrastBlur;
 
+                $dropBlur: math.div($blurAmount, 100);
+                    filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                    -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                    -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                    -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                    -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                
+                @extend .is-uppercase;
+                // font-stretch: ultra-expanded;
+                font-size: 1em;
+
+
+            }
+        
+            button:focus {
+                outline: transparent;
+                color: pink;
+            }
+
+
+        
+
+        // border: 1px dotted #000;
+            display: block;
+            height: 50%;
+            width: 100%;
+        .titles{
+            // background-color: yellow;
+            line-height: 0.8;
+            position: fixed;
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            h1{
+                font-size: 6em;
+                font-family: 'Hakuna Sans', sans-serif;
+                // @extend .highContrastBlur;
+                $dropBlur: math.div($blurAmount, 100);
+                filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+                -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+            }
+
+        }
+
+        .allotment{
+            background-color: blue;
+            // cursor: url('./mouse icons/water_can.svg'), auto;
+            position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+        }
+
+        .tags{
+            // background-color: pink;
+            position: fixed;
+                width: 80%;
+                top: 95%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                justify-content: space-between;
+
+                .buttons{
+                    background-color: blue($color: #000000)
+                }
+        }
+            .buttons {
+                background-color: blue($color: #000000)
+            }
+
+
+        .navbar-end, .navbar-start{
             $dropBlur: math.div($blurAmount, 100);
                 filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
                 -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
@@ -284,93 +365,56 @@ $garden-primary: brown;
                 -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
                 -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
             
-            @extend .is-uppercase;
-            // font-stretch: ultra-expanded;
-            font-size: 1em;
-
-
+                @extend .is-uppercase;
+                // font-stretch: ultra-expanded;
+                font-size: 1em;
+            link: white !important;
+            position: fixed;
+                width: 50%;
+                top: 5%;
+                
+                // transform: translate(-50%, -50%);
+                // justify-content: space-between;
         }
-    
-        button:focus {
-            outline: transparent;
-            color: pink;
-        }
-
-
-    
-
-    // border: 1px dotted #000;
-        display: block;
-        height: 50%;
-        width: 100%;
-    .titles{
-        // background-color: yellow;
-        line-height: 0.8;
-        position: fixed;
-        width: 80%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        h1{
-            font-size: 6em;
-            font-family: 'Hakuna Sans', sans-serif;
-            // @extend .highContrastBlur;
-            $dropBlur: math.div($blurAmount, 100);
-            filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-        }
-
-    }
-
-    .allotment{
-        background-color: blue;
-        // cursor: url('./mouse icons/water_can.svg'), auto;
-        position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-    }
-
-    .tags{
-        // background-color: pink;
-        position: fixed;
-            width: 80%;
-            top: 95%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            justify-content: space-between;
-
-            .buttons{
-                background-color: blue($color: #000000)
+            .navbar-start {
+                // background-color: yellow;
+                // background-color: pink;
+                right: 40%;
             }
-    }
-        .buttons {
-            background-color: blue($color: #000000)
-        }
 
+            .navbar-end {
+                display: flex;
+                justify-content: right;
+                // background-color: pink;
+                right: 10%;
+            }
+
+            .post{
+                position: absolute;
+                    width: 80%;
+                    top: 10%;
+                    left: 10%;
+                    // line-height: 0.0001rem;
+            }
 }
 
 
 .top-bit nav{
-    position: fixed;
-        width: 80%;
-        top: 5%;
-        left: 50%;
-        // transform: translate(-50%, -50%);
-        justify-content: space-between;
-        font-family: 'Hakuna Sans', sans-serif;
-        color: $garden-primary;
-            // @extend .highContrastBlur;
-            $dropBlur: math.div($blurAmount, 100);
-            filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
-            -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+    // position: fixed;
+    //     width: 80%;
+    //     top: 5%;
+    //     left: 50%;
+    //     // transform: translate(-50%, -50%);
+    //     justify-content: space-between;
+    //     font-family: 'Hakuna Sans', sans-serif;
+    //     color: $garden-primary;
+    //         // @extend .highContrastBlur;
+    //         $dropBlur: math.div($blurAmount, 100);
+    //         filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+    //         -webkit-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+    //         -moz-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+    //         -o-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
+    //         -ms-filter: blur($blurAmount) drop-shadow(0 0 $dropBlur $garden-primary);
 
 }
 
@@ -443,18 +487,21 @@ a:hover {
 }
 
 // maybe pin this on desktop
-nav{
-    margin-top: 100px;
-    @media only screen and (max-width : $desktop) {
-            margin-top: 0px;
-        }
-}
 
-.pageContent{
-    margin-top: 80px;
-    @media only screen and (max-width : $desktop) {
-            margin-top: 0px;
-        }
+.main-page{
+    nav{
+        margin-top: 100px;
+        @media only screen and (max-width : $desktop) {
+                margin-top: 0px;
+            }
+    }
+
+    .pageContent{
+        margin-top: 80px;
+        @media only screen and (max-width : $desktop) {
+                margin-top: 0px;
+            }
+    }
 }
 
 .logo{

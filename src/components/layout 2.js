@@ -4,8 +4,8 @@ import "../style/bulmacustom.scss"
 // import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const navItems = [
-    {content:<code>Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
-      link: "/info"},
+    {content:<>Home</>, 
+      link: "/"},
 ]
 const socialMediaItems = [
   {
@@ -18,24 +18,24 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="column is-2-desktop has-text-left-desktop mx-4 mr-6 pr-6 pl-0" role="navigation" aria-label="main navigation">
-        <Link to="/" className="is-uppercase logo">
-          Ashley's Garden
+      <nav className="navbar-start" role="navigation" aria-label="main navigation">
+        <Link to="/garden" className="is-uppercase logo">
+          Garden
           </Link>
         
-        {/* <div class="navbar-end">
+        
+      </nav>
+    );
+
+    const endBar = (
+      <nav className="navbar-end" role="navigation">
             {navItems.map((item) => (
               <Link className="" to={item.link}> 
                 {item.content}
                 </Link>
 
             ))}
-          </div> */}
-      </nav>
-    );
-
-    const endBar = (
-      <nav className="column is-2-desktop has-text-left-desktop" role="navigation">
+      
       </nav>
     );
 
@@ -74,10 +74,9 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     
 
     return(
-      <body className="top-bit">
+      <body className="garden columns">
           {navBar}
-          
-          <main className="pageContent">
+          <main className="pageContent column is-6-desktop px-4">
             {children}
             </main>
             {endBar}
