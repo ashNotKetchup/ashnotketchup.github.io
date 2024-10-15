@@ -6,6 +6,8 @@ import "../style/bulmacustom.scss"
 const navItems = [
     {content:<code>Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
       link: "/info"},
+      {content:<span><br></br><code className="garden-link">Check out my garden 🌱</code></span>, 
+      link: "/garden"}
 ]
 const socialMediaItems = [
   {
@@ -23,11 +25,11 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
           Ashley Noel-Hirst
           </Link>
         
-        <div class="navbar-end">
+        <div class="navbar-end-normal">
             {navItems.map((item) => (
-              <Link className="" to={item.link}> 
-                {item.content}
-                </Link>
+              <div>
+              <Link className="" to={item.link}>{item.content}</Link>
+                </div>
 
             ))}
           </div>

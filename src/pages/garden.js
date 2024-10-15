@@ -55,10 +55,10 @@ const Garden = () => {
       setFilteredNodes(nodes);
     }, [setFilteredNodes]);
 
-    const initiaTitle = "Welcome to my Digital Garden"
+    const initiaTitle = "Cultivate a Digital Garden"
 
     const [titleText, setTitleText] = useState(initiaTitle); //causes rerender when changed
-    const initiaSubtitle = "A space for cultivating ideas in public"
+    const initiaSubtitle = "Cultivate ideas in public"
     const [subtitleText, setSubtitleText] = useState(initiaSubtitle); //causes rerender when changed
 
         

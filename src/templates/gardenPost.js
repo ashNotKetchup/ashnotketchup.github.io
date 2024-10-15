@@ -10,13 +10,23 @@ const GardenPost = ({ data }) => {
 
     return (
       <Layout name="Blog">
+
+          <div className="titles">
+            <h1 className="is-uppercase">{frontmatter.title}</h1>
+            <p className="subtitle is-size-7"> {frontmatter.subtitle} </p>
+            <p className="subtitle is-size-7"> {frontmatter.date} </p>
+            </div>
+
+
           <div className="container post">
-            <h1 className="title">{frontmatter.title}</h1>
-            <h2 className="subtitle">
-              by {frontmatter.author} &mdash; {frontmatter.date}
-            </h2>
+            {/* <div className="titles">  */}
+            {/* <h1>{frontmatter.title}</h1>
+            <h2>
+              {frontmatter.date}
+            </h2>  */}
+            {/* </div> */}
             <div
-              className="content has-text-primary"
+              className="content"
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
           </div>
