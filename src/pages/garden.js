@@ -32,6 +32,7 @@ const Garden = () => {
           subtitle
           tags
           date(formatString: "ddd DD MMM yy")
+          icon
         }
         id
       }

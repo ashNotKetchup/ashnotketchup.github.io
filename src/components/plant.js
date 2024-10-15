@@ -11,6 +11,10 @@ function pickPlant(plantIndex){
 
 const Plant = (props) => {
     const size = props.size;
+    var icon = pickPlant(size);
+    if (props.obj.frontmatter.icon){
+        icon = props.obj.frontmatter.icon
+    }
     return (
         // Set Heading From Hover
         <span class="is-size-3" 
@@ -39,7 +43,7 @@ const Plant = (props) => {
             return
             }}>
         {/* Render Plant Sprite */}
-        {pickPlant(size)}
+        {icon}
         </span>
     );
 
