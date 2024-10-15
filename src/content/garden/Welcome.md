@@ -4,7 +4,7 @@ subtitle: "Cultivate ideas in public"
 author: "Anh"
 date: "2022-03-16"
 image: "./placeholder.png"
-tags: ["seminars"]
+tags: ["discourse"]
 ---
 
 <!-- more about the history of digital gardens:
