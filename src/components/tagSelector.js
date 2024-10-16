@@ -12,9 +12,9 @@ const TagSelector = ({tags,nodes,callback,centre, initialState=false}) => {
 
     useEffect(() => {callback(memoFilter)}, [selected,filterData,memoFilter])
 
-    const createButtons = <span>
+    const createButtons = <>
         {tags.group.map((tag) => (
-            <button className="button is-small is-primary is-outlined is-rounded is-responsive"
+            <button className="button is-responsive"
             key={tag.fieldValue} 
             onClick={() => setSelected(tag.fieldValue)} 
             disabled={selected === tag.fieldValue}>
@@ -22,24 +22,25 @@ const TagSelector = ({tags,nodes,callback,centre, initialState=false}) => {
                 </button>
                 ))}
 
-            <button  className="button is-small is-primary is-outlined is-rounded is-responsive" 
+            <button  className="button is-responsive" 
                 onClick={() => setSelected(false)}
                 disabled={!selected}
                 >
                 Clear Tags (x)
                 </button>
 
-    
-    </span>
+    </>
+
 
     const buttonList = {}
     buttonList.left = (<div class={`buttons is-left mb-0`}>
         {createButtons}
         </div>)
     buttonList.centre = (
-        <div class="buttons is-centered mb-0">
+        // <div class="tags buttons is-centered mb-0">
+        <>
             {createButtons}
-        </div>
+        </>
     )
 
     if(centre){

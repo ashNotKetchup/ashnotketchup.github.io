@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql} from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Layout from "../components/layout";
+import Layout from "../components/layout 2";
 
 const GardenPost = ({ data }) => {
 
@@ -10,13 +10,23 @@ const GardenPost = ({ data }) => {
 
     return (
       <Layout name="Blog">
-          <div className="container has-text-primary">
-            <h1 className="title has-text-primary">{frontmatter.title}</h1>
-            <h2 className="subtitle">
-              by {frontmatter.author} &mdash; {frontmatter.date}
-            </h2>
+
+          <div className="titles">
+            <h1 className="is-uppercase">{frontmatter.title}</h1>
+            <p className="subtitle is-size-7"> {frontmatter.subtitle} </p>
+            <p className="subtitle is-size-7"> {frontmatter.date} </p>
+            </div>
+
+
+          <div className="container post">
+            {/* <div className="titles">  */}
+            {/* <h1>{frontmatter.title}</h1>
+            <h2>
+              {frontmatter.date}
+            </h2>  */}
+            {/* </div> */}
             <div
-              className="content has-text-primary"
+              className="content"
               dangerouslySetInnerHTML={{ __html: html }}
             ></div>
           </div>

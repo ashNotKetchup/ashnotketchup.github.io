@@ -4,10 +4,8 @@ import "../style/bulmacustom.scss"
 // import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const navItems = [
-    {content:<code>Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
-      link: "/info"},
-      {content:<span><br></br><code className="garden-link">Check out my garden 🌱</code></span>, 
-      link: "/garden"}
+    {content:<>Home</>, 
+      link: "/"},
 ]
 const socialMediaItems = [
   {
@@ -20,24 +18,24 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="column is-2-desktop has-text-left-desktop mx-4 mr-6 pr-6 pl-0" role="navigation" aria-label="main navigation">
-        <Link to="/" className="is-uppercase logo">
-          Ashley Noel-Hirst
+      <nav className="navbar-start" role="navigation" aria-label="main navigation">
+        <Link to="/garden" className="is-uppercase logo">
+          Garden
           </Link>
         
-        <div class="navbar-end-normal">
-            {navItems.map((item) => (
-              <div>
-              <Link className="" to={item.link}>{item.content}</Link>
-                </div>
-
-            ))}
-          </div>
+        
       </nav>
     );
 
     const endBar = (
-      <nav className="column is-2-desktop has-text-left-desktop" role="navigation">
+      <nav className="navbar-end" role="navigation">
+            {navItems.map((item) => (
+              <Link className="" to={item.link}> 
+                {item.content}
+                </Link>
+
+            ))}
+      
       </nav>
     );
 
@@ -76,9 +74,8 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     
 
     return(
-      <body className="main-page columns is-8 is-centered is-desktop mx-0 my-1">
+      <body className="garden columns">
           {navBar}
-          
           <main className="pageContent column is-6-desktop px-4">
             {children}
             </main>
