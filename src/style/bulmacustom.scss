@@ -284,10 +284,16 @@ $link: white;
         }
     
     .container{
-        a, button, h1, text, p, h2, h3, hr, .footnotes {
+        button, h1, text, p, h2, h3, hr, .footnotes {
            
         color: blue !important;
         //  color: hotpink;
+        }
+
+        a{
+            // color: blue !important;
+         color: hotpink;
+
         }
 
         p{
