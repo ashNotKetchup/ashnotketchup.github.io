@@ -7,7 +7,9 @@ const navItems = [
     {content:<code>Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
       link: "/info"},
       {content:<span><br></br><code className="garden-link">Check out my garden 🌱</code></span>, 
-      link: "/garden"}
+      link: "/garden"},
+      {content:<span><br></br><code className="reviews-link">Read my reviews 📝</code></span>, 
+      link: "/reviews"}
 ]
 const socialMediaItems = [
   {
