@@ -84,6 +84,15 @@ exports.createPages = async ({ graphql, actions }) => {
                 }
             }
 
+            reviews: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(reviews)/"  }})
+            {   
+                nodes {
+                    fields {
+                        slug
+                    }
+                }
+            }
+
             unsorted: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(unsorted)/"  }})
             {   
                 nodes {
@@ -139,6 +148,17 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+
+        // Create review pages
+    result.data.reviews.nodes.forEach((node) => {
+        createPage({
+        path: node.fields.slug,
+        component: workPostTemplate,
+        context: {
+            slug: node.fields.slug,
+        },
+        });
+    });
 
     // Create garden pages
     result.data.garden.nodes.forEach((node) => {

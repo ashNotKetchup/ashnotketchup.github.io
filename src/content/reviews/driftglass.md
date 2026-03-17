@@ -1,0 +1,22 @@
+---
+title: "Driftglass"
+subtitle: "Samuel R. Delany"
+author: "Ash"
+date: "2026-06-06" 
+tags: ["Review", "Book"]
+image: "./orange_square.png"
+---
+I wasn’t expecting Driftglass to be a collection of short stories – having bought it on a whim in the (well-curated) bookshop of London’s Institute of Contemporary Arts – but I was pleasantly surprised by the format. Each of Delaney’s ten vignettes arises and withdraws with little fanfare, leaving the reader with the sense of having stepped in and out of something governed by an internal logic and ontological independence far beyond their comprehension. In this way, the form captures a potency closer to real life than is possible in novels.
+
+Delaney allots to these stories a total of a little over 360 pages. Yet, each story breathes deeply. We jump into worlds of telepaths, amphifolk, and the like, make what sense we can, and then leave, whether things are neatly resolved or not. He draws us in with accessible language; worldbuilds with rich descriptions, in particular via adverbs and alternatives to the word 'said'('yelled', 'whispered', 'remembered'. In fact flicking open a random page one might struggle to find 'said' at all.); and holds at an appropriate viewing distance his characters, often by exploiting the third-person and present-tense. The result is a well-balanced ease, intrigue and up-to-speed-ness.
+
+If Driftglass' form is its root, and accessibility its stem, then it is flowered by Delaney's ability to wrest from very ordinary English a real sensitivity to beauty, 'details ... are important things .... the points from which we suspend later pain' (Driftglass p.161). It sounds hyperbolic now, but at times, Delaney's ingenuity left me grateful for the English language itself, overcome by a sense of 'oh, you can do that!?', for example, when a protagonist supposes that - as one might translate knots in palm fibres, so too could the anxious knots in his entrails be read (Driftglass p.175).
+
+While I enjoyed the writing itself, I found the curation and organisation of these stories to be uneven. Star Pit – which, though I did enjoy it, was the least pithy of the stories and had one of the least compelling protagonists – kicked things off, and tested my patience from the jump. By contrast, the closing story, Night and the Loves of Joe Dicostanzo, juts out at the end – short, incredibly fragmented and disconcerting. Maybe that's the point. I didn't enjoy it, and it was a strange way to end the book. Highlights for me include: Dog in a Fisherman's Net, which I found incredibly moving; Driftglass, with its sensitivity; and We in Some Strange Power's Employ, Move on a Rigorous Line, which had the strongest sense of narrative. When he is exploring maniacal compulsions and paranoia (Cage of Brass, Corona, ...Joe Dicostanzo), I am reminded of Camus' The Fall, insofar as Delaney makes it difficult to look away, slowly wrapping us into the mind-turnings of his protagonists.
+
+Refreshingly, these are stories about humans and collections of humans, rather than humanity and politics. Though he renders each story in different tones and genres, he doesn't construct hypotheticals-cum-philosophy with which he bashes you over the head (which can happen in science fiction). Of course, there are some sort of brilliant flashes of philosophy, for example, 'the science of probability gives mathematical expression to our ignorance, not to our wisdom’ (Time Considered as a Helix of Semiprecious Stones, p.328), but they aren't overly indulged. For example, We in Some Strange Power's Employ... could very easily be framed as some sort of colonial or decelerationist (or accelerationist, depending on who you are) story. But instead, it's about normal stuff, like love triangles, interpersonal relationships at work, and flying motorbikes...
+On the other side, Delaney does well to avoid getting caught up in navel-gazing fantasy, and leaves some aspects of his societies unaddressed, let alone answered (for example, Star Pit's polyamorous 'proc groups' or the singers in 'time considered...') beyond their implications for our protagonist. Instead, he tells a real story about real people.
+
+While many others in the genre are writing pseudo-science, anthropological reports, and philosophical treatises, Delaney creates an elegant, working folk's science fiction. Maybe its groundedness and legibility are unrealistic – but so is intergalactic space travel enabled by clinical depression.
+
+7/10 (3.5 Stars) 
