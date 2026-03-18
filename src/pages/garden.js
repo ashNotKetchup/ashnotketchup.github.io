@@ -1,6 +1,6 @@
 import React, {useState, useCallback} from "react";
 import { graphql, Link, useStaticQuery } from "gatsby";
-import Layout from "../components/layout 2";
+import Layout from "../components/layout";
 import Plant from "../components/plant";
 import TagSelector from "../components/tagSelector";
 
