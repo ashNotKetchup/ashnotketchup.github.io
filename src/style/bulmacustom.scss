@@ -72,12 +72,20 @@ body{
         
     font-size: 12px;
 
+    @include mobile {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
     @include tablet {
         font-size: 18px;
+        line-height: 35px;
+
     }
 
     @include desktop {
         font-size: 20px;
+        line-height: 38px;
     }
 
     color: $text;
@@ -488,7 +496,7 @@ figcaption{
 
 html,
 body {
-    height: 100vh;
+    // height: 100vh;
     background-color: $background-color;
 }
 
@@ -531,13 +539,64 @@ a:hover {
 
 // maybe pin this on desktop
 
-.main-page{
-    nav{
+.main-page {
+    nav {
         margin-top: 100px;
-        @media only screen and (max-width : $desktop) {
-                margin-top: 0px;
+        
+        &.startbar{
+            background-color: blue;
+        }
+
+            position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 5px; /* How far from top it locks */
+    height: max-content; /* Required for sticky inside flexbox columns */
+    z-index: 30;
+
+        // Default behavior: Append emoji
+        a[data-emoji] {
+            
+            &::after {
+                content: attr(data-emoji);
+                margin-left: 0.5em;
             }
+        }
+
+        // Small screen behavior: Replace content with emoji
+        @media only screen and (max-width : $desktop) {
+            margin-top: 0px;
+            line-height: 1;
+            .logo {
+                // display: inline-block;
+                writing-mode: vertical-lr;
+                text-orientation: upright;
+                letter-spacing: -10%;
+                // background-color: pink;
+                font-weight: 900;
+                &[data-short-title]{
+                    font-size: 0; // Hides the original text
+                    
+                    &::after {
+                        content: attr(data-short-title);
+                        
+                        font-size: 1.5rem; // Restores size for the emoji
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            a[data-emoji] {
+                font-size: 0; // Hides the original text
+
+                &::after {
+                    font-size: 1.5rem; // Restores size for the emoji
+                    margin-left: 0;
+                }
+            }
+        }
     }
+}
+    
 
     .pageContent{
         margin-top: 80px;
@@ -545,10 +604,10 @@ a:hover {
                 margin-top: 0px;
             }
     }
-}
+
 
 .logo{
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
 }
 
@@ -673,11 +732,11 @@ $blurAmount: 0.05em;
 
 @media only screen and (max-width : $tablet) {
     .bigTitle {
-            font-size: 6.6em;
+            font-size: 4em;
                 }
 
         .smaller {
-            font-size: 4em;
+            font-size: 3em;
         }
         
     .listedEntry{
@@ -741,7 +800,8 @@ $blurAmount: 0.05em;
 // Make sure that page takes up whole vertical space
 #gatsby-focus-wrapper {
     // padding-top: 3.5rem; // Add padding to make sure navbar does not cover content
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-height:min-height;
     display: flex;
     flex-direction: column;
 }
@@ -778,7 +838,7 @@ section.hero::before {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    // height: 100vh;
     z-index: -1;
 }
 
@@ -829,3 +889,45 @@ section.hero::before {
     width: 100%;
     margin-bottom: 2vw;
 }
+
+
+// book reviews
+spoiler {
+    background-color: $accent-text;
+    color: $accent-text;
+    padding: 0.1rem;
+    border-radius: 1px;
+    margin: 0.1rem 0;
+
+    
+}
+
+spoiler:hover {
+    color: $text;
+    background-color: transparent;
+}
+
+.reviews{
+    $primary: orange;
+    a {
+        color: $primary;
+    }
+
+    .button,
+    .tag,
+    .is-primary {
+        background-color: $primary;
+        border-color: $primary;
+        color: $background-color;
+    }
+    // @extend .content;
+    // Re-apply Bulma's primary styles with the local $primary
+    // @extend .highContrastBlur;
+    .bigTitle{
+        @extend .liquidMetal;
+    }
+}
+
+
+
+

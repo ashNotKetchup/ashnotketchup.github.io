@@ -41,7 +41,7 @@ const Reviews = ({ pageContext }) => {
   const theme = {name:"reviews", data: data.reviews.nodes}
   return (
     <Layout name="Index">
-      <section>
+      <section className="reviews">
         <ThemeList theme={theme.name} data={theme.data}></ThemeList>
         </section>
       </Layout>

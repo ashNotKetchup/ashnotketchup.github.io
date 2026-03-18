@@ -4,12 +4,12 @@ import "../style/bulmacustom.scss"
 // import { Breadcrumb } from "gatsby-plugin-breadcrumb"
 
 const navItems = [
-    {content:<code>Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
-      link: "/info"},
-      {content:<span><br></br><code className="garden-link">Check out my garden 🌱</code></span>, 
-      link: "/garden"},
-      {content:<span><br></br><code className="reviews-link">Read my reviews 📝</code></span>, 
-      link: "/reviews"}
+    {content:<code className="info-link">Artist, Designer, and PhD Researcher in Artificial Intelligence and Music</code>, 
+      link: "/info", emoji: "ℹ️"},
+      {content:<span><br></br><code className="garden-link">Check out my garden</code></span>, 
+      link: "/garden", emoji: "🌱"},
+      {content:<span><br></br><code className="reviews-link">Read my reviews</code></span>, 
+      link: "/reviews", emoji: "📝"}
 ]
 const socialMediaItems = [
   {
@@ -22,24 +22,24 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
   
     const navBar = (
-      <nav className="column is-2-desktop has-text-left-desktop mx-4 mr-6 pr-6 pl-0" role="navigation" aria-label="main navigation">
-        <Link to="/" className="is-uppercase logo">
-          Ashley Noel-Hirst
-          </Link>
-        
-        <div class="navbar-end-normal">
-            {navItems.map((item) => (
-              <div>
-              <Link className="" to={item.link}>{item.content}</Link>
-                </div>
-
-            ))}
+      <nav className="column is-2-desktop is-1-touch has-text-left-desktop has-text-centered-touch ml-4-desktop mr-6-desktop pr-6-desktop mx-4-touch px-3-touch is-fixed-top startbar" role="navigation" aria-label="main navigation">
+      <Link to="/" className="is-uppercase logo" data-short-title="ANH">
+        Ashley Noel-Hirst
+        </Link>
+      
+      <div class="navbar-end-normal">
+        {navItems.map((item) => (
+          <div>
+          <Link className="" to={item.link} data-emoji={item.emoji}>{item.content}</Link>
           </div>
+
+        ))}
+        </div>
       </nav>
     );
 
     const endBar = (
-      <nav className="column is-2-desktop has-text-left-desktop" role="navigation">
+      <nav className="column is-2-desktop is-hidden-touch has-text-left-desktop endbar" role="navigation">
       </nav>
     );
 
@@ -61,7 +61,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
 
               {/* <!-- Define a lighting effect with a point light that is positioned at virtual 3D coordinates x: 40px, y: -30px, z: 200px: --> */}
               <feSpecularLighting surfaceScale="6" specularConstant="1" specularExponent="30" lighting-color="#white" in="BLUR" result="SPECULAR">
-                  <fePointLight x="0" y="0" z="200" />
+                  <fePointLight x="0" y="0" z="240" />
               </feSpecularLighting>
 
               {/* <!-- Cut off the parts that overlap the source graphic… --> */}
@@ -78,7 +78,7 @@ const Layout = ({children, nameInNav, crumbs, name, hero}) => {
     
 
     return(
-      <body className="main-page columns is-8 is-centered is-desktop mx-0 my-1">
+      <body className="main-page columns is-8-desktop is-centered is-mobile mx-0 my-1 has-navbar-fixed-top">
           {navBar}
           
           <main className="pageContent column is-6-desktop px-4">
