@@ -3,26 +3,26 @@
  */
 module.exports = {
   flags: {
-    DEV_SSR: false
+    DEV_SSR: false // disable SSR during development to avoid chunking issues
   },
   siteMetadata: {
     title: `Ashley Noel-Hirst`,
     siteUrl: `https://www.noelhirst.net`,
   },
   plugins: [
-    "gatsby-plugin-styled-components",
-    "gatsby-plugin-image",
+    "gatsby-plugin-styled-components", // CSS-in-JS support
+    "gatsby-plugin-image",             // Gatsby Image support
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: "gatsby-plugin-manifest", // favicon / manifest
       options: {
         icon: "src/images/icon.jpg",
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
+    // "gatsby-plugin-mdx",                // MDX support
+    "gatsby-plugin-sharp",              // image processing
+    "gatsby-transformer-sharp",         // image processing
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-source-filesystem", // images folder
       options: {
         name: "images",
         path: "./src/images/",
@@ -30,7 +30,7 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: "gatsby-source-filesystem", // pages folder
       options: {
         name: "pages",
         path: "./src/pages/",
@@ -38,61 +38,41 @@ module.exports = {
       __key: "pages",
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`, // content folder for Markdown
       options: {
         name: `content`,
         path: "./src/content",
       },
     },
     {
-      resolve: `gatsby-plugin-breadcrumb`,
+      resolve: `gatsby-plugin-breadcrumb`, // breadcrumb navigation
       options: {
-        useAutoGen: true, // useAutoGen: required 'true' to use autogen
-        }
+        useAutoGen: true, // auto-generate breadcrumbs from paths
+      },
     },
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: `gatsby-transformer-remark`, // transform Markdown to HTML
       options: {
         plugins: [
-          // `gatsby-remark-relative-images`,
+          // `gatsby-remark-relative-images`, // commented out; optional
           {
-            resolve: `gatsby-remark-images`,
+            resolve: `gatsby-remark-images`, // automatically process images in Markdown
             options: {
-              maxWidth: 800,
+              maxWidth: 800,            // max display width
               linkImagesToOriginal: true,
               sizeByPixelDensity: true,
-              showCaptions: false
-              }
+              showCaptions: false,
             },
-          `gatsby-remark-autolink-headers`,
-          ]
-        }
-      },
-    // `gatsby-transformer-remark`,
-    `gatsby-plugin-catch-links`,
-    "gatsby-plugin-sass",
-    {
-      resolve: "gatsby-remark-embed-video",
-      options: {
-        width: 800,
-        ratio: 1.77, // Optional: Defaults to 16/9 = 1.77
-        // height: 400, // Optional: Overrides optional.ratio
-        related: false, //Optional: Will remove related videos from the end of an embedded YouTube video.
-        noIframeBorder: true, //Optional: Disable insertion of <style> border: 0
-        loadingStrategy: "lazy", //Optional: Enable support for lazy-load offscreen iframes. Default is disabled.
-        urlOverrides: [
-          {
-            id: "youtube",
-            embedURL: (videoId) =>
-              `https://www.youtube-nocookie.com/embed/${videoId}`,
           },
-        ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
-        containerClass: "embedVideo-container", //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
-        iframeId: false, //Optional: if true, iframe's id will be set to what is provided after 'video:' (YouTube IFrame player API requires iframe id)
+          `gatsby-remark-autolink-headers`,  // adds links to headers automatically
+          `gatsby-remark-responsive-iframe`, // make iframes responsive
+        ],
       },
     },
-    "gatsby-remark-responsive-iframe", //Optional: Must be loaded after gatsby-remark-embed-video
-    "gatsby-plugin-twitter",
-    // 'gatsby-transformer-bibtex',
+    // these are top-level plugins, unrelated to Remark
+    `gatsby-plugin-catch-links`,           // intercepts local links in Markdown
+    "gatsby-plugin-sass",                  // SASS/SCSS support
+    "gatsby-plugin-twitter",               // Twitter embeds
+    // 'gatsby-transformer-bibtex',        // optional BibTeX support
   ],
 };
