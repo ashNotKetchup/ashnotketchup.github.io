@@ -41,9 +41,9 @@ The second is that people (or at least the culture at large) don't seem to want 
 
 The final and more fundamental issue is that of the current deracination of AI systems. That is to say that: AI systems and their data are increasingly divorced from their context — the context of each data point, of the larger dataset, and of the model itself — leaving it without a clear interpretive perspective or situatedness. I argue that this leaves AI systems ill-equipped to deal with the values and methods used in sample-based music making. While sample-based music deals largely in the realm of context, generative AI tools deal almost entirely in the realm of content.
 
-![Annotated waveform of J-Dilla's 'Stop!'](figures/dilla%20figure.png)
+![Annotated waveform of J-Dilla's 'Stop!'](figures/dilla_figure.png)
 
-  *(Above: J-Dilla's 'Stop!' when it is annotated w.r.t content vs context. The additional context turns it from a standard hip-hop track into a mournful victory lap for one of hip-hop's greats.)*
+*(Above: J-Dilla's 'Stop!' when it is annotated w.r.t content vs context. The additional context turns it from a standard hip-hop track into a mournful victory lap for one of hip-hop's greats.)*
      
 
 Consider, for example, the J Dilla Track 'Stop!' (2006). Shown in the figure above, a simple content-based analysis of the track can highlight the use of multiple audio sources, lyrics, the musical structure and timbral effect of the piece. Meanwhile, wider context reveals that Dilla himself may have been trying to relate to his own mortality on the track, since (A) *he* transformed the lyrics from ''it's that real shit'' to ''is death real?'' and (B) he was on his own deathbed while producing it.
