@@ -7,8 +7,8 @@ image: "./exclaimation-question.png"
 ## tl;dr
 Samples are more about context than content. AI systems will struggle to address the sample-based community as long as they prioritise the former.
 
-## [Download the poster here](https://www.dropbox.com/scl/fi/ju982jr483jssm3awft6h/AIMS_Poster-1.pdf?rlkey=vbqgv8mvgng5iq2zvk3kb5knf&st=yjgmevh8&dl=0)
-The full-res poster, as presented at AIMS '26, is available at [this link.](https://www.dropbox.com/scl/fi/ju982jr483jssm3awft6h/AIMS_Poster-1.pdf?rlkey=vbqgv8mvgng5iq2zvk3kb5knf&st=yjgmevh8&dl=) Below is a more fleshed out exploration of the themes of the poster.
+## [Download the poster here](https://raw.githubusercontent.com/ashNotKetchup/ashnotketchup.github.io/8d90c652da474c4e739cb52c8356c20faf3fbf80/src/static/downloads/AIMS_Poster-1.pdf)
+The full-res poster, as presented at AIMS '26, is available at [this link.](https://raw.githubusercontent.com/ashNotKetchup/ashnotketchup.github.io/8d90c652da474c4e739cb52c8356c20faf3fbf80/src/static/downloads/AIMS_Poster-1.pdf) Below is a more fleshed out exploration of the themes of the poster.
 
 ## Code
 Code and data used to create these diagrams are available at: https://github.com/ashNotKetchup/aims-2026-is-depth-real-figures
