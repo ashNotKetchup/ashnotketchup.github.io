@@ -9,7 +9,7 @@ tags: ["NIME", "NISE", "Selected"]
 
 <!-- # Manipulating Audio with Latent Timbre -->
 
-In my PhD I look at how we might rethink AI systems from the perspectives of empowering individual or marginalised forms of musical expression. In particular I look at sample-based music making, and how AI is impacting the relationships between creators, communities, sounds and technologies.  
+In my PhD I look at how we might rethink AI systems from the perspectives of empowering individual or marginalised forms of musical expression. In particular I look at sample-based music-making, and how AI is impacting the relationships between creators, communities, sounds and technologies.  
 
 ## Can AI Support Sampling?
 
@@ -20,6 +20,8 @@ All of these technologies rely on what is called a ‘latent representation’. 
 Each of these has their own affordances, but they have a fundamental issue, they are fixed. What if I think about my sound differently to you, or to the folks at Meta? None of these models are trained on my sounds, for manipulating samples how I like to, so they aren’t as useful for my practice.
 
 ## “Just Train Your Own model…? OK!”
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dBentiYVt9o?si=jFMnWHzHdX9MJ0A-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 We could retrain our own models from scratch… if we had all the data and computing required for high quality music/audio generation, and if we were comfortable with the environmental overhead. But it would be much better if we had ways of reusing what is already there. Big AI models are bad because they’re big and flattening, but they’re also performant because of this ability to generalise. If we did our own, they’d be small, bad, or take ages and lots of hacking to work…. Monica Dinculescu from Google's Magenta says ‘it'd be like trying to learn all of music theory from a single song’[^6]
 
