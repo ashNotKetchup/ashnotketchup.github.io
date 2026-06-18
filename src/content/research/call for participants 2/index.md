@@ -28,10 +28,10 @@ Participation requires that you:
 
 - Engage with a pre-study questionnaire (**25-mins**)
 - Attend an in-person induction to the study tool in person (**30 mins-1 hour**)
-- Using the provided tool in 3 music-making tasks (making or working 30-60 seconds of your own music, in your own time, but by a deadline in late-april).
+- Using the provided tool in 3 music-making tasks (making or working 30-60 seconds of your own music, in your own time, but by a deadline end of June).
 - Complete four post-use questionnaires (totalling **30-40 mins**)
-- Engage with researchers for a brief (**30 min**) interview
-- Attend a workshop afternoon with other participants to share and discuss practices + experience (**3hr**)
+- Engage with researchers for a brief (**30 min**) interview (first two weeks July)
+- Attend a workshop afternoon with other participants to share and discuss practices + experience (**3hr**) (Late July, depending on availability)
 
 ## Contact
 
@@ -39,4 +39,4 @@ If you’re interested, please write to the PhD conducting this research: Ashley
 
 This work is conducted at the [Centre for Digital Music](https://c4dm.eecs.qmul.ac.uk) as part of the [Communication Acoustics Lab](https://comma.eecs.qmul.ac.uk)
 
-[^1]: Voucher of the participants choosing (or cash, pending approval from finance department)
+[^1]: Voucher of the participants choosing
