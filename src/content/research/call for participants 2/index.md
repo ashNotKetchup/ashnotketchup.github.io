@@ -12,7 +12,7 @@ As part of my PhD at the Centre for Digital Music, QMUL, I’ve been exploring w
 
 I invite you to participate in our research study exploring how these tools can be used for creative manipulation of the **timbre** of audio samples.
 
-We are offering compensation of £150[^1] for participation.
+We are offering compensation equivalent to £100[^1] for participation.
 
 ## Context + Aims
 
@@ -26,12 +26,16 @@ I have a year left in the PhD, and I want to use all of it to make stuff for and
 
 Participation requires that you:
 
-- Engage with a pre-study questionnaire (**25-mins**)
-- Attend an in-person induction to the study tool in person (**30 mins-1 hour**)
-- Using the provided tool in 3 music-making tasks (making or working 30-60 seconds of your own music, in your own time, but by a deadline end of June).
-- Complete four post-use questionnaires (totalling **30-40 mins**)
-- Engage with researchers for a brief (**30 min**) interview (first two weeks July)
-- Attend a workshop afternoon with other participants to share and discuss practices + experience (**3hr**) (Late July, depending on availability)
+1. Complete a pre-study questionnaire **(25-mins)**
+2. Collect 5-20 of your own samples (either recorded by you or used by you), each under 40 seconds long.
+3. Attend a single in-person session in our studios around 4hrs long (including several breaks), using our study tool on a machine that we have already set up for you. The session runs as follows:
+   1. A short introduction, consent, and getting your samples onto the machine (15 mins)
+   2. A practice go with the tool (20-25 mins)
+   3. Three music-making tasks, (20-25 mins each), making 30-60 seconds of music in response to a prompt. You will use a different version of the tool each time. As you work, you jot down the time and a few words whenever something stands out. The tool also logs some basic interaction data, such as clicks, time in use, etc.
+   4. A short questionnaire after each task (10 mins each)
+   5. A closing questionnaire (15 mins)
+   6. An interview (45 mins) in which we talk through the experience, particularly referencing of interest to you
+
 
 ## Contact
 
